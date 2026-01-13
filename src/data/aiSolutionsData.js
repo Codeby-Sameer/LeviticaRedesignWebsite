@@ -89,10 +89,10 @@ This isn't just a chatbot; it's a complete customer engagement transformation. W
     ],
     
     pricingModels: {
-      standard: '$25,000 - $50,000 (One-time implementation)',
+      standard: '₹25,000 - ₹50,000 (One-time implementation)',
       enterprise: 'Custom pricing (Large-scale deployment)',
-      subscription: '$2,000 - $10,000/month (Managed service)',
-      'pay-per-use': '$0.10 - $0.50 per conversation (Cloud-based)'
+      subscription: '₹2,000 - ₹10,000/month (Managed service)',
+      'pay-per-use': '₹0.10 - ₹0.50 per conversation (Cloud-based)'
     },
     
     timeline: '12-16 weeks for complete implementation',
@@ -200,10 +200,10 @@ We don't just deliver predictions; we deliver a complete ecosystem for data-driv
     ],
     
     pricingModels: {
-      standard: '$30,000 - $75,000 (Complete solution)',
+      standard: '₹30,000 - ₹75,000 (Complete solution)',
       enterprise: 'Custom pricing (Multi-department deployment)',
-      subscription: '$3,000 - $15,000/month (SaaS model)',
-      'consulting+licensing': '$15,000 + Annual license fee'
+      subscription: '₹3,000 - ₹15,000/month (SaaS model)',
+      'consulting+licensing': '₹15,000 + Annual license fee'
     },
     
     timeline: '10-14 weeks for complete deployment',
@@ -311,9 +311,9 @@ We transform your existing processes into intelligent workflows that reduce erro
     ],
     
     pricingModels: {
-      'per-process': '$20,000 - $50,000 per major process',
+      'per-process': '₹20,000 - ₹50,000 per major process',
       enterprise: 'Custom pricing (Enterprise-wide deployment)',
-      subscription: '$5,000 - $25,000/month (Platform license + support)',
+      subscription: '₹5,000 - ₹25,000/month (Platform license + support)',
       'outcome-based': 'Performance-based pricing available'
     },
     
@@ -422,9 +422,9 @@ Whether you need to automate quality control on a production line, enhance secur
     ],
     
     pricingModels: {
-      'per-camera': '$10,000 - $30,000 per camera setup',
+      'per-camera': '₹10,000 - ₹30,000 per camera setup',
       enterprise: 'Custom pricing (Multi-site deployment)',
-      subscription: '$2,000 - $10,000/month (SaaS platform)',
+      subscription: '₹2,000 - ₹10,000/month (SaaS platform)',
       'project-based': 'Fixed price for complete solution'
     },
     
@@ -534,9 +534,9 @@ Whether you're optimizing supply chains, making investment decisions, or plannin
     ],
     
     pricingModels: {
-      standard: '$40,000 - $80,000 (Department-level solution)',
+      standard: '₹40,000 - ₹80,000 (Department-level solution)',
       enterprise: 'Custom pricing (Enterprise-wide platform)',
-      subscription: '$5,000 - $20,000/month (Cloud platform)',
+      subscription: '₹5,000 - ₹20,000/month (Cloud platform)',
       'consulting+development': 'Time and materials + licensing'
     },
     
@@ -646,9 +646,9 @@ Whether you're personalizing e-commerce product recommendations, content discove
     ],
     
     pricingModels: {
-      standard: '$25,000 - $60,000 (Platform implementation)',
+      standard: '₹25,000 - ₹60,000 (Platform implementation)',
       enterprise: 'Custom pricing (Enterprise personalization suite)',
-      subscription: '$3,000 - $12,000/month (SaaS platform)',
+      subscription: '₹3,000 - ₹12,000/month (SaaS platform)',
       'performance-based': 'Revenue share model available'
     },
     
