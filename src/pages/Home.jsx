@@ -8,10 +8,10 @@ import { FaArrowRight, FaRobot, FaChartBar, FaClock, FaCloud, FaCrosshairs, FaRo
 
 // Image URLs - replace these with your actual images
 const IMAGES = {
-  aiTechnology: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=2065&q=80",
-  cloudInfrastructure: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80",
+  aiTechnology: "https://media.istockphoto.com/id/2206472967/photo/ai-cloud-cloud-computing-technology-big-data-concepts.jpg?s=612x612&w=0&k=20&c=1qYFy4w_xPq6wIej9NMNZA6IT43_WU_se7hTVSly4AM=",
+  cloudInfrastructure: "https://media.istockphoto.com/id/981901768/photo/cloud-computing.webp?a=1&b=1&s=612x612&w=0&k=20&c=87V521q--2uaBf8C2SMMR2K3Q34T2Qj9-EJrfggPzkA=",
   realTimeAnalytics: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-  enterpriseSecurity: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+  enterpriseSecurity: "https://media.istockphoto.com/id/2020157664/photo/cyber-security-network-cybersecurity-concept-global-network-security-technology-business.webp?a=1&b=1&s=612x612&w=0&k=20&c=3dJ_LcKoMA7sEzkX3e6W-DEiyz3RCfPrwmzTmjUS4SM=",
   digitalTransformation: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
   techTeam: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
   innovationLab: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80",
