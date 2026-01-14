@@ -7,6 +7,7 @@ export const aiSolutionsData = [
     id: 'intelligent-chatbot-solution',
     icon: FaRegMessage,
     title: 'Intelligent Chatbot Solution',
+    imageUrl: '/services/web-development.jpg',
     shortDescription: 'AI-powered conversational platform that automates customer interactions with human-like understanding.',
     fullDescription: 'Transform customer engagement with our end-to-end Intelligent Chatbot Solution. Deploy AI chatbots that understand context, learn from conversations, and provide 24/7 support across all channels.',
     detailedDescription: `Our Intelligent Chatbot Solution is a complete AI-powered conversational platform designed to revolutionize customer interactions. We don't just build chatbots – we deliver comprehensive solutions that integrate seamlessly with your existing systems and scale with your business. <br>

@@ -157,11 +157,11 @@ const SolutionDetailPage = () => {
                   >
                     <div className="flex items-center mb-3">
                       <stat.icon className={`w-5 h-5 mr-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
-                      <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
+                      <div className={`text-md font-medium ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
                         {stat.label}
                       </div>
                     </div>
-                    <div className={`font-bold text-lg ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                    <div className={`font-bold text-center text-sm md:text-lg ${isDark ? 'text-white' : 'text-slate-900'}`}>
                       {stat.value}
                     </div>
                   </motion.div>
@@ -256,7 +256,7 @@ const SolutionDetailPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8 }}
-            className="mb-20"
+            className="py-10"
           >
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -289,7 +289,7 @@ const SolutionDetailPage = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
-            className="mb-20"
+            className="py-10"
           >
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -343,7 +343,7 @@ const SolutionDetailPage = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
-            className="mb-20"
+            className="py-10"
           >
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -389,7 +389,7 @@ const SolutionDetailPage = () => {
           </motion.section>
 
           {/* Two Column Layout: Tech Stack & Process */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-10">
             {/* Technologies */}
             <motion.section
               initial={{ opacity: 0, y: 40 }}
@@ -515,7 +515,7 @@ const SolutionDetailPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8 }}
-            className="mb-20"
+            className="py-10"
           >
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
               <motion.h2
@@ -643,7 +643,7 @@ const SolutionDetailPage = () => {
           </motion.section>
 
           {/* Pricing & Team Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 py-10">
             {/* Pricing Models */}
             <motion.section
               initial={{ opacity: 0, y: 40 }}
@@ -685,7 +685,7 @@ const SolutionDetailPage = () => {
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
                         transition={{ duration: 0.3, delay: index * 0.2 }}
-                        className={`text-2xl font-bold bg-gradient-to-r bg-clip-text text-transparent ${solution.color(isDark)}`}
+                        className={`text-lg font-bold bg-gradient-to-r bg-clip-text text-transparent ${solution.color(isDark)}`}
                       >
                         {price}
                       </motion.div>
@@ -796,7 +796,7 @@ const SolutionDetailPage = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.8 }}
-        className={`py-20 ${isDark 
+        className={`py-10 ${isDark 
             ? 'bg-gradient-to-br from-slate-900 via-blue-900/30 to-slate-900' 
             : 'bg-gradient-to-br from-white via-blue-50/70 to-gray-50'}`}
       >
@@ -806,7 +806,7 @@ const SolutionDetailPage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-8 ${isDark ? 'text-white' : 'text-slate-900'}`}
+            className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-8 ${isDark ? 'text-white' : 'text-slate-900'}`}
           >
             Ready to Implement{' '}
             <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
