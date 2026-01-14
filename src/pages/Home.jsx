@@ -255,7 +255,7 @@ const Home = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-10">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-16 ">
           <div className="max-w-7xl mx-auto">
             {/* Image Carousel */}
             

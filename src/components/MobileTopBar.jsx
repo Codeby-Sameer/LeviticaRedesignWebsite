@@ -4,7 +4,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const MobileTopBar = ({ scrolled, isDark }) => {
   return (
-    <div className={`w-full md:hidden py-2 text-sm transition-all duration-300 ${
+    <div className={`w-full md:hidden py-1 text-xs transition-all duration-300 ${
       scrolled ? 'shadow-md' : ''
     } ${
       isDark 
