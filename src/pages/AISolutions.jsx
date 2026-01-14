@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, Bot, Target, Zap, Eye, MessageSquare, TrendingUp, Cpu, ArrowRight, CheckCircle, Cloud, Code, Database, Shield, Sparkles } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 import { useTheme } from '../contexts/ThemeContext';
 import { aiSolutionsData } from '../data/aiSolutionsData';
+import { FaArrowRight, FaBolt, FaRobot, FaClock, FaCode, FaCrosshairs, FaDatabase, FaShield } from 'react-icons/fa6';
+import { LuBot } from 'react-icons/lu';
+import { FaCheckCircle, FaCloud, FaMagic, FaShieldAlt } from 'react-icons/fa';
 
 const AISolutions = () => {
   const { isDark } = useTheme();
@@ -63,7 +65,7 @@ const AISolutions = () => {
                 className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 border transition-all duration-300 ${isDark 
                     ? 'bg-blue-500/10 border-blue-400/20 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/30' 
                     : 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 shadow-sm'}`}>
-                <Brain className="w-4 h-4 mr-2" />
+                <FaRobot className="w-4 h-4 mr-2" />
                 Artificial Intelligence Solutions
               </motion.span>
               
@@ -73,9 +75,9 @@ const AISolutions = () => {
                 transition={{ delay: 0.3 }}
                 className="flex items-center justify-center space-x-2 mb-6"
               >
-                <Brain className={`w-12 h-12 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
-                <Bot className={`w-10 h-10 ${isDark ? 'text-cyan-400' : 'text-blue-700'}`} />
-                <Zap className={`w-8 h-8 ${isDark ? 'text-blue-300' : 'text-blue-800'}`} />
+                <FaRobot className={`w-10 h-10 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                {/* <LuBot className={`w-10 h-10 ${isDark ? 'text-cyan-400' : 'text-blue-700'}`} /> */}
+                <FaBolt className={`w-8 h-8 ${isDark ? 'text-blue-300' : 'text-blue-800'}`} />
               </motion.div>
               
               <motion.h1
@@ -115,7 +117,7 @@ const AISolutions = () => {
                       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl'}`}
                 >
                   <span>Start AI Transformation</span>
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 
                 <Link
@@ -214,7 +216,7 @@ const AISolutions = () => {
 
                       <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
                         <div className="flex items-center text-sm">
-                          <Clock className={`w-4 h-4 mr-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} />
+                          <FaClock className={`w-4 h-4 mr-2 ${isDark ? 'text-gray-500' : 'text-gray-400'}`} />
                           <span className={isDark ? 'text-gray-400' : 'text-slate-600'}>{solution.timeline}</span>
                         </div>
                         <motion.div 
@@ -222,7 +224,7 @@ const AISolutions = () => {
                           className={`inline-flex items-center text-sm font-medium ${isDark ? 'text-blue-400' : 'text-blue-600'}`}
                         >
                           Learn More
-                          <ArrowRight className="ml-1 w-4 h-4 transition-transform" />
+                          <FaArrowRight className="ml-1 w-4 h-4 transition-transform" />
                         </motion.div>
                       </div>
                     </div>
@@ -246,7 +248,7 @@ const AISolutions = () => {
                   : 'text-blue-600 hover:text-blue-700 border border-blue-600/50 hover:border-blue-600 hover:bg-blue-50'}`}
             >
               Need a Custom AI Solution?
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <FaArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </motion.div>
         </div>
@@ -314,7 +316,7 @@ const AISolutions = () => {
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <div className={`font-medium mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
-                      <Code className="inline-block w-4 h-4 mr-2" />
+                      <FaCode className="inline-block w-4 h-4 mr-2" />
                       Frameworks
                     </div>
                     <ul className="space-y-2 text-sm">
@@ -324,7 +326,7 @@ const AISolutions = () => {
                           whileHover={{ x: 2 }}
                           className={`flex items-center transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-slate-700'}`}
                         >
-                          <CheckCircle className="w-3 h-3 mr-2" />
+                          <FaCheckCircle className="w-3 h-3 mr-2" />
                           {item}
                         </motion.li>
                       ))}
@@ -332,7 +334,7 @@ const AISolutions = () => {
                   </div>
                   <div>
                     <div className={`font-medium mb-3 ${isDark ? 'text-cyan-400' : 'text-blue-700'}`}>
-                      <Database className="inline-block w-4 h-4 mr-2" />
+                      <FaDatabase className="inline-block w-4 h-4 mr-2" />
                       Languages
                     </div>
                     <ul className="space-y-2 text-sm">
@@ -342,7 +344,7 @@ const AISolutions = () => {
                           whileHover={{ x: 2 }}
                           className={`flex items-center transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-slate-700'}`}
                         >
-                          <CheckCircle className="w-3 h-3 mr-2" />
+                          <FaCheckCircle className="w-3 h-3 mr-2" />
                           {item}
                         </motion.li>
                       ))}
@@ -361,7 +363,7 @@ const AISolutions = () => {
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <div className={`font-medium mb-3 ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
-                      <Cloud className="inline-block w-4 h-4 mr-2" />
+                      <FaCloud className="inline-block w-4 h-4 mr-2" />
                       AWS
                     </div>
                     <ul className="space-y-2 text-sm">
@@ -371,7 +373,7 @@ const AISolutions = () => {
                           whileHover={{ x: 2 }}
                           className={`flex items-center transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-slate-700'}`}
                         >
-                          <CheckCircle className="w-3 h-3 mr-2" />
+                          <FaCheckCircle className="w-3 h-3 mr-2" />
                           {item}
                         </motion.li>
                       ))}
@@ -379,7 +381,7 @@ const AISolutions = () => {
                   </div>
                   <div>
                     <div className={`font-medium mb-3 ${isDark ? 'text-cyan-400' : 'text-blue-700'}`}>
-                      <Shield className="inline-block w-4 h-4 mr-2" />
+                      <FaShield className="inline-block w-4 h-4 mr-2" />
                       Azure & GCP
                     </div>
                     <ul className="space-y-2 text-sm">
@@ -389,7 +391,7 @@ const AISolutions = () => {
                           whileHover={{ x: 2 }}
                           className={`flex items-center transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-slate-700'}`}
                         >
-                          <CheckCircle className="w-3 h-3 mr-2" />
+                          <FaCheckCircle className="w-3 h-3 mr-2" />
                           {item}
                         </motion.li>
                       ))}
@@ -429,25 +431,25 @@ const AISolutions = () => {
           >
             {[
               {
-                icon: Sparkles,
+                icon: FaMagic,
                 title: "End-to-End Solutions",
                 description: "Complete implementation from strategy to deployment and ongoing support",
                 color: isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-700"
               },
               {
-                icon: Target,
+                icon: FaCrosshairs,
                 title: "Measurable Results",
                 description: "Clear KPIs and ROI tracking for every solution we deliver",
                 color: isDark ? "from-green-500 to-green-500" : "from-green-700 to-green-800"
               },
               {
-                icon: Shield,
+                icon: FaShieldAlt,
                 title: "Enterprise Ready",
                 description: "Scalable, secure solutions built for enterprise deployment",
                 color: isDark ? "from-purple-600 to-purple-500" : "from-indigo-500 to-indigo-500"
               },
               {
-                icon: Zap,
+                icon: FaBolt,
                 title: "Rapid Deployment",
                 description: "Agile methodology for faster time-to-value and business impact",
                 color: isDark ? "from-pink-500 to-pink-600" : "from-pink-500 to-pink-600"
@@ -523,9 +525,9 @@ const AISolutions = () => {
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white shadow-lg hover:shadow-blue-500/25' 
                       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl'}`}
                 >
-                  <Brain className="w-5 h-5 mr-2" />
+                  <FaRobot className="w-5 h-5 mr-2" />
                   <span>Book Free Consultation</span>
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 
                 <Link

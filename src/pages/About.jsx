@@ -1,13 +1,10 @@
 
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Users, Target, Lightbulb, Award, Globe, Zap, 
-  ArrowRight, Building, TrendingUp, Clock, Shield, 
-  Users2, Brain 
-} from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 import { useTheme } from '../contexts/ThemeContext';
+import { FaArrowRight, FaAward, FaBolt, FaRobot, FaBuilding, FaChartLine, FaClock, FaCrosshairs, FaGlobe, FaLightbulb, FaShieldCat, FaShieldHeart, FaUsers } from 'react-icons/fa6';
+import { FaShieldAlt } from 'react-icons/fa';
 
 const About = () => {
   const { isDark } = useTheme();
@@ -23,37 +20,37 @@ const About = () => {
 
   const values = [
     {
-      icon: Target,
+      icon: FaCrosshairs,
       title: "Innovation Excellence",
       description: "We push the boundaries of what's possible, delivering cutting-edge solutions that create competitive advantages for our clients.",
       color: isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-800"
     },
     {
-      icon: Users,
+      icon: FaUsers,
       title: "Client Partnership",
       description: "We build long term partnerships based on trust, transparency, and shared success in achieving business objectives.",
       color: isDark ? "from-green-500 to-green-500" : "from-green-700 to-green-900"
     },
     {
-      icon: Lightbulb,
+      icon: FaLightbulb,
       title: "Technical Mastery",
       description: "Our team maintains expertise in the latest technologies, ensuring solutions that are both current and future-ready.",
       color: isDark ? "from-purple-600 to-purple-500" : "from-purple-800 to-purple-700"
     },
     {
-      icon: Award,
+      icon: FaAward,
       title: "Quality Commitment", 
       description: "We deliver enterprise-grade solutions with rigorous testing, security protocols, and performance optimization.",
       color: isDark ? "from-emerald-500 to-emerald-600" : "from-emerald-700 to-emerald-800"
     },
     {
-      icon: Globe,
+      icon: FaGlobe,
       title: "Scalable Impact",
       description: "Every solution we build is designed to scale, adapt, and evolve with your business growth and changing requirements.",
       color: isDark ? "from-pink-500 to-pink-500" : "from-pink-600 to-pink-700"
     },
     {
-      icon: Zap,
+      icon: FaBolt,
       title: "Agile Execution",
       description: "We execute with speed and precision, delivering value iteratively while maintaining the highest quality standards.",
       color: isDark ? "from-yellow-500 to-yellow-600" : "from-yellow-500 to-yellow-600"
@@ -61,12 +58,12 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "500+", label: "Projects Completed", icon: TrendingUp },
-    { number: "150+", label: "Enterprise Clients", icon: Users2 },
-    { number: "50+", label: "AI Models Deployed", icon: Brain },
-    { number: "99.9%", label: "System Uptime", icon: Shield },
-    { number: "8", label: "Years of Innovation", icon: Clock },
-    { number: "24/7", label: "Technical Support", icon: Zap }
+    { number: "500+", label: "Projects Completed", icon: FaChartLine },
+    { number: "150+", label: "Enterprise Clients", icon: FaUsers },
+    { number: "50+", label: "AI Models Deployed", icon: FaRobot },
+    { number: "99.9%", label: "System Uptime", icon: FaShieldAlt },
+    { number: "8", label: "Years of Innovation", icon: FaClock },
+    { number: "24/7", label: "Technical Support", icon: FaBolt }
   ];
 
   return (
@@ -87,7 +84,7 @@ const About = () => {
             <span className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 border transition-all duration-300 ${isDark 
                 ? 'bg-blue-500/10 border-blue-400/20 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/30' 
                 : 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 shadow-sm'}`}>
-              <Building className="w-4 h-4 mr-2" />
+              <FaBuilding className="w-4 h-4 mr-2" />
               Our Story & Vision
             </span>
             
@@ -113,7 +110,7 @@ const About = () => {
                     : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl'}`}
               >
                 <span>Join Our Team</span>
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 <div className={`absolute inset-0 rounded-lg blur opacity-30 group-hover:opacity-50 -z-10 ${isDark 
                     ? 'bg-gradient-to-r from-blue-400 to-cyan-400' 
                     : 'bg-gradient-to-r from-blue-500 to-blue-600'}`} />
@@ -147,7 +144,7 @@ const About = () => {
                   : 'bg-white/70 border-slate-200/50 hover:border-blue-300/50 hover:bg-white/90 shadow-lg hover:shadow-xl'}`}>
                 <div className="flex items-center mb-6">
                   <div className={`p-3 rounded-lg ${isDark ? 'bg-blue-500/20' : 'bg-blue-100'} mr-4`}>
-                    <Target className={`w-6 h-6 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                    <FaCrosshairs className={`w-6 h-6 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
                   </div>
                   <h2 className={`text-2xl md:text-3xl font-bold transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>Our Mission</h2>
                 </div>
@@ -161,7 +158,7 @@ const About = () => {
                   : 'bg-white/70 border-slate-200/50 hover:border-blue-400/50 hover:bg-white/90 shadow-lg hover:shadow-xl'}`}>
                 <div className="flex items-center mb-6">
                   <div className={`p-3 rounded-lg ${isDark ? 'bg-cyan-500/20' : 'bg-cyan-100'} mr-4`}>
-                    <Lightbulb className={`w-6 h-6 ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`} />
+                    <FaLightbulb className={`w-6 h-6 ${isDark ? 'text-cyan-400' : 'text-cyan-600'}`} />
                   </div>
                   <h2 className={`text-2xl md:text-3xl font-bold transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>Our Vision</h2>
                 </div>
@@ -349,7 +346,7 @@ const About = () => {
                       : 'border-blue-600/50 text-blue-600 hover:border-blue-600 hover:bg-blue-50 shadow-md hover:shadow-lg'}`}
                 >
                   Meet Our Leadership Team
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <FaArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
             </div>

@@ -1,10 +1,12 @@
 // SolutionDetailPage.jsx
 import { motion } from 'framer-motion';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Clock, Users, Target, CheckCircle, DollarSign, BarChart, Zap, Code, Sparkles } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { getSolutionById } from '../data/aiSolutionsData';
 import { useState, useEffect } from 'react';
+import { FaArrowLeft, FaArrowRight, FaBolt, FaClock, FaCode, FaIndianRupeeSign, FaRupeeSign, FaUsers } from 'react-icons/fa6';
+import { PiTargetBold } from 'react-icons/pi';
+import { FaChartBar, FaCheckCircle } from 'react-icons/fa';
 
 const SolutionDetailPage = () => {
   const { id } = useParams();
@@ -48,7 +50,7 @@ const SolutionDetailPage = () => {
         <div className={`text-center ${isDark ? 'text-white' : 'text-slate-900'}`}>
           <h2 className="text-2xl font-bold mb-4">Solution not found</h2>
           <Link to="/ai-solutions" className={`inline-flex items-center text-blue-500 hover:text-blue-600`}>
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <FaArrowLeft className="w-4 h-4 mr-2" />
             Back to AI Solutions
           </Link>
         </div>
@@ -107,7 +109,7 @@ const SolutionDetailPage = () => {
                   to="/ai-solutions" 
                   className={`group inline-flex items-center text-sm font-medium mb-8 transition-all duration-300 ${isDark ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-700'}`}
                 >
-                  <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+                  <FaArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
                   
                 </Link>
               </motion.div>
@@ -140,10 +142,10 @@ const SolutionDetailPage = () => {
                 className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-8"
               >
                 {[
-                  { icon: Clock, label: 'Timeline', value: solution.timeline },
-                  { icon: Users, label: 'Team Size', value: solution.team.size },
-                  { icon: Target, label: 'Success Rate', value: '95%+' },
-                  { icon: DollarSign, label: 'Starting From', value: Object.values(solution.pricingModels)[0].split('(')[0] }
+                  { icon: FaClock, label: 'Timeline', value: solution.timeline },
+                  { icon: FaUsers, label: 'Team Size', value: solution.team.size },
+                  { icon: PiTargetBold, label: 'Success Rate', value: '95%+' },
+                  { icon: FaIndianRupeeSign, label: 'Starting From', value: Object.values(solution.pricingModels)[0].split('(')[0] }
                 ].map((stat, index) => (
                   <motion.div
                     key={index}
@@ -191,7 +193,7 @@ const SolutionDetailPage = () => {
                           : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg'}`}
                     >
                       <span className="relative z-10">Request Consultation</span>
-                      <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
+                      <FaArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
                       <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600"
                         initial={{ opacity: 0 }}
@@ -233,7 +235,7 @@ const SolutionDetailPage = () => {
                         variants={itemVariants}
                         className="flex items-center text-sm"
                       >
-                        <CheckCircle className={`w-4 h-4 mr-3 ${isDark ? 'text-green-400' : 'text-green-600'}`} />
+                        <FaCheckCircle className={`w-3 h-3 mr-3 ${isDark ? 'text-green-400' : 'text-green-600'}`} />
                         <span className={isDark ? 'text-gray-300' : 'text-slate-600'}>{fact}</span>
                       </motion.li>
                     ))}
@@ -311,7 +313,7 @@ const SolutionDetailPage = () => {
                   key={index}
                   variants={cardVariants}
                   whileHover={{ y: -8 }}
-                  className={`p-8 rounded-2xl backdrop-blur-sm border transition-all duration-300 ${isDark 
+                  className={`p-2 rounded-2xl backdrop-blur-sm border transition-all duration-300 ${isDark 
                       ? 'bg-slate-800/30 border-slate-700/50 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10' 
                       : 'bg-white/70 border-slate-200/50 hover:border-blue-300 hover:shadow-xl'}`}
                 >
@@ -319,9 +321,9 @@ const SolutionDetailPage = () => {
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.2 }}
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center mr-4 ${isDark ? 'bg-blue-500/20' : 'bg-blue-100'}`}
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center mr-2 ${isDark ? 'bg-blue-500/20' : 'bg-blue-100'}`}
                     >
-                      <Zap className={`w-6 h-6 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                      <FaBolt className={`w-5 h-5 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
                     </motion.div>
                     <h3 className={`text-lg font-semibold mt-2 ${isDark ? 'text-white' : 'text-slate-900'}`}>
                       {feature}
@@ -369,9 +371,9 @@ const SolutionDetailPage = () => {
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.5 }}
-                    className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mr-4 ${isDark ? 'bg-green-500/20' : 'bg-green-100'}`}
+                    className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center mt-1.5 mr-4 ${isDark ? 'bg-green-500/20' : 'bg-green-100'}`}
                   >
-                    <CheckCircle className={`w-5 h-5 ${isDark ? 'text-green-400' : 'text-green-600'}`} />
+                    <FaCheckCircle className={`w-3 h-3 ${isDark ? 'text-green-400' : 'text-green-600'}`} />
                   </motion.div>
                   <motion.p
                     initial={{ opacity: 0 }}
@@ -429,7 +431,7 @@ const SolutionDetailPage = () => {
                       className="flex items-center p-3 rounded-lg hover:bg-slate-500/5 transition-colors"
                     >
                       <div className={`p-2 rounded-lg mr-3 ${isDark ? 'bg-blue-500/10' : 'bg-blue-100'}`}>
-                        <Code className={`w-4 h-4 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                        <FaCode className={`w-4 h-4 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
                       </div>
                       <span className={isDark ? 'text-gray-300' : 'text-slate-700'}>
                         {tech}
@@ -541,7 +543,7 @@ const SolutionDetailPage = () => {
                       ? 'bg-slate-800/50 border border-slate-700/50 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/50' 
                       : 'bg-white/70 border border-slate-200/50 text-blue-600 hover:bg-blue-50 hover:border-blue-300 shadow-sm hover:shadow-md'}`}
                 >
-                  <ArrowLeft className="w-5 h-5" />
+                  <FaArrowLeft className="w-5 h-5" />
                 </motion.button>
                 <motion.button
                   whileHover={{ y: -3 }}
@@ -551,7 +553,7 @@ const SolutionDetailPage = () => {
                       ? 'bg-slate-800/50 border border-slate-700/50 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/50' 
                       : 'bg-white/70 border border-slate-200/50 text-blue-600 hover:bg-blue-50 hover:border-blue-300 shadow-sm hover:shadow-md'}`}
                 >
-                  <ArrowRight className="w-5 h-5" />
+                  <FaArrowRight className="w-5 h-5" />
                 </motion.button>
               </motion.div>
             </div>
@@ -578,7 +580,7 @@ const SolutionDetailPage = () => {
                     transition={{ duration: 0.5, type: "spring" }}
                     className={`p-3 rounded-xl mb-4 md:mb-0 md:mr-6 ${isDark ? 'bg-blue-500/20' : 'bg-blue-100'}`}
                   >
-                    <BarChart className={`w-8 h-8 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                    <FaChartBar className={`w-8 h-8 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
                   </motion.div>
                   <div>
                     <motion.h3
@@ -739,7 +741,7 @@ const SolutionDetailPage = () => {
                     transition={{ duration: 0.6 }}
                     className={`p-3 rounded-xl mr-4 ${isDark ? 'bg-blue-500/20' : 'bg-blue-100'}`}
                   >
-                    <Users className={`w-8 h-8 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                    <FaUsers className={`w-8 h-8 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
                   </motion.div>
                   <div>
                     <div className={`font-bold text-xl ${isDark ? 'text-white' : 'text-slate-900'}`}>
@@ -840,7 +842,7 @@ const SolutionDetailPage = () => {
                     : 'bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:shadow-2xl'}`}
               >
                 <span className="relative z-10 text-white">Start Your Project</span>
-                <ArrowRight className="ml-4 w-5 h-5 group-hover:translate-x-2 transition-transform relative z-10" />
+                <FaArrowRight className="ml-4 w-5 h-5 group-hover:translate-x-2 transition-transform relative z-10" />
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-600"
                   initial={{ opacity: 0 }}

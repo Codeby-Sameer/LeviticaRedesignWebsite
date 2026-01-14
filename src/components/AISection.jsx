@@ -138,8 +138,8 @@
 
 
 import { motion } from 'framer-motion';
-import { Brain, Zap, Target, Cpu } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+import { FaBolt, FaRobot, FaCrosshairs } from 'react-icons/fa';
 
 const AISection = () => {
   const { isDark, colors } = useTheme();
@@ -197,7 +197,7 @@ const AISection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="flex items-center justify-center space-x-2 mb-4"
           >
-            <Brain className={`w-8 h-8 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+            <FaRobot className={`w-8 h-8 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
             <span className={`text-2xl font-bold bg-gradient-to-r bg-clip-text text-transparent ${
               isDark 
                 ? 'from-blue-400 to-cyan-300' 
@@ -229,17 +229,17 @@ const AISection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {[
             {
-              icon: Brain,
+              icon: FaRobot,
               title: "Machine Learning Models",
               description: "Custom AI models trained on your specific data to deliver precise insights and predictions.",
             },
             {
-              icon: Zap,
+              icon: FaBolt,
               title: "Real time Processing",
               description: "Lightning fast AI inference engines that process data and deliver results in milliseconds.",
             },
             {
-              icon: Target,
+              icon: FaCrosshairs,
               title: "Predictive Analytics",
               description: "Advanced forecasting algorithms that help you stay ahead of market trends and opportunities.",
             },

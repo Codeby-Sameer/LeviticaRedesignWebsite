@@ -161,14 +161,6 @@ import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 import ThemeToggle from './ThemeToggle';
 import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaYoutube,
-  FaWhatsapp,
-  FaLinkedin,
-  FaPhone,
-  FaEnvelope,
   FaBars,
   FaTimes
 } from 'react-icons/fa';

@@ -1,15 +1,12 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  ArrowLeft, Calendar, CheckCircle, Clock, DollarSign, 
-  Shield, Users, Zap, Target, BarChart, Code,
-  ExternalLink, MessageSquare, FileText
-} from 'lucide-react';
 import { servicesData } from '../data/Servicedata';
 import { useTheme } from '../contexts/ThemeContext';
 import AnimatedBackground from '../components/AnimatedBackground';
 import { businessServicesData } from '../data/Servicedata';
+import { FaArrowLeft, FaBolt, FaCalendarDays, FaCode, FaCrosshairs, FaFileSignature, FaRegMessage } from 'react-icons/fa6';
+import { FaChartBar, FaCheckCircle, FaExternalLinkAlt, FaExternalLinkSquareAlt, FaRegCheckCircle } from 'react-icons/fa';
 
 const ServiceDetail = () => {
   const { serviceId } = useParams();
@@ -36,11 +33,11 @@ const ServiceDetail = () => {
   }
 
   const tabs = [
-    { id: 'overview', label: 'Overview', icon: Target },
-    { id: 'features', label: 'Features', icon: CheckCircle },
-    { id: 'benefits', label: 'Benefits', icon: Zap },
+    { id: 'overview', label: 'Overview', icon: FaCrosshairs },
+    { id: 'features', label: 'Features', icon: FaRegCheckCircle },
+    { id: 'benefits', label: 'Benefits', icon: FaBolt },
     // { id: 'case-studies', label: 'Case Studies', icon: BarChart },
-    { id: 'technologies', label: 'Technologies', icon: Code }
+    { id: 'technologies', label: 'Technologies', icon: FaCode }
   ];
 
   return (
@@ -66,7 +63,7 @@ const ServiceDetail = () => {
                   isDark ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-700'
                 }`}
               >
-                <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+                <FaArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
               </Link>
 
               <div className="flex items-center gap-4 mb-6">
@@ -93,9 +90,9 @@ const ServiceDetail = () => {
                       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl'
                   }`}
                 >
-                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                  <FaCalendarDays className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   <span>Schedule a Call</span>
-                  <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <FaExternalLinkSquareAlt className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
                 <button className={`inline-flex items-center justify-center px-5 sm:px-6 py-3 border-2 rounded-lg font-semibold transition-all duration-300 ${
@@ -103,7 +100,7 @@ const ServiceDetail = () => {
                     ? 'border-cyan-400/50 text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10' 
                     : 'border-blue-600/50 text-blue-600 hover:border-blue-600 hover:bg-blue-50'
                 }`}>
-                  <FileText className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                  <FaFileSignature className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   <span>Download Brochure</span>
                 </button>
               </div>
@@ -217,7 +214,7 @@ const ServiceDetail = () => {
                     }`}>
                       {service.features.slice(0, 4).map((feature, index) => (
                         <li key={index} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-3 text-green-500 flex-shrink-0" />
+                          <FaCheckCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-3 text-green-500 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -274,7 +271,7 @@ const ServiceDetail = () => {
                     <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r ${
                       service.color(isDark)
                     } mb-4`}>
-                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                      <FaCheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     <h4 className={`font-semibold text-base sm:text-lg mb-2 transition-colors duration-300 ${
                       isDark ? 'text-white' : 'text-slate-900'
@@ -318,7 +315,7 @@ const ServiceDetail = () => {
                         }`}
                       >
                         <div className="flex items-start">
-                          <Zap className={`w-5 h-5 mr-3 mt-1 flex-shrink-0 ${
+                          <FaBolt className={`w-5 h-5 mr-3 mt-1 flex-shrink-0 ${
                             isDark ? 'text-yellow-400' : 'text-yellow-600'
                           }`} />
                           <span className={`transition-colors duration-300 ${
@@ -402,7 +399,7 @@ const ServiceDetail = () => {
                       }`}>
                         Case Study
                       </div>
-                      <BarChart className={`w-5 h-5 ${
+                      <FaChartBar className={`w-5 h-5 ${
                         isDark ? 'text-blue-400' : 'text-blue-600'
                       }`} />
                     </div>
@@ -525,9 +522,9 @@ const ServiceDetail = () => {
                       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl'
                   }`}
                 >
-                  <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
+                  <FaRegMessage className="w-4 h-4 sm:w-4 sm:h-4 mr-2 flex-shrink-0" />
                   <span>Get in Touch</span>
-                  <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                  <FaExternalLinkAlt className="w-4 h-4 sm:w-4 sm:h-4 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                 </Link>
                 
                 <Link

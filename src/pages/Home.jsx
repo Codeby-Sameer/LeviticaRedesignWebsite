@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Cpu, Globe, Zap, Shield, TrendingUp, Users, Clock, Server, ChevronRight, Sparkles, Rocket, Target, Code, Database, Cloud, Brain, BarChart, Smartphone, CheckCircle, Award, Target as TargetIcon, Zap as ZapIcon, Users as UsersIcon, Shield as ShieldIcon, Star, Quote, ChevronLeft, ChevronRight as ChevronRightIcon, User } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 import AISection from '../components/AISection';
 import { useTheme } from '../contexts/ThemeContext';
 import { useState, useEffect, useRef } from 'react';
+import { FaArrowRight, FaRobot, FaChartBar, FaClock, FaCloud, FaCrosshairs, FaRocket, FaServer, FaShieldAlt, FaUsers, FaChevronRight, FaAward, FaBolt, FaCode, FaLaptop, FaCheckCircle, FaQuoteRight, FaStar, FaChevronLeft } from 'react-icons/fa';
 
 // Image URLs - replace these with your actual images
 const IMAGES = {
@@ -41,21 +41,11 @@ const Home = () => {
       title: "Cloud Excellence",
       subtitle: "Scalable solutions for enterprise success"
     },
-    // {
-    //   url: IMAGES.hero3,
-    //   title: "Data Intelligence",
-    //   subtitle: "Unlocking insights with advanced analytics"
-    // },
     {
       url: IMAGES.hero4,
       title: "Security First",
       subtitle: "Protecting your digital assets"
     },
-    // {
-    //   url: IMAGES.hero5,
-    //   title: "Future Ready",
-    //   subtitle: "Building tomorrow's technology today"
-    // }
   ];
 
   // Hero image auto-rotate
@@ -185,7 +175,7 @@ const Home = () => {
         "AI-driven automation"
       ],
       image: IMAGES.aiTechnology,
-      icon: Brain,
+      icon: FaRobot,
       color: isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-700",
       reversed: false
     },
@@ -200,7 +190,7 @@ const Home = () => {
         "Cost optimization"
       ],
       image: IMAGES.cloudInfrastructure,
-      icon: Cloud,
+      icon: FaCloud,
       color: isDark ? "from-cyan-500 to-blue-500" : "from-blue-700 to-blue-800",
       reversed: true
     },
@@ -215,7 +205,7 @@ const Home = () => {
         "Live monitoring systems"
       ],
       image: IMAGES.realTimeAnalytics,
-      icon: BarChart,
+      icon: FaChartBar,
       color: isDark ? "from-blue-600 to-purple-500" : "from-blue-800 to-indigo-700",
       reversed: false
     },
@@ -230,7 +220,7 @@ const Home = () => {
         "Security monitoring"
       ],
       image: IMAGES.enterpriseSecurity,
-      icon: Shield,
+      icon: FaShieldAlt,
       color: isDark ? "from-purple-500 to-blue-600" : "from-indigo-700 to-blue-800",
       reversed: true
     }
@@ -268,78 +258,7 @@ const Home = () => {
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-10">
           <div className="max-w-7xl mx-auto">
             {/* Image Carousel */}
-            <div className="relative mb-8 md:mb-12">
-              <div className="relative h-64 md:h-96 lg:h-[500px] w-full overflow-hidden rounded-2xl shadow-2xl">
-                {heroImages.map((image, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ 
-                      opacity: index === activeHeroImage ? 1 : 0,
-                      x: index === activeHeroImage ? 0 : index < activeHeroImage ? -100 : 100
-                    }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
-                    className="absolute inset-0"
-                  >
-                    <img
-                      src={image.url}
-                      alt={image.title}
-                      className="w-full h-full object-cover"
-                    />
-                    {/* Gradient Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-t ${isDark 
-                        ? 'from-slate-900/70 via-slate-900/30 to-transparent' 
-                        : 'from-white/70 via-white/30 to-transparent'}`} />
-                    
-                    {/* Image Title Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                      <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-3 ${isDark 
-                          ? 'bg-blue-500/20 border border-blue-400/20 text-blue-400' 
-                          : 'bg-white/90 border border-slate-200 text-blue-700 shadow-sm'}`}>
-                        <Sparkles className="w-4 h-4 mr-2" />
-                        {image.title}
-                      </div>
-                      <h3 className={`text-lg md:text-xl font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                        {image.subtitle}
-                      </h3>
-                    </div>
-                  </motion.div>
-                ))}
-                
-                {/* Navigation Controls */}
-                <div className="absolute top-4 right-4 z-20">
-                  <div className="flex items-center space-x-2">
-                    <button
-                      onClick={prevHeroImage}
-                      className={`p-2 rounded-full backdrop-blur-sm transition-all duration-300 ${isDark 
-                          ? 'bg-slate-800/70 border border-slate-700/50 text-white hover:bg-blue-500/30 hover:border-blue-400/50 hover:shadow-glow' 
-                          : 'bg-white/80 border border-slate-200/50 text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:shadow-md'}`}
-                    >
-                      <ChevronLeft className="w-5 h-5" />
-                    </button>
-                    <div className="flex space-x-1">
-                      {heroImages.map((_, index) => (
-                        <button
-                          key={index}
-                          onClick={() => goToHeroImage(index)}
-                          className={`w-2 h-2 rounded-full transition-all duration-300 ${index === activeHeroImage 
-                              ? (isDark ? 'bg-blue-400 w-4' : 'bg-blue-600 w-4') 
-                              : (isDark ? 'bg-slate-700/70 hover:bg-slate-600/70' : 'bg-slate-300/70 hover:bg-slate-400/70')}`}
-                        />
-                      ))}
-                    </div>
-                    <button
-                      onClick={nextHeroImage}
-                      className={`p-2 rounded-full backdrop-blur-sm transition-all duration-300 ${isDark 
-                          ? 'bg-slate-800/70 border border-slate-700/50 text-white hover:bg-blue-500/30 hover:border-blue-400/50 hover:shadow-glow' 
-                          : 'bg-white/80 border border-slate-200/50 text-slate-700 hover:bg-blue-50 hover:border-blue-300 hover:shadow-md'}`}
-                    >
-                      <ChevronRightIcon className="w-5 h-5" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
             {/* Hero Content */}
             <div className="text-center">
@@ -377,9 +296,9 @@ const Home = () => {
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white shadow-sm hover:shadow-blue-500/25' 
                       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-sm hover:shadow-xl'}`}
                 >
-                  <Rocket className="w-5 h-5 mr-2" />
+                  <FaRocket className="w-5 h-5 mr-2" />
                   <span>Start Your Digital Transformation</span>
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   <div className={`absolute inset-0 rounded-lg blur opacity-30 group-hover:opacity-50 -z-10 ${isDark 
                       ? 'bg-gradient-to-r from-blue-400 to-cyan-400' 
                       : 'bg-gradient-to-r from-blue-500 to-blue-600'}`} />
@@ -392,7 +311,7 @@ const Home = () => {
                       : 'border-blue-600/50 text-blue-600 hover:border-blue-600 hover:bg-blue-50 shadow-md hover:shadow-lg'}`}
                 >
                   Explore AI Solutions
-                  <ChevronRight className="ml-2 w-4 h-4" />
+                  <FaChevronRight className="ml-2 w-4 h-4" />
                 </Link>
               </motion.div>
 
@@ -407,25 +326,25 @@ const Home = () => {
                   { 
                     number: "500+", 
                     label: "Projects Delivered",
-                    icon: TrendingUp,
+                    icon: FaChartBar,
                     description: "Successful implementations"
                   },
                   { 
                     number: "150+", 
                     label: "Enterprise Clients",
-                    icon: Users,
+                    icon: FaUsers,
                     description: "Global partnerships"
                   },
                   { 
                     number: "99.9%", 
                     label: "System Uptime",
-                    icon: Server,
+                    icon: FaServer,
                     description: "Guaranteed reliability"
                   },
                   { 
                     number: "24/7", 
                     label: "AI Support",
-                    icon: Clock,
+                    icon: FaClock,
                     description: "Always available"
                   },
                 ].map((stat, index) => (
@@ -500,7 +419,7 @@ const Home = () => {
                     <span className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium border ${isDark 
                         ? 'bg-blue-500/10 border-blue-400/20 text-blue-400' 
                         : 'bg-blue-50 border-blue-200 text-blue-600'}`}>
-                      <Target className="w-4 h-4 mr-2" />
+                      <FaCrosshairs className="w-4 h-4 mr-2" />
                       {section.reversed ? 'Enterprise Solution' : 'Core Technology'}
                     </span>
                     
@@ -542,7 +461,7 @@ const Home = () => {
                             : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-md'}`}
                       >
                         <span>Learn More</span>
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </div>
                   </div>
@@ -569,25 +488,25 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  icon: Award,
+                  icon: FaAward,
                   title: "Proven Expertise",
                   description: "8+ years of experience delivering complex enterprise solutions with measurable ROI",
                   color: isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-700"
                 },
                 {
-                  icon: ZapIcon,
+                  icon: FaBolt,
                   title: "Rapid Deployment",
                   description: "Agile development approach ensures faster time to market for your solutions",
                   color: isDark ? "from-red-500 to-orange-500" : "from-red-700 to-orange-800"
                 },
                 {
-                  icon: UsersIcon,
+                  icon: FaUsers,
                   title: "Dedicated Teams",
                   description: "Skilled professionals who become an extension of your in house team",
                   color: isDark ? "from-violet-600 to-violet-500" : "from-violet-800 to-violet-700"
                 },
                 {
-                  icon: ShieldIcon,
+                  icon: FaShieldAlt,
                   title: "Enterprise Security",
                   description: "Highest security standards with compliance certifications and regular audits",
                   color: isDark ? "from-green-500 to-green-600" : "from-green-700 to-green-800"
@@ -636,25 +555,25 @@ const Home = () => {
                   number: "01",
                   title: "Discovery & Analysis",
                   description: "Deep dive into your business needs, challenges, and objectives",
-                  icon: TargetIcon
+                  icon: FaCrosshairs
                 },
                 {
                   number: "02",
                   title: "Solution Design",
                   description: "Architect the optimal technical solution with detailed planning",
-                  icon: Code
+                  icon: FaCode
                 },
                 {
                   number: "03",
                   title: "Development & Testing",
                   description: "Agile development with continuous integration and rigorous testing",
-                  icon: Cpu
+                  icon: FaLaptop
                 },
                 {
                   number: "04",
                   title: "Deployment & Support",
                   description: "Seamless deployment and ongoing support for long term success",
-                  icon: Shield
+                  icon: FaShieldAlt
                 }
               ].map((step, index) => (
                 <div
@@ -725,7 +644,7 @@ const Home = () => {
                       : 'bg-white/70 border-slate-200/50 hover:border-blue-300/50 hover:bg-white/90 shadow-lg hover:shadow-xl'}`}
                 >
                   <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${story.color} rounded-lg mb-4`}>
-                    <CheckCircle className="w-6 h-6 text-white" />
+                    <FaCheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h3 className={`text-xl font-semibold mb-3 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>
                     {story.title}
@@ -787,7 +706,7 @@ const Home = () => {
                             <div className={`absolute -bottom-2 -right-2 w-12 h-12 rounded-full flex items-center justify-center ${isDark 
                                 ? 'bg-gradient-to-r from-blue-600 to-cyan-600' 
                                 : 'bg-gradient-to-r from-blue-600 to-blue-700'}`}>
-                              <Quote className="w-6 h-6 text-white" />
+                              <FaQuoteRight className="w-6 h-6 text-white" />
                             </div>
                           </div>
                           
@@ -806,7 +725,7 @@ const Home = () => {
                             {/* Rating */}
                             <div className="flex justify-center lg:justify-start mb-4">
                               {[...Array(5)].map((_, i) => (
-                                <Star
+                                <FaStar
                                   key={i}
                                   className={`w-5 h-5 ${i < testimonials[activeTestimonial].rating 
                                     ? (isDark ? 'text-yellow-400' : 'text-yellow-500') 
@@ -819,11 +738,11 @@ const Home = () => {
                             {/* Project Info */}
                             <div className={`text-sm space-y-2 ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
                               <div className="flex items-center">
-                                <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
+                                <FaCheckCircle className="w-4 h-4 mr-2 text-green-500" />
                                 <span>{testimonials[activeTestimonial].project}</span>
                               </div>
                               <div className="flex items-center">
-                                <Clock className="w-4 h-4 mr-2 text-blue-500" />
+                                <FaClock className="w-4 h-4 mr-2 text-blue-500" />
                                 <span>{testimonials[activeTestimonial].duration}</span>
                               </div>
                             </div>
@@ -872,7 +791,7 @@ const Home = () => {
                         ? 'bg-slate-800/50 border border-slate-700/50 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/50 hover:shadow-glow' 
                         : 'bg-white/70 border border-slate-200/50 text-blue-600 hover:bg-blue-50 hover:border-blue-300 hover:shadow-md'}`}
                   >
-                    <ChevronLeft className="w-5 h-5" />
+                    <FaChevronLeft className="w-4 h-4" />
                   </button>
                   
                   {/* Dots Indicator */}
@@ -894,7 +813,7 @@ const Home = () => {
                         ? 'bg-slate-800/50 border border-slate-700/50 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/50 hover:shadow-glow' 
                         : 'bg-white/70 border border-slate-200/50 text-blue-600 hover:bg-blue-50 hover:border-blue-300 hover:shadow-md'}`}
                   >
-                    <ChevronRightIcon className="w-5 h-5" />
+                    <FaChevronRight className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -930,9 +849,9 @@ const Home = () => {
                         ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white shadow-lg hover:shadow-blue-500/25' 
                         : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl'}`}
                   >
-                    <Rocket className="w-5 h-5 mr-2" />
+                    <FaRocket className="w-5 h-5 mr-2" />
                     <span>Start Your Project</span>
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     <div className={`absolute inset-0 rounded-lg blur opacity-30 group-hover:opacity-50 -z-10 ${isDark 
                         ? 'bg-gradient-to-r from-blue-400 to-cyan-400' 
                         : 'bg-gradient-to-r from-blue-500 to-blue-600'}`} />
@@ -945,7 +864,7 @@ const Home = () => {
                         : 'border-blue-600/50 text-blue-600 hover:border-blue-600 hover:bg-blue-50 shadow-md hover:shadow-lg'}`}
                   >
                     View Case Studies
-                    <ChevronRight className="ml-2 w-4 h-4" />
+                    <FaChevronRight className="ml-2 w-4 h-4" />
                   </Link>
                 </div>
                 

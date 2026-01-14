@@ -1,15 +1,18 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Code, Database, Cloud, Smartphone, Brain, Shield, ArrowRight, Cpu, Zap, Server, Terminal, Sparkles, Layers, GitBranch, Lock, Rocket, TrendingUp, CheckCircle, Users, Globe } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 import { useTheme } from '../contexts/ThemeContext';
+import { FaArrowRight, FaCloud, FaCode, FaDatabase, FaGlobe, FaLaptopCode, FaLayerGroup, FaRobot, FaRocket, FaUsers } from 'react-icons/fa6';
+import { FaCheckCircle, FaShieldAlt } from 'react-icons/fa';
+import { LuSparkles, LuTrendingUp } from 'react-icons/lu';
+import { IoGitBranchOutline } from 'react-icons/io5';
 
 const Technologies = () => {
   const { isDark } = useTheme();
 
   const techCategories = [
     {
-      icon: Code,
+      icon: FaCode,
       title: "Frontend Development",
       description: "Crafting exceptional user experiences with modern frameworks",
       highlight: "Pixel perfect responsive designs",
@@ -23,7 +26,7 @@ const Technologies = () => {
       ]
     },
     {
-      icon: Database,
+      icon: FaDatabase,
       title: "Backend & Databases",
       description: "Robust server solutions for scalable applications",
       highlight: "High performance data management",
@@ -37,7 +40,7 @@ const Technologies = () => {
       ]
     },
     {
-      icon: Cloud,
+      icon: FaCloud,
       title: "Cloud & DevOps",
       description: "Enterprise grade infrastructure and deployment",
       highlight: "Automated CI/CD pipelines",
@@ -51,7 +54,7 @@ const Technologies = () => {
       ]
     },
     {
-      icon: Brain,
+      icon: FaRobot,
       title: "AI & Machine Learning",
       description: "Intelligent solutions powered by advanced AI",
       highlight: "Custom ML models & integrations",
@@ -68,25 +71,25 @@ const Technologies = () => {
 
   const capabilities = [
     {
-      icon: Rocket,
+      icon: FaRocket,
       title: "Rapid Prototyping",
       description: "From concept to MVP in weeks, not months",
       color: isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-800"
     },
     {
-      icon: Shield,
+      icon: FaShieldAlt,
       title: "Enterprise Security",
       description: "SOC2 compliant with end-to-end encryption",
       color: isDark ? "from-green-500 to-emerald-500" : "from-green-600 to-emerald-700"
     },
     {
-      icon: TrendingUp,
+      icon: LuTrendingUp,
       title: "Scalable Architecture",
       description: "Designed to handle millions of users",
       color: isDark ? "from-purple-500 to-violet-500" : "from-purple-600 to-violet-700"
     },
     {
-      icon: Users,
+      icon: FaUsers,
       title: "Team Augmentation",
       description: "Seamless integration with your existing teams",
       color: isDark ? "from-orange-500 to-amber-500" : "from-orange-600 to-amber-700"
@@ -94,12 +97,12 @@ const Technologies = () => {
   ];
 
   const clientBenefits = [
-    { icon: CheckCircle, text: "Reduced time to market by 40%" },
-    { icon: CheckCircle, text: "Scalable infrastructure saving 30% on cloud costs" },
-    { icon: CheckCircle, text: "24/7 monitoring and proactive maintenance" },
-    { icon: CheckCircle, text: "Regular security audits and compliance checks" },
-    { icon: CheckCircle, text: "Dedicated technical support team" },
-    { icon: CheckCircle, text: "Future proof technology stack" }
+    { icon: FaCheckCircle, text: "Reduced time to market by 40%" },
+    { icon: FaCheckCircle, text: "Scalable infrastructure saving 30% on cloud costs" },
+    { icon: FaCheckCircle, text: "24/7 monitoring and proactive maintenance" },
+    { icon: FaCheckCircle, text: "Regular security audits and compliance checks" },
+    { icon: FaCheckCircle, text: "Dedicated technical support team" },
+    { icon: FaCheckCircle, text: "Future proof technology stack" }
   ];
 
   return (
@@ -126,7 +129,7 @@ const Technologies = () => {
                 className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 border transition-all duration-300 ${isDark 
                     ? 'bg-blue-500/10 border-blue-400/20 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/30' 
                     : 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 shadow-sm'}`}>
-                <Sparkles className="w-4 h-4 mr-2" />
+                <LuSparkles className="w-4 h-4 mr-2" />
                 Trusted by industry leaders
               </motion.span>
             
@@ -151,16 +154,16 @@ const Technologies = () => {
                   ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white hover:shadow-cyan-500/30' 
                   : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white hover:shadow-2xl'}`}
               >
-                <Cpu className="w-4 h-4 sm:w-6 sm:h-6 mr-2 sm:mr-3 flex-shrink-0" />
+                <FaLaptopCode className="w-4 h-4 sm:w-6 sm:h-6 mr-2 sm:mr-3 flex-shrink-0" />
                 <span className="truncate">Start Your Tech Journey</span>
-                <ArrowRight className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform flex-shrink-0" />
+                <FaArrowRight className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform flex-shrink-0" />
               </Link>
               
               <div className="flex items-center space-x-4 sm:space-x-6 pt-4 sm:pt-0">
                 <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0 ${isDark 
                   ? 'bg-white/10 border border-white/20' 
                   : 'bg-white/80 border border-blue-100 shadow-lg'}`}>
-                  <Globe className={`w-6 h-6 sm:w-8 sm:h-8 ${isDark ? 'text-cyan-400' : 'text-blue-600'}`} />
+                  <FaGlobe className={`w-6 h-6 sm:w-8 sm:h-8 ${isDark ? 'text-cyan-400' : 'text-blue-600'}`} />
                 </div>
                 <div className="text-left">
                   <div className={`text-xl sm:text-2xl font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>50+</div>
@@ -503,7 +506,7 @@ const Technologies = () => {
               ? 'bg-slate-900/40 border border-slate-700/50' 
               : 'bg-white/10 border border-white/20'}`}
           >
-            <Sparkles className={`w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 mx-auto mb-4 sm:mb-4 md:mb-5 ${isDark ? 'text-cyan-400' : 'text-white'}`} />
+            <LuSparkles className={`w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 mx-auto mb-4 sm:mb-4 md:mb-5 ${isDark ? 'text-cyan-400' : 'text-white'}`} />
             
             <h2 className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-4 md:mb-5 ${isDark ? 'text-white' : 'text-white'}`}>
               Ready to Transform Your
@@ -525,7 +528,7 @@ const Technologies = () => {
               >
                 <span className="flex items-center justify-center">
                   Start Conversation
-                  <ArrowRight className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform flex-shrink-0" />
+                  <FaArrowRight className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform flex-shrink-0" />
                 </span>
               </Link>
               
@@ -551,10 +554,10 @@ const Technologies = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-6">
             {[
-              { value: "200+", label: "Projects Delivered", icon: Layers },
-              { value: "99.9%", label: "Client Satisfaction", icon: CheckCircle },
-              { value: "50+", label: "Technologies", icon: GitBranch },
-              { value: "24/7", label: "Support", icon: Shield }
+              { value: "200+", label: "Projects Delivered", icon: FaLayerGroup },
+              { value: "99.9%", label: "Client Satisfaction", icon: FaCheckCircle },
+              { value: "50+", label: "Technologies", icon: IoGitBranchOutline },
+              { value: "24/7", label: "Support", icon: FaShieldAlt }
             ].map((stat, index) => (
               <motion.div
                 key={index}

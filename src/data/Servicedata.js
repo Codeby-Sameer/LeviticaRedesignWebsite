@@ -17,7 +17,7 @@ import {
   FaShieldAlt,
   FaServer,
   FaFlask,
-  FaBrain,
+  FaRobot,
 
  
 } from 'react-icons/fa';
@@ -371,7 +371,7 @@ export const servicesData = [
   },
   {
     id: 'ai-machine-learning',
-    icon: FaBrain,
+    icon: FaRobot,
     title: "AI & Machine Learning",
     image: '/services/ai-machine-learning.jpg',
     shortDescription: "Smart AI-driven solutions to automate workflows and enhance efficiency.",

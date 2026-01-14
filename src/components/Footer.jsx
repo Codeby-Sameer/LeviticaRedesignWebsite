@@ -208,11 +208,10 @@
 
 
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Linkedin, Twitter, Github, Instagram, Facebook, ExternalLink, ChevronRight, Globe, Shield, Heart } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { Link } from 'react-router-dom';
-import { FaXTwitter } from 'react-icons/fa6';
-import {FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaWhatsapp, FaYoutube,} from 'react-icons/fa';
+import { FaXTwitter,FaGlobe, FaHeart } from 'react-icons/fa6';
+import {FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaMap, FaPhone, FaWhatsapp, FaYoutube,} from 'react-icons/fa';
 
 const Footer = () => {
   const { isDark } = useTheme();
@@ -267,9 +266,9 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: '', href: 'mailto:info@leviticatechnologies.com' },
-    { icon: Phone, text: '+91 9032503559', href: 'tel:+919032503559' },
-    { icon: MapPin, text: `Office #409, 4th Floor, Jain sadguru image's capital park, Ayyappa Society, VIP Hills, Silicon Valley, Madhapur, Hyderabad, Telangana 500081`, href: 'https://maps.google.com' },
+    { icon: FaEnvelope, text: '', href: 'mailto:info@leviticatechnologies.com' },
+    { icon: FaPhone, text: '+91 9032503559', href: 'tel:+919032503559' },
+    { icon: FaMap, text: `Office #409, 4th Floor, Jain sadguru image's capital park, Ayyappa Society, VIP Hills, Silicon Valley, Madhapur, Hyderabad, Telangana 500081`, href: 'https://maps.google.com' },
   ];
 
   return (
@@ -351,7 +350,7 @@ const Footer = () => {
                 ))}
               </div>
               <div className="flex items-center space-x-2 text-sm text-blue-100/60">
-                <Globe className="w-4 h-4" />
+                <FaGlobe className="w-4 h-4" />
                 <span>Global Presence: US • UK • India • Singapore</span>
               </div>
             </div>
@@ -395,7 +394,7 @@ const Footer = () => {
             </p>
             <span className="text-blue-100/50">•</span>
             <div className="flex items-center gap-1 text-xs text-blue-100/60">
-              <Heart className="w-3 h-3" />
+              <FaHeart className="w-3 h-3" />
               <span>Made with passion for innovation</span>
             </div>
           </div>

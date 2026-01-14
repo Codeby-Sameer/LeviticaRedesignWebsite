@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Mail, Phone, MapPin, MessageSquare, Send, Clock, Globe, ArrowRight, Target, CheckCircle, Users, Zap } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 import { useTheme } from '../contexts/ThemeContext';
+import { FaClock, FaEnvelope, FaGlobe, FaMapLocationDot, FaPaperPlane, FaPhone, FaSignalMessenger } from 'react-icons/fa6';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
   const { isDark } = useTheme();
@@ -46,28 +47,28 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: Mail,
+      icon: FaEnvelope,
       title: "Email Us",
       details: "info@leviticatechnologies.com",
       subtitle: "Response within 4 hours",
       color: isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-800"
     },
     {
-      icon: Phone,
+      icon: FaPhone,
       title: "Call Us",
       details: " +91 9032503559",
       subtitle: "Mon-Fri, 9 AM - 6 PM PST",
       color: isDark ? "from-green-500 to-green-500" : "from-green-700 to-green-900"
     },
     {
-      icon: MapPin,
+      icon: FaMapMarkerAlt,
       title: "Visit Us",
       details: "Jain Sadguru Image's Capital Park, Ayyappa Society, Madhapur, Hyderabad, Telangana 500081.",
       subtitle: "Schedule an appointment",
       color: isDark ? "from-purple-600 to-purple-500" : "from-purple-600 to-purple-600"
     },
     {
-      icon: Clock,
+      icon: FaClock,
       title: "24/7 Support",
       details: "Emergency Hotline",
       subtitle: "+91 9032503559",
@@ -103,7 +104,7 @@ const Contact = () => {
             <span className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 border transition-all duration-300 ${isDark 
                 ? 'bg-blue-500/10 border-blue-400/20 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/30' 
                 : 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 shadow-sm'}`}>
-              <MessageSquare className="w-4 h-4 mr-2" />
+              <FaSignalMessenger className="w-4 h-4 mr-2" />
               Get in Touch
             </span>
             
@@ -345,7 +346,7 @@ const Contact = () => {
                     </>
                   ) : (
                     <>
-                      <Send className="w-5 h-5 mr-2" />
+                      <FaPaperPlane className="w-5 h-5 mr-2" />
                       Send Message
                     </>
                   )}
@@ -418,7 +419,7 @@ const Contact = () => {
                   : 'bg-white/70 border-slate-200/50 shadow-lg'}`}>
                 <div className="flex items-center mb-4">
                   <div className={`p-2 rounded-lg ${isDark ? 'bg-blue-500/20' : 'bg-blue-100'} mr-3`}>
-                    <Globe className={`w-5 h-5 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+                    <FaGlobe className={`w-5 h-5 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
                   </div>
                   <h3 className={`text-xl font-semibold transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>
                     Global Reach, Local Expertise
@@ -446,7 +447,7 @@ const Contact = () => {
       
       {/* Google Map */}
       <div style={{ textAlign: "center", padding: "20px" }}>
-        <h2 className='text-3xl font-bold mb-4' >Hyderabad</h2>
+        <h2 className='text-3xl font-bold mb-4' ><FaMapLocationDot className='inline-block mr-2 text-purple-600' /> Hyderabad</h2>
         <div className='w-full h-[400px]'>
           <iframe
             title="Hyderabad Map"

@@ -1,11 +1,11 @@
 // aiSolutionsData.js
 
-import { MessageSquare, TrendingUp, Cpu, Brain, Eye, Target, Zap, Cloud, Shield, Database, Code, Users, BarChart, Globe, Lock, RefreshCw, Sparkles, Layers, Filter, PieChart, LineChart, Settings, Terminal, BookOpen, Headphones, Fingerprint, Camera, Grid, Search, Palette, ShieldCheck, Bot, Sparkles as SparklesIcon, Target as TargetIcon, Zap as ZapIcon } from 'lucide-react';
+import { FaChartLine, FaLaptop, FaRegMessage, FaLaptopCode, FaEye, FaRobot, FaCrosshairs } from 'react-icons/fa6';
 
 export const aiSolutionsData = [
   {
     id: 'intelligent-chatbot-solution',
-    icon: MessageSquare,
+    icon: FaRegMessage,
     title: 'Intelligent Chatbot Solution',
     shortDescription: 'AI-powered conversational platform that automates customer interactions with human-like understanding.',
     fullDescription: 'Transform customer engagement with our end-to-end Intelligent Chatbot Solution. Deploy AI chatbots that understand context, learn from conversations, and provide 24/7 support across all channels.',
@@ -116,7 +116,7 @@ This isn't just a chatbot; it's a complete customer engagement transformation. W
 
   {
     id: 'predictive-analytics-solution',
-    icon: TrendingUp,
+    icon: FaChartLine,
     title: 'Predictive Analytics Solution',
     shortDescription: 'Complete AI-powered forecasting platform that turns data into actionable business predictions.',
     fullDescription: 'Our Predictive Analytics Solution provides enterprise-grade forecasting capabilities powered by machine learning, delivering accurate predictions and actionable insights for strategic decision-making.',
@@ -227,7 +227,7 @@ We don't just deliver predictions; we deliver a complete ecosystem for data-driv
 
   {
     id: 'ai-process-automation-solution',
-    icon: Cpu,
+    icon: FaLaptopCode,
     title: 'AI Process Automation Solution',
     shortDescription: 'End-to-end automation platform that transforms business processes with intelligent decision-making capabilities.',
     fullDescription: 'Our AI Process Automation Solution combines robotic process automation (RPA) with artificial intelligence to create intelligent workflows that learn, adapt, and optimize business processes automatically.',
@@ -338,7 +338,7 @@ We transform your existing processes into intelligent workflows that reduce erro
 
   {
     id: 'computer-vision-solution',
-    icon: Eye,
+    icon: FaEye,
     title: 'Computer Vision Solution',
     shortDescription: 'Complete visual intelligence platform for automated inspection, analysis, and recognition tasks.',
     fullDescription: 'Our Computer Vision Solution provides advanced image and video analysis capabilities for quality control, security, surveillance, and automated visual inspection across multiple industries.',
@@ -449,7 +449,7 @@ Whether you need to automate quality control on a production line, enhance secur
 
   {
     id: 'ai-decision-support-solution',
-    icon: Brain,
+    icon: FaRobot,
     title: 'AI Decision Support Solution',
     shortDescription: 'Intelligent decision-making platform that analyzes complex data to provide optimal recommendations.',
     fullDescription: 'Our AI Decision Support Solution processes multiple variables and constraints to deliver data-driven recommendations, enabling faster and more accurate strategic decisions across your organization.',
@@ -561,7 +561,7 @@ Whether you're optimizing supply chains, making investment decisions, or plannin
 
   {
     id: 'personalization-engine-solution',
-    icon: Target,
+    icon: FaCrosshairs,
     title: 'AI Personalization Engine Solution',
     shortDescription: 'Advanced personalization platform that creates unique user experiences based on behavior and preferences.',
     fullDescription: 'Our AI Personalization Engine Solution delivers hyper-personalized content, product recommendations, and user experiences that increase engagement, conversion, and customer loyalty.',

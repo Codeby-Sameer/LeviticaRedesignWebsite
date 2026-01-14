@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
-import { Code, Smartphone, Cloud, Users, Cog, BarChart, ArrowRight, Target, Zap, CheckCircle, Calendar, ExternalLink, Briefcase, TrendingUp, FileText, Users as UsersIcon, Scale, Calculator } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
 import { useTheme } from '../contexts/ThemeContext';
 import { servicesData } from '../data/Servicedata';
 import { businessServicesData } from '../data/Servicedata';
+import { FaArrowRight, FaBolt, FaBriefcase, FaBuilding, FaClock, FaCode, FaCrosshairs, FaLaptopCode, FaRegCalendarDays, FaStar, FaUsers } from 'react-icons/fa6';
+import { FaCheckCircle, FaCheckSquare, FaExternalLinkAlt, FaShieldAlt } from 'react-icons/fa';
+import { PiTargetBold } from 'react-icons/pi';
 
 // Service data moved to separate file for reusability
 
@@ -40,7 +42,7 @@ const Services = () => {
                 ? 'bg-blue-500/10 border-blue-400/20 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/30' 
                 : 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 shadow-sm'
             }`}>
-              <Target className="w-4 h-4 mr-2" />
+              <FaCrosshairs className="w-4 h-4 mr-2" />
               End-to-End Solutions
             </span>
             
@@ -82,7 +84,7 @@ const Services = () => {
                 ? 'bg-blue-500/10 border-blue-400/20 text-blue-400' 
                 : 'bg-blue-50 border-blue-200 text-blue-700'
             }`}>
-              <Code className="w-4 h-4 mr-2" />
+              <FaCode className="w-4 h-4 mr-2" />
               Technology Services
             </div>
             
@@ -118,7 +120,7 @@ const Services = () => {
                   <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color(isDark)} rounded-lg opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110`}>
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  <ExternalLink className={`w-5 h-5 transition-colors duration-300 ${
+                  <FaExternalLinkAlt className={`w-4 h-4 transition-colors duration-300 ${
                     isDark ? 'text-gray-500 group-hover:text-blue-400' : 'text-gray-400 group-hover:text-blue-600'
                   }`} />
                 </div>
@@ -133,7 +135,7 @@ const Services = () => {
                 <div className="space-y-2 mb-4">
                   {service.features.slice(0, 3).map((feature, i) => (
                     <div key={i} className="flex items-start">
-                      <CheckCircle className={`w-4 h-4 mt-0.5 mr-2 flex-shrink-0 ${
+                      <FaCheckCircle className={`w-3 h-3 mt-0.5 mr-2 flex-shrink-0 ${
                         isDark ? 'text-blue-400' : 'text-blue-600'
                       }`} />
                       <span className={`text-sm transition-colors duration-300 ${
@@ -147,7 +149,7 @@ const Services = () => {
                   isDark ? 'text-blue-400' : 'text-blue-600'
                 }`}>
                   Learn more
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  <FaArrowRight className="w-3 h-3 ml-1 mt-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </motion.div>
             ))}
@@ -171,7 +173,7 @@ const Services = () => {
                 ? 'bg-purple-500/10 border-purple-400/20 text-purple-400' 
                 : 'bg-purple-50 border-purple-200 text-purple-700'
             }`}>
-              <Briefcase className="w-4 h-4 mr-2" />
+              <FaBriefcase className="w-4 h-4 mr-2" />
               Business Solutions
             </div>
             
@@ -207,7 +209,7 @@ const Services = () => {
                   <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color(isDark)} rounded-lg opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110`}>
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  <ExternalLink className={`w-5 h-5 transition-colors duration-300 ${
+                  <FaExternalLinkAlt className={`w-4 h-4 transition-colors duration-300 ${
                     isDark ? 'text-gray-500 group-hover:text-purple-400' : 'text-gray-400 group-hover:text-purple-600'
                   }`} />
                 </div>
@@ -222,7 +224,7 @@ const Services = () => {
                 <div className="space-y-2 mb-4">
                   {service.features.slice(0, 3).map((feature, i) => (
                     <div key={i} className="flex items-start">
-                      <CheckCircle className={`w-4 h-4 mt-0.5 mr-2 flex-shrink-0 ${
+                      <FaCheckCircle className={`w-3 h-3 mt-0.5 mr-2 flex-shrink-0 ${
                         isDark ? 'text-purple-400' : 'text-purple-600'
                       }`} />
                       <span className={`text-sm transition-colors duration-300 ${
@@ -236,7 +238,7 @@ const Services = () => {
                   isDark ? 'text-purple-400' : 'text-purple-600'
                 }`}>
                   Learn more
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  <FaArrowRight className="w-3 h-3 ml-1 mt-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </motion.div>
             ))}
@@ -251,10 +253,10 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
-              { value: "200+", label: "Business Clients", icon: "🏢", color: "from-purple-600 to-pink-600" },
-              { value: "500+", label: "Tech Projects", icon: "💻", color: "from-blue-600 to-cyan-600" },
-              { value: "98%", label: "Client Satisfaction", icon: "⭐", color: "from-green-600 to-emerald-600" },
-              { value: "50+", label: "Industry Experts", icon: "👥", color: "from-orange-600 to-red-600" },
+              { value: "200+", label: "Business Clients", icon: FaBuilding , color: "from-purple-600 to-pink-600" },
+              { value: "500+", label: "Tech Projects", icon: FaLaptopCode, color: "from-blue-600 to-cyan-600" },
+              { value: "98%", label: "Client Satisfaction", icon: FaStar, color: "from-green-600 to-emerald-600" },
+              { value: "50+", label: "Industry Experts", icon: FaUsers, color: "from-orange-600 to-red-600" },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -268,7 +270,9 @@ const Services = () => {
                     : 'bg-white/50 border-slate-200/50 shadow-sm'
                 }`}
               >
-                <div className="text-3xl mb-3">{item.icon}</div>
+                <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${item.color} rounded-full mb-4`}>
+                  <item.icon className="w-6 h-6 text-white" />
+                </div>
                 <div className={`text-2xl md:text-3xl font-bold bg-gradient-to-r bg-clip-text text-transparent ${
                   isDark ? item.color : item.color.replace('600', '500')
                 }`}>
@@ -310,28 +314,28 @@ const Services = () => {
             {[
               {
                 step: "01",
-                icon: Target,
+                icon: PiTargetBold,
                 title: "Discovery & Strategy",
                 description: "Deep analysis of requirements, stakeholder interviews, and strategic planning.",
                 color: isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-700"
               },
               {
                 step: "02", 
-                icon: Code,
+                icon: FaCode,
                 title: "Design & Architecture",
                 description: "System design, UI/UX planning, and technical architecture documentation.",
                 color: isDark ? "from-cyan-500 to-blue-500" : "from-blue-700 to-blue-800"
               },
               {
                 step: "03",
-                icon: Zap,
+                icon: FaBolt,
                 title: "Development & Integration",
                 description: "Agile development with continuous integration and regular client feedback.",
                 color: isDark ? "from-blue-600 to-purple-500" : "from-blue-800 to-indigo-700"
               },
               {
                 step: "04",
-                icon: CheckCircle,
+                icon: FaCheckSquare,
                 title: "Deployment & Support",
                 description: "Production deployment, monitoring setup, and ongoing maintenance support.",
                 color: isDark ? "from-purple-500 to-blue-600" : "from-indigo-700 to-blue-800"
@@ -352,9 +356,11 @@ const Services = () => {
               >
                 <div className="relative">
                   <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${process.color} rounded-full text-white font-bold text-lg mb-4`}>
-                    {process.step}
+                    <process.icon className={`w-5 h-5 ${
+                      isDark ? 'text-white-400' : 'text-white-600'
+                    }`} />
                   </div>
-                  <div className={`absolute -top-2 -right-2 w-10 h-10 rounded-full flex items-center justify-center ${
+                  {/* <div className={`absolute -top-2 -right-2 w-10 h-10 rounded-full flex items-center justify-center ${
                     isDark ? 'bg-slate-800' : 'bg-white'
                   } border ${
                     isDark ? 'border-slate-700' : 'border-slate-200'
@@ -362,7 +368,7 @@ const Services = () => {
                     <process.icon className={`w-5 h-5 ${
                       isDark ? 'text-blue-400' : 'text-blue-600'
                     }`} />
-                  </div>
+                  </div> */}
                 </div>
                 <h3 className={`text-xl font-semibold mb-3 transition-colors duration-300 ${
                   isDark ? 'text-white' : 'text-slate-900'
@@ -418,9 +424,9 @@ const Services = () => {
                       : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl'
                   }`}
                 >
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <FaRegCalendarDays className="w-5 h-5 mr-2" />
                   <span>Schedule a Consultation</span>
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   <div className={`absolute inset-0 rounded-lg blur opacity-30 group-hover:opacity-50 -z-10 ${
                     isDark 
                       ? 'bg-gradient-to-r from-blue-400 to-cyan-400' 
@@ -457,10 +463,10 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "Agile", label: "Development Methodology", icon: "⚡" },
-              { value: "99%", label: "Client Satisfaction", icon: "⭐" },
-              { value: "48hrs", label: "Average Response Time", icon: "⏱️" },
-              { value: "24/7", label: "Production Support", icon: "🛡️" },
+              { value: "Agile", label: "Development Methodology", icon: FaBolt },
+              { value: "99%", label: "Client Satisfaction", icon: FaStar },
+              { value: "48hrs", label: "Average Response Time", icon: FaClock },
+              { value: "24/7", label: "Production Support", icon: FaShieldAlt },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -470,7 +476,9 @@ const Services = () => {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-2xl mb-2">{item.icon}</div>
+                <div className={`inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r ${item.color} rounded-full text-white font-bold text-lg mb-4`}>
+                    <item.icon className={`w-7 h-7 text-purple-700 `} />
+                </div>
                 <div className={`text-2xl md:text-3xl font-bold bg-gradient-to-r bg-clip-text text-transparent ${
                   isDark 
                     ? 'from-blue-400 to-cyan-400' 
