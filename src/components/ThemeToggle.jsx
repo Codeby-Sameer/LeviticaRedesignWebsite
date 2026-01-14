@@ -33,9 +33,9 @@ const ThemeToggle = () => {
       </motion.div>
       
       {/* Glow effect */}
-      <div className={`absolute inset-0 rounded-lg blur-lg opacity-30 transition-all duration-300 ${
+      {/* <div className={`absolute inset-0 rounded-lg blur-lg opacity-30 transition-all duration-300 ${
         isDark ? 'bg-yellow-400' : 'bg-blue-600'
-      }`} />
+      }`} /> */}
     </motion.button>
   );
 };
