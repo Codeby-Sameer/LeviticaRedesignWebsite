@@ -43,7 +43,7 @@ const Services = () => {
                 : 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 shadow-sm'
             }`}>
               <FaCrosshairs className="w-4 h-4 mr-2" />
-              End-to-End Solutions
+              End t0 End Solutions
             </span>
             
             <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 transition-colors duration-300 ${
@@ -96,7 +96,7 @@ const Services = () => {
             <p className={`text-lg md:text-xl max-w-3xl mx-auto transition-colors duration-300 ${
               isDark ? 'text-gray-400' : 'text-slate-600'
             }`}>
-              From conception to deployment, we provide end-to-end services that transform your business vision into reality
+              From conception to deployment, we provide end to end services that transform your business vision into reality
             </p>
           </motion.div>
 

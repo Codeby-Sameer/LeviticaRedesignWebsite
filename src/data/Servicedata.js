@@ -30,7 +30,7 @@ export const servicesData = [
         title: "Web Development",
         image: '/services/web-development.jpg',
         shortDescription: "Custom websites and web applications built with modern technologies.",
-        fullDescription: "We create responsive, high-performance websites and web applications that deliver exceptional user experiences. Using cutting-edge technologies and best practices, we build solutions that are scalable, secure, and optimized for performance across all devices.",
+        fullDescription: "We create responsive, high-performance websites and web applications that deliver exceptional user experiences. Using cutting edge technologies and best practices, we build solutions that are scalable, secure, and optimized for performance across all devices.",
         detailedDescription: "Our web development services cover everything from simple business websites to complex web applications. We focus on creating intuitive user interfaces, fast loading times, and seamless functionality. Our approach combines aesthetic design with technical excellence to deliver web solutions that not only look great but also drive business results through improved user engagement and conversion rates.",
         features: [
         "Responsive Design",
@@ -53,11 +53,11 @@ export const servicesData = [
         {name: 'Docker'}
         ],
         benefits: [
-        "Pixel-perfect responsive designs",
+        "Pixel perfect responsive designs",
         "Improved search engine rankings",
         "Fast loading performance",
-        "Cross-browser compatibility",
-        "Mobile-first approach",
+        "Cross browser compatibility",
+        "Mobile first approach",
         "Easy content management"
         ],
         color: (isDark) => isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-800",
@@ -98,12 +98,12 @@ export const servicesData = [
     icon: FaMobileAlt,
     title: "Mobile App Development",
     image: '/services/mobile-app.jpg',
-    shortDescription: "Cross-platform apps with intuitive UX/UI design for iOS & Android.",
-    fullDescription: "We build native and cross-platform mobile applications that deliver exceptional user experiences. Our apps are designed with intuitive interfaces, smooth animations, and reliable performance that keep users engaged.",
-    detailedDescription: "Our mobile app development services cover both iOS and Android platforms using native and cross-platform technologies. We focus on creating apps that are not only visually appealing but also functionally robust, secure, and scalable.",
+    shortDescription: "Cross platform apps with intuitive UX/UI design for iOS & Android.",
+    fullDescription: "We build native and cross platform mobile applications that deliver exceptional user experiences. Our apps are designed with intuitive interfaces, smooth animations, and reliable performance that keep users engaged.",
+    detailedDescription: "Our mobile app development services cover both iOS and Android platforms using native and cross platform technologies. We focus on creating apps that are not only visually appealing but also functionally robust, secure, and scalable.",
     features: [
       "iOS & Android",
-      "Cross-platform",
+      "Cross platform",
       "Native Performance",
       "App Store Optimization"
     ],
@@ -123,9 +123,9 @@ export const servicesData = [
     ],
     benefits: [
       "Single codebase for multiple platforms",
-      "Native-like performance",
+      "Native like performance",
       "Faster time to market",
-      "Cost-effective development",
+      "Cost effective development",
       "Easy maintenance",
       "Enhanced user engagement"
     ],
@@ -148,7 +148,7 @@ export const servicesData = [
       "Development sprints",
       "Testing on real devices",
       "App store submission",
-      "Post-launch updates"
+      "Post launch updates"
     ],
     pricing: {
       basic: "Starting at $8,000",
@@ -192,7 +192,7 @@ export const servicesData = [
     ],
     benefits: [
       "99.9% uptime guarantee",
-      "Auto-scaling capabilities",
+      "Auto scaling capabilities",
       "Reduced deployment time",
       "Cost optimization",
       "Enhanced security",
@@ -306,7 +306,7 @@ export const servicesData = [
     title: "Software Testing & QA",
     image: '/services/software-testing.jpg',
     shortDescription: "Ensure software quality with comprehensive testing and quality assurance.",
-    fullDescription: "We provide thorough software testing and quality assurance services to ensure your applications are bug-free, performant, and deliver exceptional user experiences.",
+    fullDescription: "We provide thorough software testing and quality assurance services to ensure your applications are bug free, performant, and deliver exceptional user experiences.",
     detailedDescription: "Our QA services include manual and automated testing, performance testing, security testing, and usability testing to ensure your software meets the highest quality standards before release.",
     features: [
       "Desktop Apps",
@@ -329,7 +329,7 @@ export const servicesData = [
       {name: 'Docker'}
     ],
     benefits: [
-      "Bug-free software releases",
+      "Bug free software releases",
       "Improved user experience",
       "Reduced maintenance costs",
       "Faster time to market",
@@ -340,13 +340,13 @@ export const servicesData = [
     caseStudies: [
       { 
         title: "ERP System Testing", 
-        result: "99.9% bug-free release",
-        description: "Conducted comprehensive testing for an ERP system, resulting in 99.9% bug-free production release."
+        result: "99.9% bug free release",
+        description: "Conducted comprehensive testing for an ERP system, resulting in 99.9% bug free production release."
       },
       { 
         title: "Mobile App QA", 
         result: "5-star app store rating",
-        description: "Performed thorough testing on a mobile app, leading to consistent 5-star ratings on app stores."
+        description: "Performed thorough testing on a mobile app, leading to consistent 5 star ratings on app stores."
       }
     ],
     process: [
@@ -374,8 +374,8 @@ export const servicesData = [
     icon: FaRobot,
     title: "AI & Machine Learning",
     image: '/services/ai-machine-learning.jpg',
-    shortDescription: "Smart AI-driven solutions to automate workflows and enhance efficiency.",
-    fullDescription: "We develop AI and machine learning solutions that automate processes, provide intelligent insights, and enhance decision-making capabilities for businesses.",
+    shortDescription: "Smart AI driven solutions to automate workflows and enhance efficiency.",
+    fullDescription: "We develop AI and machine learning solutions that automate processes, provide intelligent insights, and enhance decision making capabilities for businesses.",
     detailedDescription: "Our AI/ML services include developing custom machine learning models, natural language processing, computer vision solutions, and predictive analytics to help businesses gain competitive advantages.",
     features: [
       "ML Models",
@@ -399,7 +399,7 @@ export const servicesData = [
     ],
     benefits: [
       "Automated workflows",
-      "Data-driven insights",
+      "Data driven insights",
       "Improved decision making",
       "Enhanced efficiency",
       "Predictive capabilities",
@@ -447,8 +447,8 @@ export const businessServicesData = [
     title: 'Startup & Business Consulting',
     image: '/services/startup-business.jpg',
     shortDescription: 'Strategic guidance for entrepreneurs and SMEs to scale efficiently and achieve sustainable growth.',
-    fullDescription: 'Our Startup & Business Consulting services provide comprehensive strategic guidance for entrepreneurs and small-to-medium enterprises looking to scale their operations efficiently. We combine market insights with practical business acumen to help you navigate growth challenges, secure funding, and build sustainable business models that stand the test of time.',
-    detailedDescription: 'In today\'s competitive business landscape, startups and SMEs need more than just good ideas—they need strategic direction and expert guidance. Our consulting services cover every aspect of business growth, from initial market entry strategies to scaling operations globally. We work closely with founders and leadership teams to develop customized growth plans, identify new market opportunities, optimize operations, and build investor relationships that fuel sustainable expansion.',
+    fullDescription: 'Our Startup & Business Consulting services provide comprehensive strategic guidance for entrepreneurs and small to medium enterprises looking to scale their operations efficiently. We combine market insights with practical business acumen to help you navigate growth challenges, secure funding, and build sustainable business models that stand the test of time.',
+    detailedDescription: 'In today\'s competitive business landscape, startups and SMEs need more than just good ideas they need strategic direction and expert guidance. Our consulting services cover every aspect of business growth, from initial market entry strategies to scaling operations globally. We work closely with founders and leadership teams to develop customized growth plans, identify new market opportunities, optimize operations, and build investor relationships that fuel sustainable expansion.',
     features: [
       'Business Strategy Development',
       'Market Analysis & Competitive Research',
@@ -523,14 +523,14 @@ export const businessServicesData = [
     title: 'Digital Marketing',
     image: '/services/digital marketing.jpg',
     shortDescription: 'Comprehensive digital marketing services including SEO, SEM, social media campaigns, and brand visibility.',
-    fullDescription: 'Transform your online presence with our full-spectrum digital marketing services. We create data-driven marketing strategies that increase brand visibility, drive qualified traffic, and generate measurable results. From search engine optimization to social media management, we help you connect with your target audience and achieve your business objectives.',
+    fullDescription: 'Transform your online presence with our full spectrum digital marketing services. We create data-driven marketing strategies that increase brand visibility, drive qualified traffic, and generate measurable results. From search engine optimization to social media management, we help you connect with your target audience and achieve your business objectives.',
     detailedDescription: 'In the digital age, effective marketing requires a strategic approach that combines creativity with data analysis. Our Digital Marketing services cover the entire spectrum of online marketing, helping businesses establish strong digital footprints and connect with their audiences across multiple channels. We focus on delivering measurable ROI through targeted campaigns, optimized content, and performance tracking that informs continuous improvement.',
     features: [
       'SEO & SEM Strategy & Execution',
       'Social Media Marketing & Management',
       'Content Marketing & Strategy',
       'Email Marketing Campaigns',
-      'Pay-Per-Click Advertising',
+      'Pay Per Click Advertising',
       'Conversion Rate Optimization',
       'Brand Development & Positioning',
       'Marketing Analytics & Reporting'
@@ -550,8 +550,8 @@ export const businessServicesData = [
       'Enhanced brand awareness and recognition',
       'Better customer engagement metrics',
       'Measurable ROI on marketing spend',
-      'Multi-channel marketing integration',
-      'Data-driven decision making'
+      'Multi channel marketing integration',
+      'Data driven decision making'
     ],
     color: (isDark) => isDark ? 'from-green-600 to-teal-600' : 'from-green-500 to-teal-500',
     caseStudies: [
@@ -568,7 +568,7 @@ export const businessServicesData = [
       { 
         title: 'Brand Awareness Campaign', 
         result: 'Reached 2M+ impressions',
-        description: 'Developed and ran multi-channel brand awareness campaign that achieved over 2 million impressions and significantly improved brand recognition.'
+        description: 'Developed and ran multi channel brand awareness campaign that achieved over 2 million impressions and significantly improved brand recognition.'
       }
     ],
     process: [
@@ -668,7 +668,7 @@ export const businessServicesData = [
       size: '2-4 specialists',
       roles: ['Content Strategist', 'Technical Writer', 'Copywriter', 'Editor', 'Translator']
     },
-    methodologies: ['Content-First Approach', 'SEO-Optimized Writing', 'User-Centered Documentation', 'Agile Content Development']
+    methodologies: ['Content-First Approach', 'SEO Optimized Writing', 'User Centered Documentation', 'Agile Content Development']
   },
   {
     id: 'hr-recruitment',
@@ -676,7 +676,7 @@ export const businessServicesData = [
     title: 'HR & Recruitment',
     image: '/services/HR and Recruitment.jpg',
     shortDescription: 'Comprehensive HR services including staffing, payroll management, compliance, and training programs.',
-    fullDescription: 'Build and manage high-performing teams with our comprehensive HR and recruitment services. We help you attract top talent, optimize HR processes, ensure compliance, and develop your workforce through effective training programs.',
+    fullDescription: 'Build and manage high performing teams with our comprehensive HR and recruitment services. We help you attract top talent, optimize HR processes, ensure compliance, and develop your workforce through effective training programs.',
     detailedDescription: 'Your people are your most valuable asset, and effective human resources management is critical to business success. Our HR & Recruitment services provide comprehensive support for all aspects of people management, from attracting and hiring top talent to developing and retaining your workforce. We combine deep HR expertise with modern recruitment strategies to help you build teams that drive business growth and innovation.',
     features: [
       'Talent Acquisition & Executive Search',
@@ -697,7 +697,7 @@ export const businessServicesData = [
       'Employee Engagement Tools'
     ],
     benefits: [
-      'Reduced time-to-hire by 50%',
+      'Reduced time to hire by 50%',
       'Improved employee retention rates',
       'Ensured legal compliance',
       'Enhanced workforce productivity',
@@ -711,7 +711,7 @@ export const businessServicesData = [
       { 
         title: 'Tech Talent Acquisition', 
         result: 'Filled 50+ positions in 3 months',
-        description: 'Managed end-to-end recruitment for a growing tech company, successfully filling over 50 technical positions within 3 months.'
+        description: 'Managed end to end recruitment for a growing tech company, successfully filling over 50 technical positions within 3 months.'
       },
       { 
         title: 'HR Process Automation', 
@@ -745,7 +745,7 @@ export const businessServicesData = [
       size: '2-5 specialists',
       roles: ['HR Manager', 'Recruitment Specialist', 'Payroll Administrator', 'Training Coordinator', 'Compliance Officer']
     },
-    methodologies: ['Competency-Based Hiring', 'Structured Interviewing', 'Performance Management Frameworks', 'Blended Learning Approaches']
+    methodologies: ['Competency Based Hiring', 'Structured Interviewing', 'Performance Management Frameworks', 'Blended Learning Approaches']
   },
   {
     id: 'legal-finance',
@@ -754,7 +754,7 @@ export const businessServicesData = [
     image: '/services/legal and finance.jpg',
     shortDescription: 'Business registration, bookkeeping, taxation, and intellectual property management services for sustainable financial growth.',
     fullDescription: 'Navigate the complexities of business law and finance with our expert services. We provide comprehensive support for business registration, financial management, tax planning, and intellectual property protection to ensure your business operates smoothly and compliantly.',
-    detailedDescription: 'Managing legal and financial aspects of business operations can be complex and time-consuming, especially as you scale. Our Legal & Finance services provide expert guidance and support across all aspects of business compliance, financial management, and legal protection. We help businesses establish solid foundations, optimize financial performance, ensure regulatory compliance, and protect valuable intellectual property assets.',
+    detailedDescription: 'Managing legal and financial aspects of business operations can be complex and time consuming, especially as you scale. Our Legal & Finance services provide expert guidance and support across all aspects of business compliance, financial management, and legal protection. We help businesses establish solid foundations, optimize financial performance, ensure regulatory compliance, and protect valuable intellectual property assets.',
     features: [
       'Business Registration & Incorporation',
       'Bookkeeping & Accounting Services',

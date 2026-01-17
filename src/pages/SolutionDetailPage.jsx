@@ -1292,7 +1292,7 @@ const SolutionDetailPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="lg:sticky lg:top-24 h-fit"
+              className="lg:sticky lg:top-32 h-fit"
             >
               <div className={`backdrop-blur-sm border rounded-2xl p-4 md:p-8 ${isDark 
                   ? 'bg-slate-800/70 border-slate-700/50' 

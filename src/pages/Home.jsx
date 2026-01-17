@@ -135,7 +135,7 @@ const Home = () => {
       name: "Jennifer Park",
       position: "Director of Operations, DataSystems",
       company: "Healthcare Analytics",
-      content: "The AI-driven analytics platform developed by Levitica revolutionized how we process patient data. We're now able to deliver insights 10x faster with 99.9% accuracy. Their support team is incredibly responsive.",
+      content: "The AI driven analytics platform developed by Levitica revolutionized how we process patient data. We're now able to deliver insights 10x faster with 99.9% accuracy. Their support team is incredibly responsive.",
       rating: 5,
       project: "Healthcare Analytics Platform",
       duration: "4-month implementation",
@@ -145,7 +145,7 @@ const Home = () => {
       name: "David Wilson",
       position: "CEO, CloudScale",
       company: "Enterprise SaaS Provider",
-      content: "Levitica's security framework implementation was flawless. They not only met all compliance requirements but also future-proofed our systems against emerging threats. Their expertise gave us peace of mind.",
+      content: "Levitica's security framework implementation was flawless. They not only met all compliance requirements but also future proofed our systems against emerging threats. Their expertise gave us peace of mind.",
       rating: 5,
       project: "Security Infrastructure",
       duration: "3-month security audit & implementation",
@@ -155,7 +155,7 @@ const Home = () => {
       name: "Priya Sharma",
       position: "Product Director, AI Labs",
       company: "AI Research & Development",
-      content: "The custom ML models developed by Levitica's team outperformed all our benchmarks. Their innovative approach to problem-solving and deep technical knowledge made this partnership incredibly valuable.",
+      content: "The custom ML models developed by Levitica's team outperformed all our benchmarks. Their innovative approach to problem solving and deep technical knowledge made this partnership incredibly valuable.",
       rating: 5,
       project: "Custom Machine Learning Models",
       duration: "9-month R&D collaboration",
@@ -172,7 +172,7 @@ const Home = () => {
         "Natural language processing",
         "Computer vision solutions",
         "Predictive analytics",
-        "AI-driven automation"
+        "AI driven automation"
       ],
       image: IMAGES.aiTechnology,
       icon: FaRobot,
@@ -279,7 +279,7 @@ const Home = () => {
                 </h1>
                 
                 <p className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 mb-8 ${isDark ? 'text-gray-300' : 'text-slate-600'}`}>
-                  We transform enterprises through cutting-edge AI solutions, cloud infrastructure, and intelligent automation. 
+                  We transform enterprises through cutting edge AI solutions, cloud infrastructure, and intelligent automation. 
                   Building tomorrow's technology today with precision, scalability, and innovation at the core.
                 </p>
               </motion.div>

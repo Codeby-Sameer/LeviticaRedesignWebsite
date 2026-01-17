@@ -101,7 +101,7 @@ const AISolutions = () => {
                 className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 mb-8 ${isDark ? 'text-gray-300' : 'text-slate-600'}`}
               >
                 Harness the power of artificial intelligence to transform your business operations, 
-                enhance decision-making, and create unprecedented competitive advantages.
+                enhance decision making, and create unprecedented competitive advantages.
               </motion.p>
 
               <motion.div
@@ -268,7 +268,7 @@ const AISolutions = () => {
                 AI Technology Expertise
               </h2>
               <p className={`text-lg md:text-xl mb-8 leading-relaxed transition-colors duration-300 ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
-                Our team masters cutting-edge AI technologies to deliver solutions that push the boundaries of what's possible.
+                Our team masters cutting edge AI technologies to deliver solutions that push the boundaries of what's possible.
               </p>
               
               <div className="space-y-6">
@@ -418,7 +418,7 @@ const AISolutions = () => {
               Why Choose Our AI Solutions?
             </h2>
             <p className={`text-lg md:text-xl max-w-3xl mx-auto transition-colors duration-300 ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
-              We deliver end-to-end AI solutions with proven results and measurable ROI
+              We deliver end to end AI solutions with proven results and measurable ROI
             </p>
           </motion.div>
 
