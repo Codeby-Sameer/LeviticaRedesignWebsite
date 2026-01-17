@@ -27,7 +27,7 @@ const Services = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="md:pt-28 pt-20 overflow-x-hidden"
+      className="md:pt-24 pt-20 overflow-x-hidden"
     >
       {/* Hero Section */}
       <AnimatedBackground className="min-h-[60vh] flex items-center justify-center">

@@ -1,5 +1,6 @@
 // aiSolutionsData.js
 
+import { image } from 'framer-motion/client';
 import { FaChartLine, FaLaptop, FaRegMessage, FaLaptopCode, FaEye, FaRobot, FaCrosshairs } from 'react-icons/fa6';
 
 export const aiSolutionsData = [
@@ -7,7 +8,11 @@ export const aiSolutionsData = [
     id: 'intelligent-chatbot-solution',
     icon: FaRegMessage,
     title: 'Intelligent Chatbot Solution',
-    imageUrl: '/services/web-development.jpg',
+    images: [
+      'https://media.istockphoto.com/id/1933417108/photo/ai-chatbot-artificial-intelligence-concept.jpg?s=612x612&w=0&k=20&c=5Snaez5rJ6USlEYcUZBIrCb8AK6GowyDsTC8lf6vkLs=',
+      'https://media.istockphoto.com/id/1474963602/photo/digital-chatbot-a-i-robot-application-conversation-assistant-ai-artificial-intelligence.jpg?s=612x612&w=0&k=20&c=Y8asw_JBqhNA3bLH6z1PWHAF8cVqRSKIweTNKiw6UAA=',
+      'https://media.istockphoto.com/id/1550542820/photo/quantum-computer-chip-with-funny-chatbot-artificial-intelligence-and-data-transfer-network.jpg?s=612x612&w=0&k=20&c=4ujNYJVdX04SXHtbShB3jA9yDueHSPWUTviBkgBQcsg='
+    ],
     shortDescription: 'AI-powered conversational platform that automates customer interactions with human-like understanding.',
     fullDescription: 'Transform customer engagement with our end-to-end Intelligent Chatbot Solution. Deploy AI chatbots that understand context, learn from conversations, and provide 24/7 support across all channels.',
     detailedDescription: `Our Intelligent Chatbot Solution is a complete AI-powered conversational platform designed to revolutionize customer interactions. We don't just build chatbots – we deliver comprehensive solutions that integrate seamlessly with your existing systems and scale with your business. <br>
@@ -119,6 +124,11 @@ This isn't just a chatbot; it's a complete customer engagement transformation. W
     id: 'predictive-analytics-solution',
     icon: FaChartLine,
     title: 'Predictive Analytics Solution',
+    images: [
+      'https://media.istockphoto.com/id/2193247029/photo/business-team-analyzing-interactive-digital-dashboards-with-data-visualizations.jpg?s=612x612&w=0&k=20&c=HtZUwhV03NtKN4OtSY4mG4jD3K5zzzzGRF4kgaTcOes=',
+      'https://media.istockphoto.com/id/494497554/photo/diagrams-projecting-from-tablet.jpg?s=612x612&w=0&k=20&c=qwHopHBsfMjeq0yqCDEHtL1PeTKTH5T8lg43qeu4Bhs=',
+      'https://media.istockphoto.com/id/2243612408/photo/businesswoman-interacting-with-futuristic-digital-interface-disp.jpg?s=612x612&w=0&k=20&c=7Szx43BHgacOprGwsA18njKUeBtDAuXDzYxh_TiDOFk='
+    ],
     shortDescription: 'Complete AI-powered forecasting platform that turns data into actionable business predictions.',
     fullDescription: 'Our Predictive Analytics Solution provides enterprise-grade forecasting capabilities powered by machine learning, delivering accurate predictions and actionable insights for strategic decision-making.',
     detailedDescription: `The Predictive Analytics Solution is a comprehensive AI platform that transforms your historical data into accurate future predictions. We build custom machine learning models tailored to your specific business needs, whether it's demand forecasting, customer behavior prediction, risk assessment, or market trend analysis. <br>
@@ -230,6 +240,11 @@ We don't just deliver predictions; we deliver a complete ecosystem for data-driv
     id: 'ai-process-automation-solution',
     icon: FaLaptopCode,
     title: 'AI Process Automation Solution',
+    images: [
+      'https://media.istockphoto.com/id/2161721546/photo/smart-industry-control-concept.jpg?s=612x612&w=0&k=20&c=bnnOu71qWCVNgL6bqiaN_TyT-XzqE9Re40T853g1NK0=',
+      'https://media.istockphoto.com/id/1184804468/photo/industrial-technology-concept-factory-automation-smart-factory-industry-4-0.jpg?s=612x612&w=0&k=20&c=1MaCUFJnqZmuugNhMyL5kt4q0BMwiNpzmnJbSggBE6I=',
+      'https://media.istockphoto.com/id/1435014643/photo/ai-machine-learning-robot-hand-ai-artificial-intelligence-assistance-human-touching-on-big.jpg?s=612x612&w=0&k=20&c=MlbHdhkfqetT9b9kq58EPb2x_twui75NS-dCY01nf4Q='
+    ],
     shortDescription: 'End-to-end automation platform that transforms business processes with intelligent decision-making capabilities.',
     fullDescription: 'Our AI Process Automation Solution combines robotic process automation (RPA) with artificial intelligence to create intelligent workflows that learn, adapt, and optimize business processes automatically.',
     detailedDescription: `The AI Process Automation Solution is a complete platform that revolutionizes how businesses handle repetitive tasks and complex workflows. We combine the best of RPA with advanced AI capabilities to create intelligent automation that goes beyond simple task automation. <br>
@@ -341,6 +356,11 @@ We transform your existing processes into intelligent workflows that reduce erro
     id: 'computer-vision-solution',
     icon: FaEye,
     title: 'Computer Vision Solution',
+    images: [
+      'https://media.istockphoto.com/id/1809654178/photo/following-aerial-top-down-drone-view-autonomous-self-driving-car-moving-through-city-highway.jpg?s=612x612&w=0&k=20&c=ndTHqggJLF68VNO8PObNNaYjyYctB45LMx5y9XLdIpk=',
+      'https://media.istockphoto.com/id/2196599690/photo/engineer-with-laptop-activates-autonomous-ev-factory-digitization-visualization-shows-robotic.jpg?s=612x612&w=0&k=20&c=IpQ3ZQmR2LvLA2KvaEcs2bxbhPYzIzlzx2-GyzWnaMo=',
+      'https://media.istockphoto.com/id/2192972398/photo/computer-vision-concept.jpg?s=612x612&w=0&k=20&c=NC_hmtIZwiistVzSm1sXYSwLvliHxVMIqgEbsoMvosA='
+    ],
     shortDescription: 'Complete visual intelligence platform for automated inspection, analysis, and recognition tasks.',
     fullDescription: 'Our Computer Vision Solution provides advanced image and video analysis capabilities for quality control, security, surveillance, and automated visual inspection across multiple industries.',
     detailedDescription: `The Computer Vision Solution is a comprehensive platform that brings visual intelligence to your operations. We develop custom computer vision models that can see, understand, and analyze visual data with human-like (or better) accuracy. <br>
@@ -452,6 +472,11 @@ Whether you need to automate quality control on a production line, enhance secur
     id: 'ai-decision-support-solution',
     icon: FaRobot,
     title: 'AI Decision Support Solution',
+    images: [
+      'https://media.istockphoto.com/id/2221419699/photo/close-up-hand-using-smartphone-with-hologram-interface-showing-ai-suggestion-system.jpg?s=612x612&w=0&k=20&c=Ge0DyPOqClVMZmHWiJN5g7-XlGl1zlDZuEh5V7UJHfI=',
+      'https://media.istockphoto.com/id/2252033544/photo/businessman-searching-for-the-right-ai-assistant-symbolizing-artificial-intelligence.jpg?s=612x612&w=0&k=20&c=NU-eCJiH0reZaclJBe3-22Nk-toTON187FR9OASRRHQ=',
+      'https://media.istockphoto.com/id/2247063159/photo/artificial-intelligence.jpg?s=612x612&w=0&k=20&c=phfs5JXxTEv0GE5Nnq95snN9z-qL4j1eb7iRVsr_Tm4='
+    ],
     shortDescription: 'Intelligent decision-making platform that analyzes complex data to provide optimal recommendations.',
     fullDescription: 'Our AI Decision Support Solution processes multiple variables and constraints to deliver data-driven recommendations, enabling faster and more accurate strategic decisions across your organization.',
     detailedDescription: `The AI Decision Support Solution is a powerful platform that transforms how organizations make critical decisions. We build intelligent systems that analyze complex data, consider multiple constraints and objectives, and provide optimal recommendations in real-time. <br>
@@ -564,6 +589,11 @@ Whether you're optimizing supply chains, making investment decisions, or plannin
     id: 'personalization-engine-solution',
     icon: FaCrosshairs,
     title: 'AI Personalization Engine Solution',
+    images: [
+      'https://media.istockphoto.com/id/1778252812/photo/the-concept-of-using-artificial-intelligence-to-control-the-system-the-industry-that-uses.jpg?s=612x612&w=0&k=20&c=vdV3OE0ebEMzDtLzXwZukcEebgG2-s81VhBZ2Nhxn0k=',
+      'https://media.istockphoto.com/id/1014029070/photo/abstract-humanoid-robot.jpg?s=612x612&w=0&k=20&c=S_uBbTtsjSCoHOUhdaNaKrH6Tfkhh5ZlHIBdMinfWsU=',
+      'https://media.istockphoto.com/id/2149068248/photo/robotic-hand-with-grey-gear-wheel-on-neon-blue-background.jpg?s=612x612&w=0&k=20&c=hrElJrAu-Qku4VwgmlxLJeOEv2NXAKZH4cHePGUE7n0='
+    ],
     shortDescription: 'Advanced personalization platform that creates unique user experiences based on behavior and preferences.',
     fullDescription: 'Our AI Personalization Engine Solution delivers hyper-personalized content, product recommendations, and user experiences that increase engagement, conversion, and customer loyalty.',
     detailedDescription: `The AI Personalization Engine Solution is a sophisticated platform that creates truly personalized experiences for every user. We build recommendation systems that understand individual preferences, predict future needs, and deliver relevant content in real-time. <br>

@@ -380,8 +380,13 @@ const Home = () => {
       {/* Image-Content Sections */}
       <div className="space-y-5 md:space-y-14 py-6 md:py-10">
         {imageContentSections.map((section, index) => (
-          <section 
-            key={index} 
+          <motion.div 
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            whileHover={{ y: -5 }} 
             className={`transition-all duration-300 ${isDark ? 'bg-slate-900/30' : 'bg-gray-50/50'}`}
           >
             <div className="w-full px-4 sm:px-6 lg:px-8 py-4">
@@ -468,7 +473,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </motion.div>
         ))}
       </div>
 
@@ -512,8 +517,13 @@ const Home = () => {
                   color: isDark ? "from-green-500 to-green-600" : "from-green-700 to-green-800"
                 }
               ].map((item, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
                   className={`backdrop-blur-sm border rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 ${isDark 
                       ? 'bg-slate-800/50 border-slate-700/50 hover:border-blue-400/50 hover:bg-slate-800/70 hover:shadow-glow' 
                       : 'bg-white/70 border-slate-200/50 hover:border-blue-300/50 hover:bg-white/90 shadow-lg hover:shadow-xl'}`}
@@ -527,7 +537,7 @@ const Home = () => {
                   <p className={`text-sm leading-relaxed transition-colors duration-300 ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
                     {item.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
