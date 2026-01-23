@@ -135,7 +135,7 @@ const Home = () => {
       name: "Jennifer Park",
       position: "Director of Operations, DataSystems",
       company: "Healthcare Analytics",
-      content: "The AI-driven analytics platform developed by Levitica revolutionized how we process patient data. We're now able to deliver insights 10x faster with 99.9% accuracy. Their support team is incredibly responsive.",
+      content: "The AI driven analytics platform developed by Levitica revolutionized how we process patient data. We're now able to deliver insights 10x faster with 99.9% accuracy. Their support team is incredibly responsive.",
       rating: 5,
       project: "Healthcare Analytics Platform",
       duration: "4-month implementation",
@@ -145,7 +145,7 @@ const Home = () => {
       name: "David Wilson",
       position: "CEO, CloudScale",
       company: "Enterprise SaaS Provider",
-      content: "Levitica's security framework implementation was flawless. They not only met all compliance requirements but also future-proofed our systems against emerging threats. Their expertise gave us peace of mind.",
+      content: "Levitica's security framework implementation was flawless. They not only met all compliance requirements but also future proofed our systems against emerging threats. Their expertise gave us peace of mind.",
       rating: 5,
       project: "Security Infrastructure",
       duration: "3-month security audit & implementation",
@@ -155,7 +155,7 @@ const Home = () => {
       name: "Priya Sharma",
       position: "Product Director, AI Labs",
       company: "AI Research & Development",
-      content: "The custom ML models developed by Levitica's team outperformed all our benchmarks. Their innovative approach to problem-solving and deep technical knowledge made this partnership incredibly valuable.",
+      content: "The custom ML models developed by Levitica's team outperformed all our benchmarks. Their innovative approach to problem solving and deep technical knowledge made this partnership incredibly valuable.",
       rating: 5,
       project: "Custom Machine Learning Models",
       duration: "9-month R&D collaboration",
@@ -172,7 +172,7 @@ const Home = () => {
         "Natural language processing",
         "Computer vision solutions",
         "Predictive analytics",
-        "AI-driven automation"
+        "AI driven automation"
       ],
       image: IMAGES.aiTechnology,
       icon: FaRobot,
@@ -279,7 +279,7 @@ const Home = () => {
                 </h1>
                 
                 <p className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 mb-8 ${isDark ? 'text-gray-300' : 'text-slate-600'}`}>
-                  We transform enterprises through cutting-edge AI solutions, cloud infrastructure, and intelligent automation. 
+                  We transform enterprises through cutting edge AI solutions, cloud infrastructure, and intelligent automation. 
                   Building tomorrow's technology today with precision, scalability, and innovation at the core.
                 </p>
               </motion.div>
@@ -380,8 +380,13 @@ const Home = () => {
       {/* Image-Content Sections */}
       <div className="space-y-5 md:space-y-14 py-6 md:py-10">
         {imageContentSections.map((section, index) => (
-          <section 
-            key={index} 
+          <motion.div 
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            whileHover={{ y: -5 }} 
             className={`transition-all duration-300 ${isDark ? 'bg-slate-900/30' : 'bg-gray-50/50'}`}
           >
             <div className="w-full px-4 sm:px-6 lg:px-8 py-4">
@@ -468,7 +473,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </motion.div>
         ))}
       </div>
 
@@ -512,8 +517,13 @@ const Home = () => {
                   color: isDark ? "from-green-500 to-green-600" : "from-green-700 to-green-800"
                 }
               ].map((item, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
                   className={`backdrop-blur-sm border rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 ${isDark 
                       ? 'bg-slate-800/50 border-slate-700/50 hover:border-blue-400/50 hover:bg-slate-800/70 hover:shadow-glow' 
                       : 'bg-white/70 border-slate-200/50 hover:border-blue-300/50 hover:bg-white/90 shadow-lg hover:shadow-xl'}`}
@@ -527,7 +537,7 @@ const Home = () => {
                   <p className={`text-sm leading-relaxed transition-colors duration-300 ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
                     {item.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

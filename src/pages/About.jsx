@@ -22,7 +22,7 @@ const About = () => {
     {
       icon: FaCrosshairs,
       title: "Innovation Excellence",
-      description: "We push the boundaries of what's possible, delivering cutting-edge solutions that create competitive advantages for our clients.",
+      description: "We push the boundaries of what's possible, delivering cutting edge solutions that create competitive advantages for our clients.",
       color: isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-800"
     },
     {
@@ -34,13 +34,13 @@ const About = () => {
     {
       icon: FaLightbulb,
       title: "Technical Mastery",
-      description: "Our team maintains expertise in the latest technologies, ensuring solutions that are both current and future-ready.",
+      description: "Our team maintains expertise in the latest technologies, ensuring solutions that are both current and future ready.",
       color: isDark ? "from-purple-600 to-purple-500" : "from-purple-800 to-purple-700"
     },
     {
       icon: FaAward,
       title: "Quality Commitment", 
-      description: "We deliver enterprise-grade solutions with rigorous testing, security protocols, and performance optimization.",
+      description: "We deliver enterprise grade solutions with rigorous testing, security protocols, and performance optimization.",
       color: isDark ? "from-emerald-500 to-emerald-600" : "from-emerald-700 to-emerald-800"
     },
     {
@@ -90,14 +90,14 @@ const About = () => {
             
             <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>
               About Levitica
-              <span className={`block bg-gradient-to-r bg-clip-text text-transparent mt-2 ${isDark 
+              <span className={`block bg-gradient-to-r bg-clip-text text-transparent mt-2 pb-3 ${isDark 
                   ? 'from-blue-400 to-cyan-400' 
                   : 'from-blue-600 to-blue-800'}`}>
                 Technologies
               </span>
             </h1>
             <p className={`text-lg md:text-xl max-w-4xl mx-auto leading-relaxed transition-colors duration-300 mb-8 ${isDark ? 'text-gray-300' : 'text-slate-600'}`}>
-              We are a forward-thinking technology consultancy specializing in AI-driven solutions, 
+              We are a forward thinking technology consultancy specializing in AI-driven solutions, 
               cloud infrastructure, and digital transformation. Since 2018, we've been engineering 
               intelligent systems that empower businesses to thrive in the digital age.
             </p>
@@ -149,7 +149,7 @@ const About = () => {
                   <h2 className={`text-2xl md:text-3xl font-bold transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>Our Mission</h2>
                 </div>
                 <p className={`text-lg leading-relaxed transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-slate-600'}`}>
-                  Our mission is to deliver high-quality, scalable, and secure applications that solve real-world challenges, while ensuring client satisfaction at every stage.
+                  Our mission is to deliver high quality, scalable, and secure applications that solve real world challenges, while ensuring client satisfaction at every stage.
                 </p>
               </div>
 

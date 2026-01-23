@@ -1,5 +1,6 @@
 // aiSolutionsData.js
 
+import { image } from 'framer-motion/client';
 import { FaChartLine, FaLaptop, FaRegMessage, FaLaptopCode, FaEye, FaRobot, FaCrosshairs } from 'react-icons/fa6';
 
 export const aiSolutionsData = [
@@ -7,24 +8,29 @@ export const aiSolutionsData = [
     id: 'intelligent-chatbot-solution',
     icon: FaRegMessage,
     title: 'Intelligent Chatbot Solution',
-    shortDescription: 'AI-powered conversational platform that automates customer interactions with human-like understanding.',
-    fullDescription: 'Transform customer engagement with our end-to-end Intelligent Chatbot Solution. Deploy AI chatbots that understand context, learn from conversations, and provide 24/7 support across all channels.',
-    detailedDescription: `Our Intelligent Chatbot Solution is a complete AI-powered conversational platform designed to revolutionize customer interactions. We don't just build chatbots – we deliver comprehensive solutions that integrate seamlessly with your existing systems and scale with your business. <br>
+    images: [
+      'https://media.istockphoto.com/id/1933417108/photo/ai-chatbot-artificial-intelligence-concept.jpg?s=612x612&w=0&k=20&c=5Snaez5rJ6USlEYcUZBIrCb8AK6GowyDsTC8lf6vkLs=',
+      'https://media.istockphoto.com/id/1474963602/photo/digital-chatbot-a-i-robot-application-conversation-assistant-ai-artificial-intelligence.jpg?s=612x612&w=0&k=20&c=Y8asw_JBqhNA3bLH6z1PWHAF8cVqRSKIweTNKiw6UAA=',
+      'https://media.istockphoto.com/id/1550542820/photo/quantum-computer-chip-with-funny-chatbot-artificial-intelligence-and-data-transfer-network.jpg?s=612x612&w=0&k=20&c=4ujNYJVdX04SXHtbShB3jA9yDueHSPWUTviBkgBQcsg='
+    ],
+    shortDescription: 'AI-powered conversational platform that automates customer interactions with human like understanding.',
+    fullDescription: 'Transform customer engagement with our end to end Intelligent Chatbot Solution. Deploy AI chatbots that understand context, learn from conversations, and provide 24/7 support across all channels.',
+    detailedDescription: `Our Intelligent Chatbot Solution is a complete AI powered conversational platform designed to revolutionize customer interactions. We don't just build chatbots we deliver comprehensive solutions that integrate seamlessly with your existing systems and scale with your business. <br>
 
 The solution includes: <br>
 * Advanced Natural Language Processing (NLP) for understanding customer intent <br>
 * Machine learning algorithms that improve responses over time <br>
-* Multi-channel deployment (website, mobile apps, social media, messaging platforms) <br>
+* Multi channel deployment (website, mobile apps, social media, messaging platforms) <br>
 * Integration with CRM, ERP, and ticketing systems <br>
-* Real-time analytics dashboard for performance monitoring <br>
-* Human-bot handoff capabilities for complex queries <br>
+* Real time analytics dashboard for performance monitoring <br>
+* Human bot handoff capabilities for complex queries <br>
 * Custom training based on your industry and customer data <br>
 
 This isn't just a chatbot; it's a complete customer engagement transformation. We handle everything from initial design and development to deployment, training, and ongoing optimization.`,
     
     features: [
       'Contextual Conversation Engine',
-      'Multi-language Support (50+ languages)',
+      'Multi language Support (50+ languages)',
       'Sentiment Analysis & Emotional Intelligence',
       'Seamless CRM Integration',
       '24/7 Automated Customer Support',
@@ -40,7 +46,7 @@ This isn't just a chatbot; it's a complete customer engagement transformation. W
       'OpenAI GPT-4 Integration',
       'Microsoft Azure Bot Service',
       'Custom NLP Models',
-      'Real-time Analytics Engine',
+      'Real time Analytics Engine',
       'Secure Cloud Infrastructure',
       'API Integration Framework',
       'Containerized Deployment'
@@ -84,13 +90,13 @@ This isn't just a chatbot; it's a complete customer engagement transformation. W
       'Integration with Existing Systems (2-3 weeks)',
       'Testing & Quality Assurance (2 weeks)',
       'Pilot Deployment & User Training (2 weeks)',
-      'Full-scale Implementation (1 week)',
+      'Full scale Implementation (1 week)',
       'Ongoing Optimization & Support'
     ],
     
     pricingModels: {
-      standard: '₹25,000 - ₹50,000 (One-time implementation)',
-      enterprise: 'Custom pricing (Large-scale deployment)',
+      standard: '₹25,000 - ₹50,000 (One time implementation)',
+      enterprise: 'Custom pricing (Large scale deployment)',
       subscription: '₹2,000 - ₹10,000/month (Managed service)',
       'pay-per-use': '₹0.10 - ₹0.50 per conversation (Cloud-based)'
     },
@@ -118,8 +124,13 @@ This isn't just a chatbot; it's a complete customer engagement transformation. W
     id: 'predictive-analytics-solution',
     icon: FaChartLine,
     title: 'Predictive Analytics Solution',
-    shortDescription: 'Complete AI-powered forecasting platform that turns data into actionable business predictions.',
-    fullDescription: 'Our Predictive Analytics Solution provides enterprise-grade forecasting capabilities powered by machine learning, delivering accurate predictions and actionable insights for strategic decision-making.',
+    images: [
+      'https://media.istockphoto.com/id/2193247029/photo/business-team-analyzing-interactive-digital-dashboards-with-data-visualizations.jpg?s=612x612&w=0&k=20&c=HtZUwhV03NtKN4OtSY4mG4jD3K5zzzzGRF4kgaTcOes=',
+      'https://media.istockphoto.com/id/494497554/photo/diagrams-projecting-from-tablet.jpg?s=612x612&w=0&k=20&c=qwHopHBsfMjeq0yqCDEHtL1PeTKTH5T8lg43qeu4Bhs=',
+      'https://media.istockphoto.com/id/2243612408/photo/businesswoman-interacting-with-futuristic-digital-interface-disp.jpg?s=612x612&w=0&k=20&c=7Szx43BHgacOprGwsA18njKUeBtDAuXDzYxh_TiDOFk='
+    ],
+    shortDescription: 'Complete AI powered forecasting platform that turns data into actionable business predictions.',
+    fullDescription: 'Our Predictive Analytics Solution provides enterprise grade forecasting capabilities powered by machine learning, delivering accurate predictions and actionable insights for strategic decision-making.',
     detailedDescription: `The Predictive Analytics Solution is a comprehensive AI platform that transforms your historical data into accurate future predictions. We build custom machine learning models tailored to your specific business needs, whether it's demand forecasting, customer behavior prediction, risk assessment, or market trend analysis. <br>
 
 This solution includes: <br>
@@ -131,16 +142,16 @@ This solution includes: <br>
 * Integration with existing BI tools and ERP systems <br>
 * Continuous model retraining and optimization <br>
 
-We don't just deliver predictions; we deliver a complete ecosystem for data-driven decision making. Our solution evolves with your business, learning from new data and adapting to changing market conditions.`,
+We don't just deliver predictions; we deliver a complete ecosystem for data driven decision making. Our solution evolves with your business, learning from new data and adapting to changing market conditions.`,
     
     features: [
       'Automated Data Pipeline',
       'Multiple ML Algorithm Selection',
-      'Real-time Predictions',
+      'Real time Predictions',
       'Interactive Visualization Dashboards',
       'Automated Report Generation',
       'Anomaly Detection System',
-      'What-if Scenario Modeling',
+      'What if Scenario Modeling',
       'Historical Performance Tracking',
       'Integration with BI Tools',
       'Continuous Model Improvement'
@@ -150,7 +161,7 @@ We don't just deliver predictions; we deliver a complete ecosystem for data-driv
       'Python ML Stack (scikit-learn, TensorFlow, PyTorch)',
       'Apache Spark for Big Data',
       'AWS SageMaker / Azure ML',
-      'Real-time Data Streaming (Kafka)',
+      'Real time Data Streaming (Kafka)',
       'Interactive Dashboards (Tableau, Power BI)',
       'Container Orchestration (Kubernetes)',
       'Automated ML Platforms',
@@ -179,7 +190,7 @@ We don't just deliver predictions; we deliver a complete ecosystem for data-driv
       { 
         title: 'Financial Services Risk Prediction', 
         result: '30% reduction in default rates',
-        description: 'Deployed AI risk assessment models that identified 92% of high-risk applications, reducing loan default rates by 30% and improving portfolio quality.'
+        description: 'Deployed AI risk assessment models that identified 92% of high risk applications, reducing loan default rates by 30% and improving portfolio quality.'
       },
       { 
         title: 'Manufacturing Predictive Maintenance', 
@@ -229,17 +240,22 @@ We don't just deliver predictions; we deliver a complete ecosystem for data-driv
     id: 'ai-process-automation-solution',
     icon: FaLaptopCode,
     title: 'AI Process Automation Solution',
-    shortDescription: 'End-to-end automation platform that transforms business processes with intelligent decision-making capabilities.',
+    images: [
+      'https://media.istockphoto.com/id/2161721546/photo/smart-industry-control-concept.jpg?s=612x612&w=0&k=20&c=bnnOu71qWCVNgL6bqiaN_TyT-XzqE9Re40T853g1NK0=',
+      'https://media.istockphoto.com/id/1184804468/photo/industrial-technology-concept-factory-automation-smart-factory-industry-4-0.jpg?s=612x612&w=0&k=20&c=1MaCUFJnqZmuugNhMyL5kt4q0BMwiNpzmnJbSggBE6I=',
+      'https://media.istockphoto.com/id/1435014643/photo/ai-machine-learning-robot-hand-ai-artificial-intelligence-assistance-human-touching-on-big.jpg?s=612x612&w=0&k=20&c=MlbHdhkfqetT9b9kq58EPb2x_twui75NS-dCY01nf4Q='
+    ],
+    shortDescription: 'End to end automation platform that transforms business processes with intelligent decision-making capabilities.',
     fullDescription: 'Our AI Process Automation Solution combines robotic process automation (RPA) with artificial intelligence to create intelligent workflows that learn, adapt, and optimize business processes automatically.',
     detailedDescription: `The AI Process Automation Solution is a complete platform that revolutionizes how businesses handle repetitive tasks and complex workflows. We combine the best of RPA with advanced AI capabilities to create intelligent automation that goes beyond simple task automation. <br>
 
 This solution includes: <br>
-* Intelligent Document Processing (IDP) with AI-powered extraction <br>
+* Intelligent Document Processing (IDP) with AI powered extraction <br>
 * Cognitive automation for decision-based processes <br>
 * Workflow orchestration and management <br>
 * Integration with enterprise systems (ERP, CRM, SCM) <br>
-* Real-time monitoring and analytics <br>
-* Self-learning capabilities that improve over time <br>
+* Real time monitoring and analytics <br>
+* Self learning capabilities that improve over time <br>
 * Exception handling and human-in-the-loop workflows <br>
 
 We transform your existing processes into intelligent workflows that reduce errors, increase speed, and free up human resources for higher-value tasks. The solution scales with your business and adapts to changing requirements.`,
@@ -247,12 +263,12 @@ We transform your existing processes into intelligent workflows that reduce erro
     features: [
       'Intelligent Document Processing',
       'Cognitive Decision Making',
-      'End-to-end Workflow Automation',
+      'End to end Workflow Automation',
       'Real-time Process Monitoring',
       'Exception Handling Engine',
-      'Human-in-the-loop Capabilities',
-      'Multi-system Integration',
-      'Self-learning Algorithms',
+      'Human in the loop Capabilities',
+      'Multi system Integration',
+      'Self learning Algorithms',
       'Compliance & Audit Trail',
       'Scalable Architecture'
     ],
@@ -265,7 +281,7 @@ We transform your existing processes into intelligent workflows that reduce erro
       'Microservices Architecture',
       'Containerization (Docker, Kubernetes)',
       'API Gateway Integration',
-      'Real-time Analytics Platform'
+      'Real time Analytics Platform'
     ],
     
     benefits: [
@@ -295,7 +311,7 @@ We transform your existing processes into intelligent workflows that reduce erro
       { 
         title: 'Supply Chain Invoice Processing', 
         result: 'Processed 50k+ invoices monthly',
-        description: 'Deployed AI-powered invoice processing solution that handles 50,000+ invoices monthly with 99.8% accuracy, reducing processing costs by 65%.'
+        description: 'Deployed AI powered invoice processing solution that handles 50,000+ invoices monthly with 99.8% accuracy, reducing processing costs by 65%.'
       }
     ],
     
@@ -340,12 +356,17 @@ We transform your existing processes into intelligent workflows that reduce erro
     id: 'computer-vision-solution',
     icon: FaEye,
     title: 'Computer Vision Solution',
+    images: [
+      'https://media.istockphoto.com/id/1809654178/photo/following-aerial-top-down-drone-view-autonomous-self-driving-car-moving-through-city-highway.jpg?s=612x612&w=0&k=20&c=ndTHqggJLF68VNO8PObNNaYjyYctB45LMx5y9XLdIpk=',
+      'https://media.istockphoto.com/id/2196599690/photo/engineer-with-laptop-activates-autonomous-ev-factory-digitization-visualization-shows-robotic.jpg?s=612x612&w=0&k=20&c=IpQ3ZQmR2LvLA2KvaEcs2bxbhPYzIzlzx2-GyzWnaMo=',
+      'https://media.istockphoto.com/id/2192972398/photo/computer-vision-concept.jpg?s=612x612&w=0&k=20&c=NC_hmtIZwiistVzSm1sXYSwLvliHxVMIqgEbsoMvosA='
+    ],
     shortDescription: 'Complete visual intelligence platform for automated inspection, analysis, and recognition tasks.',
     fullDescription: 'Our Computer Vision Solution provides advanced image and video analysis capabilities for quality control, security, surveillance, and automated visual inspection across multiple industries.',
-    detailedDescription: `The Computer Vision Solution is a comprehensive platform that brings visual intelligence to your operations. We develop custom computer vision models that can see, understand, and analyze visual data with human-like (or better) accuracy. <br>
+    detailedDescription: `The Computer Vision Solution is a comprehensive platform that brings visual intelligence to your operations. We develop custom computer vision models that can see, understand, and analyze visual data with human like (or better) accuracy. <br>
 
 This solution includes: <br>
-* Real-time object detection and recognition <br>
+* Real time object detection and recognition <br>
 * Quality inspection and defect detection <br>
 * Facial recognition and biometric analysis <br>
 * Optical Character Recognition (OCR) for documents <br>
@@ -356,14 +377,14 @@ This solution includes: <br>
 Whether you need to automate quality control on a production line, enhance security with facial recognition, or extract data from documents and images, our solution provides the accuracy and reliability you need.`,
     
     features: [
-      'Real-time Object Detection & Classification',
+      'Real time Object Detection & Classification',
       'Quality Control & Defect Identification',
       'Facial Recognition & Biometric Analysis',
       'Optical Character Recognition (OCR)',
       'Video Analytics & Behavior Tracking',
       'Thermal & Infrared Imaging',
       'Edge Computing Capabilities',
-      'Multi-camera Support',
+      'Multi camera Support',
       'Custom Model Training',
       'Integration with IoT Devices'
     ],
@@ -374,7 +395,7 @@ Whether you need to automate quality control on a production line, enhance secur
       'YOLO / Faster R-CNN for Object Detection',
       'Edge AI Hardware (NVIDIA Jetson, Intel Movidius)',
       'Cloud Vision APIs (AWS Rekognition, Azure CV)',
-      'Real-time Video Processing',
+      'Real time Video Processing',
       'IoT Device Integration',
       'Mobile Deployment (iOS/Android)'
     ],
@@ -406,7 +427,7 @@ Whether you need to automate quality control on a production line, enhance secur
       { 
         title: 'Construction Site Safety Monitoring', 
         result: '85% reduction in safety incidents',
-        description: 'Installed AI-powered safety monitoring system that detects PPE compliance and unsafe behaviors, reducing safety incidents by 85% on construction sites.'
+        description: 'Installed AI powered safety monitoring system that detects PPE compliance and unsafe behaviors, reducing safety incidents by 85% on construction sites.'
       }
     ],
     
@@ -451,14 +472,19 @@ Whether you need to automate quality control on a production line, enhance secur
     id: 'ai-decision-support-solution',
     icon: FaRobot,
     title: 'AI Decision Support Solution',
-    shortDescription: 'Intelligent decision-making platform that analyzes complex data to provide optimal recommendations.',
-    fullDescription: 'Our AI Decision Support Solution processes multiple variables and constraints to deliver data-driven recommendations, enabling faster and more accurate strategic decisions across your organization.',
+    images: [
+      'https://media.istockphoto.com/id/2221419699/photo/close-up-hand-using-smartphone-with-hologram-interface-showing-ai-suggestion-system.jpg?s=612x612&w=0&k=20&c=Ge0DyPOqClVMZmHWiJN5g7-XlGl1zlDZuEh5V7UJHfI=',
+      'https://media.istockphoto.com/id/2252033544/photo/businessman-searching-for-the-right-ai-assistant-symbolizing-artificial-intelligence.jpg?s=612x612&w=0&k=20&c=NU-eCJiH0reZaclJBe3-22Nk-toTON187FR9OASRRHQ=',
+      'https://media.istockphoto.com/id/2247063159/photo/artificial-intelligence.jpg?s=612x612&w=0&k=20&c=phfs5JXxTEv0GE5Nnq95snN9z-qL4j1eb7iRVsr_Tm4='
+    ],
+    shortDescription: 'Intelligent decision making platform that analyzes complex data to provide optimal recommendations.',
+    fullDescription: 'Our AI Decision Support Solution processes multiple variables and constraints to deliver data driven recommendations, enabling faster and more accurate strategic decisions across your organization.',
     detailedDescription: `The AI Decision Support Solution is a powerful platform that transforms how organizations make critical decisions. We build intelligent systems that analyze complex data, consider multiple constraints and objectives, and provide optimal recommendations in real-time. <br>
 
 This solution includes: <br>
-* Multi-criteria decision analysis engines <br>
-* Real-time data integration and processing <br>
-* Scenario simulation and what-if analysis <br>
+* Multi criteria decision analysis engines <br>
+* Real time data integration and processing <br>
+* Scenario simulation and what if analysis <br>
 * Prescriptive analytics capabilities <br>
 * Integration with business intelligence tools <br>
 * Automated reporting and alerting <br>
@@ -468,8 +494,8 @@ This solution includes: <br>
 Whether you're optimizing supply chains, making investment decisions, or planning strategic initiatives, our solution provides the intelligence to make better decisions faster.`,
     
     features: [
-      'Multi-criteria Decision Analysis',
-      'Real-time Data Integration',
+      'Multi criteria Decision Analysis',
+      'Real time Data Integration',
       'Scenario Simulation Engine',
       'Prescriptive Analytics',
       'Automated Decision Documentation',
@@ -483,17 +509,17 @@ Whether you're optimizing supply chains, making investment decisions, or plannin
     technologies: [
       'Reinforcement Learning Algorithms',
       'Optimization Frameworks',
-      'Real-time Data Pipelines',
+      'Real time Data Pipelines',
       'Graph Databases for Relationship Analysis',
       'Simulation Engines',
       'Explainable AI Libraries',
       'Collaboration Tools Integration',
-      'Cloud-native Architecture'
+      'Cloud native Architecture'
     ],
     
     benefits: [
       'Improve decision accuracy by 30-50%',
-      'Reduce decision-making time by 60-80%',
+      'Reduce decision making time by 60-80%',
       'Optimize resource allocation',
       'Enhance strategic planning capabilities',
       'Reduce decision bias',
@@ -563,42 +589,47 @@ Whether you're optimizing supply chains, making investment decisions, or plannin
     id: 'personalization-engine-solution',
     icon: FaCrosshairs,
     title: 'AI Personalization Engine Solution',
+    images: [
+      'https://media.istockphoto.com/id/1778252812/photo/the-concept-of-using-artificial-intelligence-to-control-the-system-the-industry-that-uses.jpg?s=612x612&w=0&k=20&c=vdV3OE0ebEMzDtLzXwZukcEebgG2-s81VhBZ2Nhxn0k=',
+      'https://media.istockphoto.com/id/1014029070/photo/abstract-humanoid-robot.jpg?s=612x612&w=0&k=20&c=S_uBbTtsjSCoHOUhdaNaKrH6Tfkhh5ZlHIBdMinfWsU=',
+      'https://media.istockphoto.com/id/2149068248/photo/robotic-hand-with-grey-gear-wheel-on-neon-blue-background.jpg?s=612x612&w=0&k=20&c=hrElJrAu-Qku4VwgmlxLJeOEv2NXAKZH4cHePGUE7n0='
+    ],
     shortDescription: 'Advanced personalization platform that creates unique user experiences based on behavior and preferences.',
-    fullDescription: 'Our AI Personalization Engine Solution delivers hyper-personalized content, product recommendations, and user experiences that increase engagement, conversion, and customer loyalty.',
-    detailedDescription: `The AI Personalization Engine Solution is a sophisticated platform that creates truly personalized experiences for every user. We build recommendation systems that understand individual preferences, predict future needs, and deliver relevant content in real-time. <br>
+    fullDescription: 'Our AI Personalization Engine Solution delivers hyper personalized content, product recommendations, and user experiences that increase engagement, conversion, and customer loyalty.',
+    detailedDescription: `The AI Personalization Engine Solution is a sophisticated platform that creates truly personalized experiences for every user. We build recommendation systems that understand individual preferences, predict future needs, and deliver relevant content in real time. <br>
 
 This solution includes:<br>
-* Real-time user behavior tracking and analysis<br>
+* Real time user behavior tracking and analysis<br>
 * Collaborative filtering and content-based recommendation<br>
 * A/B testing and optimization framework<br>
-* Multi-channel personalization (web, mobile, email, apps)<br>
+* Multi channel personalization (web, mobile, email, apps)<br>
 * Integration with marketing automation platforms<br>
-* Privacy-compliant data handling<br>
+* Privacy compliant data handling<br>
 * Performance analytics and reporting<br>
-* Self-optimizing algorithms<br>
+* Self optimizing algorithms<br>
 
 Whether you're personalizing e-commerce product recommendations, content discovery, or marketing communications, our solution delivers measurable improvements in engagement and conversion.`,
     
     features: [
-      'Real-time User Behavior Analysis',
+      'Real time User Behavior Analysis',
       'Collaborative Filtering Engine',
       'Content-based Recommendation',
-      'Multi-channel Personalization',
+      'Multi channel Personalization',
       'A/B Testing Framework',
       'Privacy-first Data Processing',
-      'Real-time Content Delivery',
+      'Real time Content Delivery',
       'Performance Analytics Dashboard',
-      'Self-optimizing Algorithms',
+      'Self optimizing Algorithms',
       'Integration with Marketing Tools'
     ],
     
     technologies: [
       'Recommendation Algorithms (SVD, Matrix Factorization)',
-      'Real-time Data Processing (Kafka, Spark Streaming)',
+      'Real time Data Processing (Kafka, Spark Streaming)',
       'User Profiling Engines',
       'Content Similarity Analysis',
-      'Multi-armed Bandit Algorithms',
-      'Privacy-preserving AI',
+      'Multi armed Bandit Algorithms',
+      'Privacy preserving AI',
       'CDN Integration',
       'Marketing Automation Integration'
     ],
@@ -630,7 +661,7 @@ Whether you're personalizing e-commerce product recommendations, content discove
       { 
         title: 'Financial Services Cross-selling', 
         result: '50% higher cross-sell conversion',
-        description: 'Built personalization engine for bank that analyzed customer behavior to recommend relevant financial products, achieving 50% higher cross-sell conversion rates.'
+        description: 'Built personalization engine for bank that analyzed customer behavior to recommend relevant financial products, achieving 50% higher cross sell conversion rates.'
       }
     ],
     
