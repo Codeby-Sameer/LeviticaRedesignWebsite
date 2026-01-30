@@ -181,7 +181,7 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: 'AI Solutions', path: '/ai-solutions' },
-    { name: 'Technologies', path: '/technologies' },
+    // { name: 'Technologies', path: '/technologies' },
     { name: 'About', path: '/about' },
     { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
@@ -215,7 +215,7 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`flex justify-between items-center md:h-20 py-2 ${isDark ? 'bg-slate-900' : 'bg-white'}`}>
+          <div className={`flex justify-between items-center md:h-24 ${isDark ? 'bg-slate-900' : 'bg-white'}`}>
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">
               <div className="relative">
@@ -223,7 +223,7 @@ const Navbar = () => {
                 <img
                   src={isDark ? darkLogo : lightLogo}
                   alt="Levitica Technologies"
-                  className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
+                  className="h-16 w-auto transition-all duration-300 group-hover:scale-105"
                   onError={(e) => {
                     e.target.style.display = 'none';
                     const fallback = document.createElement('div');
@@ -234,21 +234,15 @@ const Navbar = () => {
                     e.target.parentNode.appendChild(fallback);
                   }}
                 />
-                {/* Subtle glow effect */}
-                {/* <div className={`absolute inset-0 blur-lg scale-150 transition-all opacity-0 group-hover:opacity-30 ${
-                  isDark 
-                    ? 'bg-blue-400' 
-                    : 'bg-blue-600'
-                }`} /> */}
               </div>
               {/* Company Name */}
-              <span className={`md:text-xl text-[16px] font-bold bg-gradient-to-r bg-clip-text text-transparent transition-all duration-300 ${
+              {/* <span className={`md:text-xl text-[16px] font-bold bg-gradient-to-r bg-clip-text text-transparent transition-all duration-300 ${
                 isDark 
                   ? 'from-blue-400 to-cyan-300 group-hover:from-blue-300 group-hover:to-cyan-200' 
                   : 'from-blue-600 to-blue-800 group-hover:from-blue-500 group-hover:to-blue-700'
               }`}>
                 Levitica Technologies
-              </span>
+              </span> */}
             </Link>
 
             {/* Desktop Menu */}

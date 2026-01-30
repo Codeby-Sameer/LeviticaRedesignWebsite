@@ -230,19 +230,18 @@ const Footer = () => {
       { name: 'Digital Marketing', path: '/services/digital-marketing' },
       { name: 'Legal Finance', path: '/services/legal-finance' },
     ],
-    technologies: [
-      { name: 'React & Next.js', path: '/technologies' },
-      { name: 'Node.js & Python', path: '/technologies' },
-      { name: 'AWS & Azure Cloud', path: '/technologies' },
-      { name: 'AI/ML Frameworks', path: '/technologies' },
-      { name: 'Database Systems', path: '/technologies' },
-      { name: 'DevOps Tools', path: '/technologies' },
-    ],
+    // technologies: [
+    //   { name: 'React & Next.js', path: '/technologies' },
+    //   { name: 'Node.js & Python', path: '/technologies' },
+    //   { name: 'AWS & Azure Cloud', path: '/technologies' },
+    //   { name: 'AI/ML Frameworks', path: '/technologies' },
+    //   { name: 'Database Systems', path: '/technologies' },
+    //   { name: 'DevOps Tools', path: '/technologies' },
+    // ],
     company: [
       { name: 'About Us', path: '/about' },
       { name: 'Services', path: '/services' },
       { name: 'Careers', path: '/careers' },
-      { name: 'Technologies', path: '/technologies' },
       { name: 'AI Solutions', path: '/ai-solutions' },
       { name: 'contact', path: '/contact' },
     ],
@@ -290,10 +289,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-12">
           {/* Left Column - Brand Info */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center">
               {/* Logo */}
               <div className="relative group">
-                <img
+                {/* <img
                   src={isDark ? darkLogo : lightLogo}
                   alt={logoAlt}
                   className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
@@ -306,13 +305,13 @@ const Footer = () => {
                     fallback.innerHTML = `<span class="font-bold text-white">LEVITICA</span>`;
                     e.target.parentNode.appendChild(fallback);
                   }}
-                />
+                /> */}
                 {/* Subtle glow */}
                 <div className="absolute inset-0 bg-blue-500/20 blur-xl group-hover:bg-blue-400/30 transition-all duration-300" />
               </div>
               
               <div>
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                <h2 className="text-2xl font-bold bg-white bg-clip-text text-transparent">
                   Levitica Technologies
                 </h2>
                 <p className="text-sm text-blue-100/80 mt-1">

@@ -150,7 +150,7 @@ const Careers = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-16 overflow-x-hidden"
+      className="pt-20 md:pt-32 overflow-x-hidden"
     >
       {/* Hero Section */}
       <AnimatedBackground className="min-h-[70vh] flex items-center justify-center">

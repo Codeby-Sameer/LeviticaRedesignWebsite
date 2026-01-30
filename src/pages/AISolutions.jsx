@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import AnimatedBackground from '../components/AnimatedBackground';
 import { useTheme } from '../contexts/ThemeContext';
 import { aiSolutionsData } from '../data/aiSolutionsData';
-import { FaArrowRight, FaBolt, FaRobot, FaClock, FaCode, FaCrosshairs, FaDatabase, FaShield } from 'react-icons/fa6';
+import { FaArrowRight, FaBolt, FaRobot, FaClock, FaCode, FaCrosshairs, FaDatabase, FaShield, FaChevronRight, } from 'react-icons/fa6';
 import { LuBot } from 'react-icons/lu';
 import { FaCheckCircle, FaCloud, FaMagic, FaShieldAlt } from 'react-icons/fa';
 
@@ -45,94 +45,145 @@ const AISolutions = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-24 md:pt-24 w-full"
+      className="pt-16 md:pt-32 w-full"
     >
-      {/* Hero Section */}
-      <div className="relative min-h-[70vh] flex items-center justify-center w-full">
-        <AnimatedBackground className="absolute inset-0" />
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-12">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <motion.span
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 border transition-all duration-300 ${isDark 
-                    ? 'bg-blue-500/10 border-blue-400/20 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/30' 
-                    : 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 shadow-sm'}`}>
-                <FaRobot className="w-4 h-4 mr-2" />
-                Artificial Intelligence Solutions
-              </motion.span>
-              
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
-                className="flex items-center justify-center space-x-2 mb-6"
-              >
-                <FaRobot className={`w-10 h-10 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
-                {/* <LuBot className={`w-10 h-10 ${isDark ? 'text-cyan-400' : 'text-blue-700'}`} /> */}
-                <FaBolt className={`w-8 h-8 ${isDark ? 'text-blue-300' : 'text-blue-800'}`} />
-              </motion.div>
-              
-              <motion.h1
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}
-              >
-                AI Solutions
-                <span className={`block pb-2 bg-gradient-to-r bg-clip-text text-transparent mt-2 ${isDark 
-                    ? 'from-blue-400 via-cyan-400 to-purple-400' 
-                    : 'from-blue-600 via-blue-700 to-blue-800'}`}>
-                  Intelligent by Design
-                </span>
-              </motion.h1>
-              
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 mb-8 ${isDark ? 'text-gray-300' : 'text-slate-600'}`}
-              >
-                Harness the power of artificial intelligence to transform your business operations, 
-                enhance decision making, and create unprecedented competitive advantages.
-              </motion.p>
+{/* Hero Section */}
+<div className="relative min-h-[70vh] flex items-center justify-center w-full overflow-hidden">
+  {/* Background Image with Overlay */}
+  <div className="absolute inset-0 z-0">
+    {/* Background Image - AI/Neural Network Theme */}
+    <div 
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: 'url(https://media.istockphoto.com/id/2223894979/photo/ai-agents-and-assistants-man-using-a-laptop-with-futuristic-software-for-generating-images.jpg?s=612x612&w=0&k=20&c=K8HxtWCtltBiy6K9hBbkbJrCVXzFwP5yOKP5jsUFOIE=)',
+        opacity: isDark ? 1 : 1,
+      }}
+    />
+    
+    {/* Dark/Light Overlay with Gradient */}
+    <div className={`absolute inset-0 ${
+      isDark 
+        ? 'bg-gradient-to-br from-gray-900/80 via-gray-900/50 to-gray-900/80' 
+        : 'bg-gradient-to-br from-white/50 via-white/50 to-white/50'
+    }`} />
+    
+    {/* Animated Background Component */}
+    <AnimatedBackground className="absolute inset-0 opacity-50" />
+    
+    {/* Neural Network Pattern Overlay */}
+    <div className={`absolute inset-0 ${
+      isDark 
+        ? 'bg-[radial-gradient(circle_at_30%_50%,_transparent_0%,_#1e40af/10_20%,_transparent_40%)]' 
+        : 'bg-[radial-gradient(circle_at_30%_50%,_transparent_0%,_#3b82f6/5_20%,_transparent_40%)]'
+    }`} />
+  </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-              >
-                <Link
-                  to="/contact"
-                  className={`group relative inline-flex items-center px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${isDark 
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white shadow-lg hover:shadow-blue-500/25' 
-                      : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl'}`}
-                >
-                  <span>Start AI Transformation</span>
-                  <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                
-                <Link
-                  to="/ai-solutions#solutions-grid"
-                  className={`inline-flex items-center px-8 py-4 border-2 rounded-lg font-semibold transition-all duration-300 ${isDark 
-                      ? 'border-cyan-400/50 text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 hover:shadow-glow' 
-                      : 'border-blue-600/50 text-blue-600 hover:border-blue-600 hover:bg-blue-50 shadow-md hover:shadow-lg'}`}
-                >
-                  Explore Solutions
-                </Link>
-              </motion.div>
-            </motion.div>
+  {/* Content */}
+  <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-7xl mx-auto text-center">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="text-center"
+      >
+        <motion.span
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 border backdrop-blur-sm transition-all duration-300 ${isDark 
+              ? 'bg-blue-500/20 border-blue-400/30 text-blue-400 hover:bg-blue-500/30 hover:border-blue-400/40 shadow-lg shadow-blue-500/10' 
+              : 'bg-white/90 border-blue-300/80 text-blue-700 hover:bg-white hover:border-blue-400 shadow-lg'}`}>
+          <FaRobot className="w-4 h-4 mr-2" />
+          Artificial Intelligence Solutions
+        </motion.span>
+        
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3 }}
+          className="flex items-center justify-center space-x-2 mb-6"
+        >
+          {/* Animated Glow Effect for Icons */}
+          <div className="relative">
+            <div className={`absolute inset-0 rounded-full blur-lg ${
+              isDark ? 'bg-blue-500/30' : 'bg-blue-400/40'
+            } animate-pulse`} />
+            <FaRobot className={`relative w-10 h-10 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
           </div>
-        </div>
-      </div>
+          <FaBolt className={`w-8 h-8 ${isDark ? 'text-blue-300' : 'text-blue-800'}`} />
+        </motion.div>
+        
+        <motion.h1
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}
+        >
+          AI Solutions
+          <span className={`block pb-2 bg-gradient-to-r bg-clip-text text-transparent mt-2 ${isDark 
+              ? 'from-blue-400 via-cyan-400 to-purple-400' 
+              : 'from-blue-600 via-blue-700 to-blue-800'}`}>
+            Intelligent by Design
+          </span>
+        </motion.h1>
+        
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 mb-8 px-4 py-2 rounded-lg ${isDark 
+              ? 'text-gray-200' 
+              : 'text-slate-700'}`}
+        >
+          Harness the power of artificial intelligence to transform your business operations, 
+          enhance decision making, and create unprecedented competitive advantages.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <Link
+            to="/contact"
+            className={`group relative inline-flex items-center px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 overflow-hidden ${isDark 
+                ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white shadow-lg hover:shadow-blue-500/25' 
+                : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl'}`}
+          >
+            {/* Button Glow Effect */}
+            <div className={`absolute inset-0 bg-gradient-to-r ${isDark 
+                ? 'from-blue-500/20 to-cyan-500/20' 
+                : 'from-blue-500/30 to-blue-600/30'} blur-xl group-hover:blur-2xl transition-all duration-300`} />
+            <span className="relative">Start AI Transformation</span>
+            <FaArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform relative" />
+          </Link>
+          
+          <Link
+            to="/ai-solutions#solutions-grid"
+            className={`group relative inline-flex items-center px-8 py-4 border-2 rounded-lg font-semibold transition-all duration-300 backdrop-blur-sm ${isDark 
+                ? 'border-cyan-400/50 text-cyan-400 hover:border-cyan-400 hover:bg-cyan-400/10 hover:shadow-lg hover:shadow-cyan-500/20' 
+                : 'border-blue-600/50 text-blue-600 hover:border-blue-600 hover:bg-blue-50 shadow-md hover:shadow-lg'}`}
+          >
+            <span className="relative">Explore Solutions</span>
+            <FaChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform opacity-0 group-hover:opacity-100" />
+          </Link>
+        </motion.div>
+      </motion.div>
+    </div>
+  </div>
+
+  {/* AI Circuit Animation at Bottom */}
+  {/* <div className="absolute bottom-0 left-0 right-0 h-1 overflow-hidden">
+    <div className={`h-full w-full ${isDark ? 'bg-gradient-to-r from-transparent via-blue-500/50 to-transparent' : 'bg-gradient-to-r from-transparent via-blue-400/50 to-transparent'}`}>
+      <div className={`h-full w-20 ${isDark ? 'bg-blue-400/30' : 'bg-blue-500/30'} animate-pulse`} style={{
+        animation: 'circuitFlow 3s linear infinite',
+        boxShadow: `0 0 20px ${isDark ? '#60a5fa' : '#3b82f6'}`
+      }} />
+    </div>
+  </div> */}
+</div>
 
       {/* AI Solutions Grid */}
       <section id="solutions-grid" className={`py-10 md:py-10 transition-all duration-300 ${isDark ? 'bg-slate-900/30' : 'bg-gray-50/50'}`}>

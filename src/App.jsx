@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import AISolutions from './pages/AISolutions';
-import Technologies from './pages/Technologies';
+// import Technologies from './pages/Technologies';
 import About from './pages/About';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
@@ -28,7 +28,7 @@ function App() {
               <Route path="/services/:serviceId" element={<ServiceDetail />} />
               <Route path="/ai-solutions" element={<AISolutions />} />
               <Route path="/ai-solutions/:id" element={<SolutionDetailPage />} />
-              <Route path="/technologies" element={<Technologies />} />
+              {/* <Route path="/technologies" element={<Technologies />} /> */}
               <Route path="/about" element={<About />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/contact" element={<Contact />} />

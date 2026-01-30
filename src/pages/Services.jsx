@@ -27,46 +27,98 @@ const Services = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="md:pt-24 pt-20 overflow-x-hidden"
+      className="md:pt-32 pt-20 overflow-x-hidden"
     >
-      {/* Hero Section */}
-      <AnimatedBackground className="min-h-[60vh] flex items-center justify-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 md:pt-5 pt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center"
-          >
-            <span className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 border transition-all duration-300 ${
-              isDark 
-                ? 'bg-blue-500/10 border-blue-400/20 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/30' 
-                : 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 shadow-sm'
-            }`}>
-              <FaCrosshairs className="w-4 h-4 mr-2" />
-              End t0 End Solutions
-            </span>
-            
-            <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 transition-colors duration-300 ${
-              isDark ? 'text-white' : 'text-slate-900'
-            }`}>
-              Technology & Business Services
-              <span className={`block bg-gradient-to-r bg-clip-text text-transparent mt-2 pb-2 ${
-                isDark 
-                  ? 'from-blue-400 to-cyan-400' 
-                  : 'from-blue-600 to-blue-800'
-              }`}>
-                Building Your Digital Future
-              </span>
-            </h1>
-            <p className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 ${
-              isDark ? 'text-gray-300' : 'text-slate-600'
-            }`}>
-              Comprehensive technology solutions designed to accelerate your digital transformation 
-              and drive sustainable business growth through innovation.
-            </p>
-          </motion.div>
-        </div>
-      </AnimatedBackground>
+     {/* Hero Section */}
+<div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+  {/* Background Image with Overlay */}
+  <div className="absolute inset-0 z-0">
+    {/* Background Image */}
+    <div 
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)',
+        opacity: isDark ? 1 : 2,
+      }}
+    />
+    
+    {/* Dark/Light Overlay */}
+    <div className={`absolute inset-0 ${
+      isDark 
+        ? 'bg-gradient-to-br from-gray-900/70 via-gray-900/40 to-gray-900/70' 
+        : 'bg-gradient-to-br from-white/50 via-white/50 to-white/50'
+    }`} />
+    
+    {/* Subtle Pattern */}
+    <div className={`absolute inset-0 ${
+      isDark 
+        ? 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-gray-900/30' 
+        : 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-blue-50/20'
+    }`} />
+  </div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 md:pt-5 pt-16">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="text-center"
+    >
+      <span className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 border backdrop-blur-sm transition-all duration-300 ${
+        isDark 
+          ? 'bg-blue-500/10 border-blue-400/30 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/40' 
+          : 'bg-white/80 border-blue-200/80 text-blue-700 hover:bg-white hover:border-blue-300 shadow-sm'
+      }`}>
+        <FaCrosshairs className="w-4 h-4 mr-2" />
+        End to End Solutions
+      </span>
+      
+      <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 transition-colors duration-300 ${
+        isDark ? 'text-white' : 'text-slate-900'
+      }`}>
+        Technology & Business Services
+        <span className={`block bg-gradient-to-r bg-clip-text text-transparent mt-2 pb-2 ${
+          isDark 
+            ? 'from-blue-400 to-cyan-400' 
+            : 'from-blue-600 to-blue-800'
+        }`}>
+          Building Your Digital Future
+        </span>
+      </h1>
+      <p className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 backdrop-blur-sm ${
+        isDark 
+          ? 'text-gray-200' 
+          : 'text-slate-700'
+      }`}>
+        Comprehensive technology solutions designed to accelerate your digital transformation 
+        and drive sustainable business growth through innovation.
+      </p>
+      
+      {/* CTA Buttons */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+      >
+        <button className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
+          isDark
+            ? 'bg-blue-500 hover:bg-blue-600 text-white shadow-lg hover:shadow-blue-500/25'
+            : 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-blue-600/25'
+        }`}>
+          Explore Our Services
+        </button>
+        <button className={`px-8 py-3 rounded-lg font-semibold border transition-all duration-300 ${
+          isDark
+            ? 'border-gray-600 hover:border-blue-400 text-gray-200 hover:text-blue-400 bg-gray-800/30 hover:bg-gray-800/50'
+            : 'border-blue-200 hover:border-blue-400 text-blue-700 hover:text-blue-800 bg-white/80 hover:bg-white'
+        }`}>
+          Schedule a Consultation
+        </button>
+      </motion.div>
+    </motion.div>
+  </div>
+</div>
 
       {/* Technology Services Section */}
       <section className={`py-10 md:py-10 transition-all duration-300 ${

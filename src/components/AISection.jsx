@@ -211,12 +211,12 @@ const AISection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className={`text-4xl lg:text-5xl font-bold mb-6 transition-colors duration-300 ${
+            className={`text-4xl lg:text-5xl font-bold mb-6 py-4 transition-colors duration-300 ${
               isDark ? 'text-white' : 'text-slate-900'
             }`}
           >
             Transforming Data into
-            <span className={`block bg-gradient-to-r bg-clip-text text-transparent ${
+            <span className={`block py-2 bg-gradient-to-r bg-clip-text text-transparent ${
               isDark 
                 ? 'from-blue-400 to-cyan-300' 
                 : 'from-blue-600 to-blue-800'

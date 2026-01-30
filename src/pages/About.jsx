@@ -10,12 +10,12 @@ const About = () => {
   const { isDark } = useTheme();
 
   const milestones = [
-    { year: "2018", title: "Company Founded", description: "Established with a vision to transform businesses through intelligent technology solutions." },
-    { year: "2019", title: "First AI Implementation", description: "Deployed our first machine learning model for predictive analytics in healthcare." },
-    { year: "2021", title: "Cloud First Strategy", description: "Transitioned to cloud native architecture, enabling 10x scalability for our clients." },
-    { year: "2023", title: "AI Innovation Lab", description: "Launched dedicated AI research lab focusing on generative AI and automation." },
-    { year: "2024", title: "Global Expansion", description: "Extended operations to serve enterprise clients across North America and Europe." },
-    { year: "2026", title: "Industry Leadership", description: "Recognized as a leading AI first technology consultancy with 500+ successful projects." }
+    { year: "2013", title: "Company Founded", description: "Established with a vision to transform businesses through intelligent technology solutions." },
+    { year: "2023", title: "First AI Implementation", description: "Deployed our first machine learning model for predictive analytics in healthcare." },
+    { year: "2024", title: "Cloud First Strategy", description: "Transitioned to cloud native architecture, enabling 10x scalability for our clients." },
+    { year: "2025", title: "AI Innovation Lab", description: "Launched dedicated AI research lab focusing on generative AI and automation." },
+    { year: "2026", title: "Global Expansion", description: "Extended operations to serve enterprise clients across North America and Europe." },
+    // { year: "2026", title: "Industry Leadership", description: "Recognized as a leading AI first technology consultancy with 500+ successful projects." }
   ];
 
   const values = [
@@ -130,7 +130,7 @@ const About = () => {
       </AnimatedBackground>
 
       {/* Mission & Vision */}
-      <section className={`py-16 md:py-20 transition-all duration-300 ${isDark ? 'bg-slate-900/30' : 'bg-gray-50/50'}`}>
+      <section className={`py-16 md:py-10 transition-all duration-300 ${isDark ? 'bg-slate-900/30' : 'bg-gray-50/50'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <motion.div
@@ -206,8 +206,84 @@ const About = () => {
         </div>
       </section>
 
+      {/* CEO Message Section */}
+<section className={`py-16 md:py-10 transition-all duration-300 ${isDark ? 'bg-slate-900/50' : 'bg-gradient-to-br from-blue-50/30 to-white'}`}>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center"
+    >
+      {/* Left side - CEO Image */}
+      <div className="lg:w-2/5 flex justify-center">
+        <div className="relative">
+          <div className={`w-64 h-64 md:w-80 md:h-80 rounded-full border-8 ${isDark ? 'border-blue-500/20' : 'border-blue-100'} overflow-hidden shadow-2xl`}>
+            {/* Actual CEO Image - Replace src with your image */}
+            <img 
+              src="/images/CEO.png" // Update this path
+              alt="Medipudi Durgaprasad - CEO of Levitica"
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                // Fallback if image doesn't exist
+                e.target.style.display = 'none';
+                e.target.parentElement.innerHTML = `
+                  <div class="w-full h-full flex items-center justify-center ${isDark ? 'bg-gradient-to-br from-blue-900/40 to-slate-800' : 'bg-gradient-to-br from-blue-100 to-blue-50'}">
+                    <div class="text-center p-8">
+                      <div class="text-5xl md:text-6xl font-bold mb-4 ${isDark ? 'text-blue-400' : 'text-blue-600'}">
+                        DP
+                      </div>
+                      <div class="text-lg font-semibold ${isDark ? 'text-white' : 'text-blue-800'}">
+                        Medipudi Durgaprasad
+                      </div>
+                      <div class="text-sm ${isDark ? 'text-blue-300' : 'text-blue-600'}">
+                        CEO & Founder
+                      </div>
+                    </div>
+                  </div>
+                `;
+              }}
+            />
+          </div>
+          {/* Decorative elements */}
+          <div className={`absolute -top-4 -right-4 w-16 h-16 rounded-full ${isDark ? 'bg-cyan-500/20' : 'bg-blue-200/50'} blur-xl`} />
+          <div className={`absolute -bottom-4 -left-4 w-20 h-20 rounded-full ${isDark ? 'bg-blue-500/20' : 'bg-blue-300/50'} blur-xl`} />
+        </div>
+      </div>
+
+      <div className="md:w-3/4">
+          <div className="flex items-center mb-6">
+            <div>
+              <h2 className={`text-2xl md:text-3xl font-bold transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Message From Our CEO
+              </h2>
+              <div className={`text-sm ${isDark ? 'text-blue-300' : 'text-blue-600'}`}>
+                Medipudi Durgaprasad, CEO of Levitica
+              </div>
+            </div>
+          </div>
+
+          <div className={`mb-6 text-lg leading-relaxed transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-slate-700'}`}>
+            <p className="mb-4 text-md">
+              Welcome to Levitica, your trusted partner for software development and consultancy. I'm excited to share our story and vision with you.
+            </p>
+            <p className="mb-4 text-md">
+              At Levitica, we believe in the power of software to transform industries and unlock boundless possibilities. Our team of exceptional professionals is here to drive your digital transformation journey.
+            </p>
+            <p className="mb-4 text-md">
+              We go beyond being just developers, we're your strategic partners. We tailor solutions to ensure your success, foster long lasting partnerships, and deliver top notch software. Our innovative mindset keeps us at the forefront of the ever evolving tech landscape.
+            </p>
+            <p className={`italic font-medium ${isDark ? 'text-blue-300' : 'text-blue-600'}`}>
+              "We go beyond being just developers, we're your strategic partners. Integrity and transparency are the cornerstones of our culture."
+            </p>
+          </div>
+        </div>
+    </motion.div>
+  </div>
+</section>
+
       {/* Company Values */}
-      <section className={`py-16 md:py-20 transition-all duration-300 ${isDark ? 'bg-slate-900/50' : 'bg-white'}`}>
+      <section className={`py-16 md:py-10 transition-all duration-300 ${isDark ? 'bg-slate-900/50' : 'bg-white'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -248,7 +324,7 @@ const About = () => {
       </section>
 
       {/* Timeline */}
-      <section className={`py-16 md:py-20 transition-all duration-300 ${isDark 
+      <section className={`py-16 md:py-10 transition-all duration-300 ${isDark 
           ? 'bg-gradient-to-br from-slate-900 via-blue-900/10 to-slate-900' 
           : 'bg-gradient-to-br from-gray-50 via-blue-50/20 to-gray-50'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -303,56 +379,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership Philosophy */}
-      <section className={`py-16 md:py-20 transition-all duration-300 ${isDark ? 'bg-slate-900/30' : 'bg-gray-50/50'}`}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            {/* Decorative Elements */}
-            <div className={`absolute -top-10 -left-10 w-20 h-20 rounded-full blur-xl opacity-20 ${isDark ? 'bg-blue-500' : 'bg-blue-400'}`} />
-            <div className={`absolute -bottom-10 -right-10 w-32 h-32 rounded-full blur-xl opacity-20 ${isDark ? 'bg-cyan-500' : 'bg-blue-300'}`} />
-            
-            <div className="relative z-10">
-              <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                Technology with Purpose
-              </h2>
-              <p className={`text-lg md:text-xl mb-8 leading-relaxed transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-slate-600'}`}>
-                We believe that technology should amplify human potential, not replace it. Our solutions 
-                are designed to augment human decision making, streamline complex processes, and create 
-                opportunities for innovation and growth.
-              </p>
-              
-              <div className={`backdrop-blur-sm border rounded-xl p-6 md:p-8 transition-all duration-300 ${isDark 
-                  ? 'bg-slate-800/50 border-slate-700/50' 
-                  : 'bg-white/70 border-slate-200/50 shadow-lg'}`}>
-                <blockquote className={`text-xl md:text-2xl italic mb-6 transition-colors duration-300 ${isDark ? 'text-gray-300' : 'text-slate-700'}`}>
-                  "The future belongs to organizations that can seamlessly blend human creativity 
-                  with artificial intelligence. We're here to make that future a reality."
-                </blockquote>
-                <div className={`font-semibold ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
-                   Levitica Technologies Leadership Team
-                </div>
-              </div>
 
-              <div className="mt-8">
-                <Link
-                  to="/team"
-                  className={`inline-flex items-center px-6 py-3 border-2 rounded-lg font-semibold transition-all duration-300 ${isDark 
-                      ? 'border-blue-400/50 text-blue-400 hover:border-blue-400 hover:bg-blue-400/10 hover:shadow-glow' 
-                      : 'border-blue-600/50 text-blue-600 hover:border-blue-600 hover:bg-blue-50 shadow-md hover:shadow-lg'}`}
-                >
-                  Meet Our Leadership Team
-                  <FaArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Team Philosophy */}
       <section className={`py-12 md:py-16 border-t transition-all duration-300 ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>

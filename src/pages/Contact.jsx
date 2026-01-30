@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AnimatedBackground from '../components/AnimatedBackground';
 import { useTheme } from '../contexts/ThemeContext';
 import { FaClock, FaEnvelope, FaGlobe, FaMapLocationDot, FaPaperPlane, FaPhone, FaSignalMessenger } from 'react-icons/fa6';
+import { FaPhoneAlt, FaRocket } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
@@ -91,38 +93,113 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-24 overflow-x-hidden"
+      className="pt-20 md:pt-32 overflow-x-hidden"
     >
-      {/* Hero Section */}
-      <AnimatedBackground className="min-h-[60vh] flex items-center justify-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center"
-          >
-            <span className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 border transition-all duration-300 ${isDark 
-                ? 'bg-blue-500/10 border-blue-400/20 text-blue-400 hover:bg-blue-500/20 hover:border-blue-400/30' 
-                : 'bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-300 shadow-sm'}`}>
-              <FaSignalMessenger className="w-4 h-4 mr-2" />
-              Get in Touch
-            </span>
-            
-            <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-3 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>
-              Let's Build Intelligent
-              <span className={`block bg-gradient-to-r bg-clip-text text-transparent mt-2 pb-3 ${isDark 
-                  ? 'from-blue-400 to-cyan-400' 
-                  : 'from-blue-600 to-blue-800'}`}>
-                Systems Together
-              </span>
-            </h1>
-            <p className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 mb-8 ${isDark ? 'text-gray-300' : 'text-slate-600'}`}>
-              Ready to transform your business with cutting-edge AI and technology solutions? 
-              Our team of experts is here to turn your vision into reality.
-            </p>
-          </motion.div>
-        </div>
-      </AnimatedBackground>
+      {/* Hero Section - Contact Page */}
+<div className="relative min-h-[60vh] py-4 flex items-center justify-center overflow-hidden">
+  {/* Background Image with Overlay */}
+  <div className="absolute inset-0 z-0">
+    {/* Background Image - Technology/Connection Theme */}
+    <div 
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: 'url(https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)',
+        opacity: isDark ? 0.5 : 0.9,
+        backgroundPosition: 'center center',
+      }}
+    />
+    
+    {/* Dark/Light Overlay */}
+    <div className={`absolute inset-0 ${
+      isDark 
+        ? 'bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-gray-900/80' 
+        : 'bg-gradient-to-br from-white/85 via-white/75 to-white/85'
+    }`} />
+    
+    
+    
+    {/* Connection/Network Pattern Overlay */}
+   
+    
+   
+  </div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="text-center"
+    >
+      <motion.span
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.2 }}
+        className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6 border backdrop-blur-sm transition-all duration-300 hover:scale-105 ${isDark 
+            ? 'bg-blue-500/20 border-blue-400/30 text-blue-400 hover:bg-blue-500/30 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/10' 
+            : 'bg-white/90 border-blue-300/80 text-blue-700 hover:bg-white hover:border-blue-400 shadow-lg hover:shadow-xl'}`}>
+        <FaSignalMessenger className="w-4 h-4 mr-2" />
+        Get in Touch
+      </motion.span>
+      
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-3 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}
+      >
+        Let's Build Intelligent
+        <span className={`block bg-gradient-to-r bg-clip-text text-transparent mt-2 pb-3 ${isDark 
+            ? 'from-blue-400 to-cyan-400' 
+            : 'from-blue-600 to-blue-800'}`}>
+          Systems Together
+        </span>
+      </motion.h1>
+      
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+        className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 mb-8 backdrop-blur-sm px-6 py-4 rounded-xl ${isDark 
+            ? 'text-gray-200 bg-gray-900/40 border border-gray-800/50' 
+            : 'text-slate-700 bg-white/70 border border-blue-100/50 shadow-lg'}`}
+      >
+        Ready to transform your business with cutting edge AI and technology solutions? 
+        Our team of experts is here to turn your vision into reality.
+      </motion.p>
+
+      {/* Contact CTA Section */}
+      
+
+      {/* Get Started Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.6 }}
+        className="mt-10"
+      >
+        <Link
+          to="/contact"
+          className={`group inline-flex items-center px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${isDark 
+              ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white shadow-xl hover:shadow-2xl hover:shadow-blue-500/25' 
+              : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-xl hover:shadow-2xl'}`}
+        >
+          <span>Start Your Project Today</span>
+          <FaRocket className="ml-3 w-5 h-5 group-hover:translate-y-[-2px] transition-transform" />
+        </Link>
+      </motion.div>
+    </motion.div>
+  </div>
+
+  {/* Connection Lines Animation */}
+  <div className="absolute bottom-0 left-0 right-0 h-px overflow-hidden">
+    <div className={`h-full w-full ${isDark 
+        ? 'bg-gradient-to-r from-transparent via-blue-500 to-transparent' 
+        : 'bg-gradient-to-r from-transparent via-blue-400 to-transparent'}`}>
+      <div className="absolute h-full w-32 bg-gradient-to-r from-transparent via-white to-transparent animate-shimmer" />
+    </div>
+  </div>
+</div>
 
       {/* Contact Information */}
       <section className={`py-10 md:py-5 transition-all duration-300 ${isDark ? 'bg-slate-900' : 'bg-gray-50'}`}>
