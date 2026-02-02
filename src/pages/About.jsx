@@ -97,8 +97,8 @@ const About = () => {
               </span>
             </h1>
             <p className={`text-lg md:text-xl max-w-4xl mx-auto leading-relaxed transition-colors duration-300 mb-8 ${isDark ? 'text-gray-300' : 'text-slate-600'}`}>
-              We are a forward thinking technology consultancy specializing in AI-driven solutions, 
-              cloud infrastructure, and digital transformation. Since 2018, we've been engineering 
+              We are a forward thinking technology consultancy specializing in AI driven solutions, 
+              cloud infrastructure, and digital transformation. Since 2013, we've been engineering 
               intelligent systems that empower businesses to thrive in the digital age.
             </p>
 

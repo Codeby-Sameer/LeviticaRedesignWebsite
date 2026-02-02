@@ -1022,7 +1022,7 @@ const SolutionDetailPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-20 md:pt-24 min-h-screen"
+      className="pt-20 md:pt-28 min-h-screen"
     >
       {/* Hero Section with Image Gallery */}
       <motion.div

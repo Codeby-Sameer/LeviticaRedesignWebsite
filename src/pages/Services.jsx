@@ -46,7 +46,7 @@ const Services = () => {
     <div className={`absolute inset-0 ${
       isDark 
         ? 'bg-gradient-to-br from-gray-900/70 via-gray-900/40 to-gray-900/70' 
-        : 'bg-gradient-to-br from-white/50 via-white/50 to-white/50'
+        : 'bg-gradient-to-br from-black/50 via-black/50 to-black/50'
     }`} />
     
     {/* Subtle Pattern */}
@@ -74,7 +74,7 @@ const Services = () => {
       </span>
       
       <h1 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 transition-colors duration-300 ${
-        isDark ? 'text-white' : 'text-slate-900'
+        isDark ? 'text-white' : 'text-white'
       }`}>
         Technology & Business Services
         <span className={`block bg-gradient-to-r bg-clip-text text-transparent mt-2 pb-2 ${
@@ -88,7 +88,7 @@ const Services = () => {
       <p className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 backdrop-blur-sm ${
         isDark 
           ? 'text-gray-200' 
-          : 'text-slate-700'
+          : 'text-white'
       }`}>
         Comprehensive technology solutions designed to accelerate your digital transformation 
         and drive sustainable business growth through innovation.

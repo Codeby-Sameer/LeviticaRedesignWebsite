@@ -272,7 +272,7 @@ const [activeSlide, setActiveSlide] = useState(0);
                 id: 2,
                 type: 'video',
                 src: "/videos/cloud video2.mp4", // Replace with your video URL
-                thumbnail: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2074&auto=format&fit=crop",
+                thumbnail: "https://media.istockphoto.com/id/1137141260/photo/augmented-reality-interface.jpg?s=612x612&w=0&k=20&c=WrO_0dvnPvpdjWA2ZJaQZKDNAbyZgCNoHB0higIMItM=",
                 title: "Cloud Infrastructure",
                 description: "Scalable cloud-native solutions"
               },
@@ -424,6 +424,74 @@ const [activeSlide, setActiveSlide] = useState(0);
   </div>
 </div>
 
+
+      {/* Why Choose Us Section */}
+      <section className={`py-10 md:py-10 transition-all duration-300 ${isDark ? 'bg-slate-900/50' : 'bg-white'}`}>
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                Why Choose Levitica Technologies?
+              </h2>
+              <p className={`text-lg md:text-xl max-w-3xl mx-auto transition-colors duration-300 ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
+                We combine technical expertise with business acumen to deliver exceptional results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: FaAward,
+                  title: "Proven Expertise",
+                  description: "8+ years of experience delivering complex enterprise solutions with measurable ROI",
+                  color: isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-700"
+                },
+                {
+                  icon: FaBolt,
+                  title: "Rapid Deployment",
+                  description: "Agile development approach ensures faster time to market for your solutions",
+                  color: isDark ? "from-red-500 to-orange-500" : "from-red-700 to-orange-800"
+                },
+                {
+                  icon: FaUsers,
+                  title: "Dedicated Teams",
+                  description: "Skilled professionals who become an extension of your in house team",
+                  color: isDark ? "from-violet-600 to-violet-500" : "from-violet-800 to-violet-700"
+                },
+                {
+                  icon: FaShieldAlt,
+                  title: "Enterprise Security",
+                  description: "Highest security standards with compliance certifications and regular audits",
+                  color: isDark ? "from-green-500 to-green-600" : "from-green-700 to-green-800"
+                }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                  className={`backdrop-blur-sm border rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 ${isDark 
+                      ? 'bg-slate-800/50 border-slate-700/50 hover:border-blue-400/50 hover:bg-slate-800/70 hover:shadow-glow' 
+                      : 'bg-white/70 border-slate-200/50 hover:border-blue-300/50 hover:bg-white/90 shadow-lg hover:shadow-xl'}`}
+                >
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${item.color} rounded-full mb-4`}>
+                    <item.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className={`text-xl font-semibold mb-3 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                    {item.title}
+                  </h3>
+                  <p className={`text-sm leading-relaxed transition-colors duration-300 ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
+                    {item.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Image-Content Sections */}
       <div className="space-y-5 md:space-y-14 py-6 md:py-10">
         {imageContentSections.map((section, index) => (
@@ -524,72 +592,7 @@ const [activeSlide, setActiveSlide] = useState(0);
         ))}
       </div>
 
-      {/* Why Choose Us Section */}
-      <section className={`py-10 md:py-10 transition-all duration-300 ${isDark ? 'bg-slate-900/50' : 'bg-white'}`}>
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                Why Choose Levitica Technologies?
-              </h2>
-              <p className={`text-lg md:text-xl max-w-3xl mx-auto transition-colors duration-300 ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
-                We combine technical expertise with business acumen to deliver exceptional results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: FaAward,
-                  title: "Proven Expertise",
-                  description: "8+ years of experience delivering complex enterprise solutions with measurable ROI",
-                  color: isDark ? "from-blue-500 to-cyan-500" : "from-blue-600 to-blue-700"
-                },
-                {
-                  icon: FaBolt,
-                  title: "Rapid Deployment",
-                  description: "Agile development approach ensures faster time to market for your solutions",
-                  color: isDark ? "from-red-500 to-orange-500" : "from-red-700 to-orange-800"
-                },
-                {
-                  icon: FaUsers,
-                  title: "Dedicated Teams",
-                  description: "Skilled professionals who become an extension of your in house team",
-                  color: isDark ? "from-violet-600 to-violet-500" : "from-violet-800 to-violet-700"
-                },
-                {
-                  icon: FaShieldAlt,
-                  title: "Enterprise Security",
-                  description: "Highest security standards with compliance certifications and regular audits",
-                  color: isDark ? "from-green-500 to-green-600" : "from-green-700 to-green-800"
-                }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
-                  className={`backdrop-blur-sm border rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 ${isDark 
-                      ? 'bg-slate-800/50 border-slate-700/50 hover:border-blue-400/50 hover:bg-slate-800/70 hover:shadow-glow' 
-                      : 'bg-white/70 border-slate-200/50 hover:border-blue-300/50 hover:bg-white/90 shadow-lg hover:shadow-xl'}`}
-                >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${item.color} rounded-full mb-4`}>
-                    <item.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className={`text-xl font-semibold mb-3 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                    {item.title}
-                  </h3>
-                  <p className={`text-sm leading-relaxed transition-colors duration-300 ${isDark ? 'text-gray-400' : 'text-slate-600'}`}>
-                    {item.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Innovation Process Section */}
       <section className={`py-10 md:py-10 transition-all duration-300 ${isDark 

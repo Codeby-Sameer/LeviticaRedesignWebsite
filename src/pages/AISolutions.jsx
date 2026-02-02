@@ -55,7 +55,7 @@ const AISolutions = () => {
     <div 
       className="absolute inset-0 bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: 'url(https://media.istockphoto.com/id/2223894979/photo/ai-agents-and-assistants-man-using-a-laptop-with-futuristic-software-for-generating-images.jpg?s=612x612&w=0&k=20&c=K8HxtWCtltBiy6K9hBbkbJrCVXzFwP5yOKP5jsUFOIE=)',
+        backgroundImage: 'url(https://media.istockphoto.com/id/1440356809/photo/artificial-intelligence-technology-robot-futuristic-data-science-data-analytics-quantum.jpg?s=612x612&w=0&k=20&c=rmkxBaRiWay0ghLSP91Zhei6NQWfaKSRv3zlzF-2BDs=)',
         opacity: isDark ? 1 : 1,
       }}
     />
@@ -64,18 +64,18 @@ const AISolutions = () => {
     <div className={`absolute inset-0 ${
       isDark 
         ? 'bg-gradient-to-br from-gray-900/80 via-gray-900/50 to-gray-900/80' 
-        : 'bg-gradient-to-br from-white/50 via-white/50 to-white/50'
+        : 'bg-gradient-to-br from-black/50 via-black/50 to-black/50'
     }`} />
     
     {/* Animated Background Component */}
     <AnimatedBackground className="absolute inset-0 opacity-50" />
     
     {/* Neural Network Pattern Overlay */}
-    <div className={`absolute inset-0 ${
+    {/* <div className={`absolute inset-0 ${
       isDark 
         ? 'bg-[radial-gradient(circle_at_30%_50%,_transparent_0%,_#1e40af/10_20%,_transparent_40%)]' 
         : 'bg-[radial-gradient(circle_at_30%_50%,_transparent_0%,_#3b82f6/5_20%,_transparent_40%)]'
-    }`} />
+    }`} /> */}
   </div>
 
   {/* Content */}
@@ -98,27 +98,13 @@ const AISolutions = () => {
           Artificial Intelligence Solutions
         </motion.span>
         
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3 }}
-          className="flex items-center justify-center space-x-2 mb-6"
-        >
-          {/* Animated Glow Effect for Icons */}
-          <div className="relative">
-            <div className={`absolute inset-0 rounded-full blur-lg ${
-              isDark ? 'bg-blue-500/30' : 'bg-blue-400/40'
-            } animate-pulse`} />
-            <FaRobot className={`relative w-10 h-10 ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
-          </div>
-          <FaBolt className={`w-8 h-8 ${isDark ? 'text-blue-300' : 'text-blue-800'}`} />
-        </motion.div>
+        
         
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 transition-colors duration-300 ${isDark ? 'text-white' : 'text-slate-900'}`}
+          className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 transition-colors duration-300 ${isDark ? 'text-white' : 'text-white'}`}
         >
           AI Solutions
           <span className={`block pb-2 bg-gradient-to-r bg-clip-text text-transparent mt-2 ${isDark 
@@ -134,7 +120,7 @@ const AISolutions = () => {
           transition={{ delay: 0.5 }}
           className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 mb-8 px-4 py-2 rounded-lg ${isDark 
               ? 'text-gray-200' 
-              : 'text-slate-700'}`}
+              : 'text-white'}`}
         >
           Harness the power of artificial intelligence to transform your business operations, 
           enhance decision making, and create unprecedented competitive advantages.
