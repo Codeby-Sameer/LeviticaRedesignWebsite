@@ -36,7 +36,7 @@ const MobileTopBar = ({ scrolled, isDark }) => {
               <FaXTwitter className="w-4 h-4" />
             </a>
             <a 
-              href="https://www.instagram.com/levitica_technologies/" 
+              href="https://www.instagram.com/life_at_levitica/" 
               target="_blank" 
               rel="noreferrer" 
               className="hover:text-white transition-colors hover:scale-110"
@@ -121,7 +121,7 @@ const MobileTopBar = ({ scrolled, isDark }) => {
               <FaXTwitter className="w-4 h-4" />
             </a>
             <a 
-              href="https://www.instagram.com/levitica_technologies/" 
+              href="https://www.instagram.com/life_at_levitica/" 
               target="_blank" 
               rel="noreferrer" 
               className="hover:text-white transition-colors hover:scale-110"

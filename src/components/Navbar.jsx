@@ -196,7 +196,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="fixed w-full top-0 z-50">
+    <header className="fixed w-full top-0 z-50 bg-white">
 
       <DesktopTopBar scrolled={scrolled} isDark={isDark} />
       <MobileTopBar scrolled={scrolled} isDark={isDark} />
@@ -206,7 +206,7 @@ const Navbar = () => {
       <motion.nav
         // initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`w-full backdrop-blur-lg border-b transition-all duration-300 ${
+        className={`w-full  border-b transition-all duration-300 ${
           scrolled ? 'shadow-xl' : 'shadow-lg'
         } ${
           isDark 
@@ -214,7 +214,7 @@ const Navbar = () => {
             : 'bg-white/95 border-slate-200/50'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 md:py-0 lg:px-8">
           <div className={`flex justify-between items-center md:h-24 ${isDark ? 'bg-slate-900' : 'bg-white'}`}>
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group">

@@ -13,6 +13,8 @@ import Contact from './pages/Contact';
 import ServiceDetail from './pages/ServiceDetail';
 import ScrollToTop from './components/ScrollToTop';
 import SolutionDetailPage from './pages/SolutionDetailPage';
+import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path='/terms' element={<TermsAndConditions />} />
+              <Route path='/privacy' element={<PrivacyPolicy />} />
             </Routes>
           </AnimatePresence>
           <Footer />

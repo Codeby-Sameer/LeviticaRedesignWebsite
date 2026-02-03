@@ -180,7 +180,7 @@ const ServiceDetail = () => {
       </div>
 
       {/* Tab Content - Only one image used in overview */}
-      <div className={`py-8 sm:py-12 md:py-16 transition-all duration-300 ${
+      <div className={`py-8 sm:py-12 md:py-8 transition-all duration-300 ${
         isDark ? 'bg-slate-900/30' : 'bg-gray-50/50'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -489,7 +489,7 @@ const ServiceDetail = () => {
       </div>
 
       {/* CTA Section */}
-      <section className={`py-12 sm:py-16 md:py-20 transition-all duration-300 ${
+      <section className={`py-12 sm:py-16 md:py-10 transition-all duration-300 ${
         isDark 
           ? 'bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900' 
           : 'bg-gradient-to-br from-white via-blue-50/50 to-gray-50'

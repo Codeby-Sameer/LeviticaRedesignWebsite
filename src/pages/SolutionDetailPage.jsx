@@ -1022,7 +1022,7 @@ const SolutionDetailPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-20 md:pt-28 min-h-screen"
+      className="pt-28 md:pt-28 min-h-screen"
     >
       {/* Hero Section with Image Gallery */}
       <motion.div
@@ -1031,7 +1031,7 @@ const SolutionDetailPage = () => {
         transition={{ duration: 0.8 }}
         className={`relative ${isDark ? 'bg-gradient-to-br from-slate-900 to-slate-800' : 'bg-gradient-to-br from-gray-50 to-white'}`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-8">
           {/* Back Link */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}

@@ -45,7 +45,7 @@ const AISolutions = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-16 md:pt-32 w-full"
+      className="pt-20 md:pt-32 w-full"
     >
 {/* Hero Section */}
 <div className="relative min-h-[70vh] flex items-center justify-center w-full overflow-hidden">

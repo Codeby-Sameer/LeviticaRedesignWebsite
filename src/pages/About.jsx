@@ -245,9 +245,7 @@ const About = () => {
               }}
             />
           </div>
-          {/* Decorative elements */}
-          <div className={`absolute -top-4 -right-4 w-16 h-16 rounded-full ${isDark ? 'bg-cyan-500/20' : 'bg-blue-200/50'} blur-xl`} />
-          <div className={`absolute -bottom-4 -left-4 w-20 h-20 rounded-full ${isDark ? 'bg-blue-500/20' : 'bg-blue-300/50'} blur-xl`} />
+          
         </div>
       </div>
 

@@ -30,7 +30,7 @@ const Services = () => {
       className="md:pt-32 pt-20 overflow-x-hidden"
     >
      {/* Hero Section */}
-<div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+<div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
   {/* Background Image with Overlay */}
   <div className="absolute inset-0 z-0">
     {/* Background Image */}
@@ -447,13 +447,7 @@ const Services = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            {/* Decorative Elements */}
-            <div className={`absolute -top-10 -left-10 w-20 h-20 rounded-full blur-xl opacity-20 ${
-              isDark ? 'bg-blue-500' : 'bg-blue-400'
-            }`} />
-            <div className={`absolute -bottom-10 -right-10 w-32 h-32 rounded-full blur-xl opacity-20 ${
-              isDark ? 'bg-cyan-500' : 'bg-blue-300'
-            }`} />
+            
             
             <div className="relative z-10">
               <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 transition-colors duration-300 ${

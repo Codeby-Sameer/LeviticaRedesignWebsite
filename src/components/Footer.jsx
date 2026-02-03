@@ -77,21 +77,21 @@
 //             <ul className={`space-y-2 text-sm ${
 //               isDark ? 'text-gray-400' : 'text-slate-600'
 //             }`}>
-//               <li><a href="#" className={`transition-colors ${
+//               <li><Link href="#" className={`transition-colors ${
 //                 isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//               }`}>Custom Software Engineering</a></li>
-//               <li><a href="#" className={`transition-colors ${
+//               }`}>Custom Software Engineering</Link></li>
+//               <li><Link href="#" className={`transition-colors ${
 //                 isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//               }`}>Web & Mobile Development</a></li>
-//               <li><a href="#" className={`transition-colors ${
+//               }`}>Web & Mobile Development</Link></li>
+//               <li><Link href="#" className={`transition-colors ${
 //                 isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//               }`}>Cloud & DevOps</a></li>
-//               <li><a href="#" className={`transition-colors ${
+//               }`}>Cloud & DevOps</Link></li>
+//               <li><Link href="#" className={`transition-colors ${
 //                 isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//               }`}>AI Solutions</a></li>
-//               <li><a href="#" className={`transition-colors ${
+//               }`}>AI Solutions</Link></li>
+//               <li><Link href="#" className={`transition-colors ${
 //                 isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//               }`}>Digital Transformation</a></li>
+//               }`}>Digital Transformation</Link></li>
 //             </ul>
 //           </div>
 
@@ -103,21 +103,21 @@
 //             <ul className={`space-y-2 text-sm ${
 //               isDark ? 'text-gray-400' : 'text-slate-600'
 //             }`}>
-//               <li><a href="#" className={`transition-colors ${
+//               <li><Link href="#" className={`transition-colors ${
 //                 isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//               }`}>React & Node.js</a></li>
-//               <li><a href="#" className={`transition-colors ${
+//               }`}>React & Node.js</Link></li>
+//               <li><Link href="#" className={`transition-colors ${
 //                 isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//               }`}>AWS & Azure</a></li>
-//               <li><a href="#" className={`transition-colors ${
+//               }`}>AWS & Azure</Link></li>
+//               <li><Link href="#" className={`transition-colors ${
 //                 isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//               }`}>AI & Machine Learning</a></li>
-//               <li><a href="#" className={`transition-colors ${
+//               }`}>AI & Machine Learning</Link></li>
+//               <li><Link href="#" className={`transition-colors ${
 //                 isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//               }`}>Database Solutions</a></li>
-//               <li><a href="#" className={`transition-colors ${
+//               }`}>Database Solutions</Link></li>
+//               <li><Link href="#" className={`transition-colors ${
 //                 isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//               }`}>DevOps Automation</a></li>
+//               }`}>DevOps Automation</Link></li>
 //             </ul>
 //           </div>
 
@@ -162,15 +162,15 @@
 //           <div className={`flex space-x-6 mt-4 md:mt-0 text-sm ${
 //             isDark ? 'text-gray-400' : 'text-slate-600'
 //           }`}>
-//             <a href="#" className={`transition-colors ${
+//             <Link href="#" className={`transition-colors ${
 //               isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//             }`}>Privacy Policy</a>
-//             <a href="#" className={`transition-colors ${
+//             }`}>Privacy Policy</Link>
+//             <Link href="#" className={`transition-colors ${
 //               isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//             }`}>Terms of Service</a>
-//             <a href="#" className={`transition-colors ${
+//             }`}>Terms of Service</Link>
+//             <Link href="#" className={`transition-colors ${
 //               isDark ? 'hover:text-blue-400' : 'hover:text-blue-600'
-//             }`}>Cookies</a>
+//             }`}>Cookies</Link>
 //           </div>
 //         </div>
 //       </div>
@@ -244,15 +244,7 @@ const Footer = () => {
       { name: 'Careers', path: '/careers' },
       { name: 'AI Solutions', path: '/ai-solutions' },
       { name: 'contact', path: '/contact' },
-    ],
-    resources: [
-      { name: 'Documentation', path: '/services/content-documentation' },
-      { name: 'API Reference', path: '/api' },
-      { name: 'Help Center', path: '/help' },
-      { name: 'Community Forum', path: '/community' },
-      { name: 'Tutorials', path: '/tutorials' },
-      { name: 'Whitepapers', path: '/whitepapers' },
-    ],
+    ]
   };
 
   const socialLinks = [
@@ -321,7 +313,7 @@ const Footer = () => {
             </div>
 
             <p className="text-blue-100/80 leading-relaxed max-w-lg">
-              We transform businesses through AI-driven innovation and cutting-edge technology 
+              We transform businesses through AI driven innovation and cutting edge technology 
               solutions. Our team of experts delivers exceptional digital experiences that drive 
               growth and efficiency.
             </p>
@@ -356,7 +348,7 @@ const Footer = () => {
           </div>
 
           {/* Right Column - Quick Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {Object.entries(footerLinks).map(([category, links]) => (
               <div key={category} className="space-y-4">
                 <h3 className="font-semibold text-lg text-white capitalize">
@@ -391,48 +383,44 @@ const Footer = () => {
             <p className="text-sm text-blue-100/70">
               © {new Date().getFullYear()} Levitica Technologies. All rights reserved.
             </p>
-            <span className="text-blue-100/50">•</span>
-            <div className="flex items-center gap-1 text-xs text-blue-100/60">
-              <FaHeart className="w-3 h-3" />
-              <span>Made with passion for innovation</span>
-            </div>
+            
           </div>
           
           <div className="flex flex-wrap gap-4 md:gap-6 mt-4 md:mt-0 text-sm text-blue-100/70">
-            <a 
-              href="#" 
+            <Link 
+              to="/privacy" 
               className="hover:text-white transition-colors flex items-center gap-1"
             >
               Privacy Policy
-            </a>
+            </Link>
             <span className="text-blue-100/50 hidden md:inline">•</span>
-            <a 
-              href="#" 
+            <Link 
+              to="/terms" 
               className="hover:text-white transition-colors flex items-center gap-1"
             >
               Terms of Service
-            </a>
-            <span className="text-blue-100/50 hidden md:inline">•</span>
-            <a 
+            </Link>
+            {/* <span className="text-blue-100/50 hidden md:inline">•</span>
+            <Link 
               href="#" 
               className="hover:text-white transition-colors flex items-center gap-1"
             >
               Cookie Policy
-            </a>
+            </Link>
             <span className="text-blue-100/50 hidden md:inline">•</span>
-            <a 
+            <Link 
               href="#" 
               className="hover:text-white transition-colors flex items-center gap-1"
             >
               GDPR Compliance
-            </a>
+            </Link>
             <span className="text-blue-100/50 hidden md:inline">•</span>
-            <a 
+            <Link 
               href="#" 
               className="hover:text-white transition-colors flex items-center gap-1"
             >
               Sitemap
-            </a>
+            </Link> */}
           </div>
         </div>
 
