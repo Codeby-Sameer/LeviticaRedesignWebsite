@@ -1,6 +1,7 @@
 // components/PrivacyPolicy.jsx
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../contexts/ThemeContext';
 import { 
   FaShieldAlt, 
   FaDatabase, 
@@ -17,7 +18,8 @@ import {
   FaExchangeAlt,
   FaKey,
   FaFileAlt,
-  FaCog
+  FaCog,
+  FaQuestionCircle
 } from 'react-icons/fa';
 
 const PrivacyPolicy = () => {
@@ -25,6 +27,7 @@ const PrivacyPolicy = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
   const tabsRef = useRef(null);
+  const { isDark } = useTheme();
 
   const sections = [
     { id: 'overview', title: 'Overview', icon: FaShieldAlt },
@@ -82,18 +85,26 @@ const PrivacyPolicy = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-32 pb-12 px-4 sm:px-6 lg:px-8">
+    <div className={`min-h-screen pt-32 pb-12 px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
+      isDark ? 'bg-slate-900' : 'bg-gray-50'
+    }`}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 lg:mb-12">
-          <h1 className="mt-4 text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">
+          <h1 className={`mt-4 text-3xl lg:text-4xl font-extrabold tracking-tight transition-colors duration-300 ${
+            isDark ? 'text-white' : 'text-gray-900'
+          }`}>
             Privacy Policy
           </h1>
-          <p className="mt-2 lg:mt-4 text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className={`mt-2 lg:mt-4 text-base lg:text-lg max-w-3xl mx-auto transition-colors duration-300 ${
+            isDark ? 'text-gray-300' : 'text-gray-600'
+          }`}>
             Protecting your privacy is our priority. This policy explains how Levitica Technologies 
             collects, uses, and protects your information.
           </p>
-          <p className="mt-2 text-sm text-gray-500">
+          <p className={`mt-2 text-sm transition-colors duration-300 ${
+            isDark ? 'text-gray-400' : 'text-gray-500'
+          }`}>
             Last updated: {new Date().toLocaleDateString('en-US', { 
               year: 'numeric', 
               month: 'long', 
@@ -118,8 +129,16 @@ const PrivacyPolicy = () => {
                     onClick={() => setActiveSection(section.id)}
                     className={`flex-shrink-0 px-4 py-3 rounded-lg flex items-center space-x-2 transition-all ${
                       activeSection === section.id
-                        ? 'bg-green-600 text-white shadow-md'
-                        : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
+                        ? `${
+                            isDark 
+                              ? 'bg-green-600 text-white shadow-md' 
+                              : 'bg-green-600 text-white shadow-md'
+                          }`
+                        : `${
+                            isDark 
+                              ? 'bg-slate-800 text-gray-300 hover:bg-slate-700 border border-slate-700' 
+                              : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
+                          }`
                     }`}
                   >
                     <Icon className="text-sm" />
@@ -135,8 +154,12 @@ const PrivacyPolicy = () => {
           {/* Desktop Sidebar Navigation */}
           <div className="hidden lg:block lg:w-1/4">
             <nav className="sticky top-36">
-              <div className="bg-white rounded-lg shadow-sm p-4">
-                <h3 className="font-semibold text-gray-900 mb-4">Quick Navigation</h3>
+              <div className={`rounded-lg shadow-sm p-4 transition-all duration-300 ${
+                isDark ? 'bg-slate-800' : 'bg-white'
+              }`}>
+                <h3 className={`font-semibold mb-4 transition-colors duration-300 ${
+                  isDark ? 'text-white' : 'text-gray-900'
+                }`}>Quick Navigation</h3>
                 <ul className="space-y-2">
                   {sections.map((section) => {
                     const Icon = section.icon;
@@ -146,11 +169,19 @@ const PrivacyPolicy = () => {
                           onClick={() => setActiveSection(section.id)}
                           className={`w-full text-left px-4 py-3 rounded-md transition-colors flex items-center space-x-3 ${
                             activeSection === section.id
-                              ? 'bg-green-50 text-green-700 font-medium'
-                              : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                              ? `${
+                                  isDark 
+                                    ? 'bg-green-600 text-white' 
+                                    : 'bg-green-50 text-green-700'
+                                }`
+                              : `${
+                                  isDark 
+                                    ? 'text-gray-300 hover:bg-slate-700 hover:text-white' 
+                                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                }`
                           }`}
                         >
-                          <Icon className="text-gray-400" />
+                          <Icon className={`${isDark ? 'text-gray-400' : 'text-gray-400'}`} />
                           <span>{section.title}</span>
                         </button>
                       </li>
@@ -159,54 +190,85 @@ const PrivacyPolicy = () => {
                 </ul>
               </div>
 
-              {/* Download Notice */}
-              <div className="mt-6 bg-green-50 rounded-lg p-4">
-                <h4 className="font-semibold text-green-900 mb-2 flex items-center">
-                  <FaDownload className="mr-2" />
-                  Download Policy
+              {/* Quick Info */}
+              <div className={`mt-6 rounded-lg p-4 transition-all duration-300 ${
+                isDark ? 'bg-green-900/20 border border-green-800/30' : 'bg-green-50'
+              }`}>
+                <h4 className={`font-semibold mb-2 flex items-center transition-colors duration-300 ${
+                  isDark ? 'text-green-300' : 'text-green-900'
+                }`}>
+                  <FaQuestionCircle className="mr-2" />
+                  Need Help?
                 </h4>
-                <p className="text-sm text-green-700 mb-3">
-                  Download a PDF version for your records
+                <p className={`text-sm mb-3 transition-colors duration-300 ${
+                  isDark ? 'text-green-200' : 'text-green-700'
+                }`}>
+                  Have questions about our terms?
                 </p>
-                <button className="inline-block w-full text-center bg-white text-green-600 px-4 py-2 rounded-md border border-green-200 hover:bg-green-600 hover:text-white transition-colors">
-                  Download PDF
-                </button>
+                <Link
+                  to="/contact"
+                  className={`inline-block w-full text-center px-4 py-2 rounded-md border transition-colors ${
+                    isDark 
+                      ? 'bg-green-600 text-white border-green-500 hover:bg-blue-700' 
+                      : 'bg-white text-green-600 border-green-200 hover:bg-green-600 hover:text-white'
+                  }`}
+                >
+                  Contact Us
+                </Link>
               </div>
             </nav>
           </div>
 
           {/* Main Content */}
           <div className="lg:w-3/4">
-            <div className="bg-white rounded-xl shadow-lg p-6 lg:p-8">
+            <div className={`rounded-xl shadow-lg p-6 lg:p-8 transition-all duration-300 ${
+              isDark ? 'bg-slate-800' : 'bg-white'
+            }`}>
               {/* Overview Section */}
               {activeSection === 'overview' && (
                 <section id="overview">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
+                  <h2 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
+                    isDark ? 'text-white' : 'text-gray-900'
+                  }`}>1. Introduction</h2>
                   
-                  <div className="prose prose-green max-w-none">
-                    <p className="text-gray-700 mb-4">
+                  <div className="prose max-w-none">
+                    <p className={`mb-4 transition-colors duration-300 ${
+                      isDark ? 'text-gray-300' : 'text-gray-700'
+                    }`}>
                       <strong>Levitica Technologies Private Limited</strong> ("we", "us", "our") is committed 
                       to protecting and respecting your privacy. This Privacy Policy explains how we collect, 
                       use, disclose, and safeguard your information when you use our services.
                     </p>
 
-                    <div className="bg-gray-50 rounded-lg p-6 mt-6 mb-6">
-                      <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
-                        <FaShieldAlt className="mr-2 text-green-500" />
+                    <div className={`rounded-lg p-6 mt-6 mb-6 ${
+                      isDark ? 'bg-slate-700/30' : 'bg-gray-50'
+                    }`}>
+                      <h3 className={`font-semibold mb-3 flex items-center transition-colors duration-300 ${
+                        isDark ? 'text-green-300' : 'text-gray-900'
+                      }`}>
+                        <FaShieldAlt className={`mr-2 ${
+                          isDark ? 'text-green-400' : 'text-green-500'
+                        }`} />
                         Our Commitment
                       </h3>
-                      <p className="text-gray-600">
+                      <p className={isDark ? 'text-gray-300' : 'text-gray-600'}>
                         We are committed to protecting your personal data and being transparent about 
                         how we handle it. We comply with applicable data protection laws including 
                         GDPR, CCPA, and other global privacy regulations.
                       </p>
                     </div>
 
-                    <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">1.1 Scope</h3>
-                    <p className="text-gray-700 mb-4">
+                    <h3 className={`text-xl font-semibold mt-6 mb-3 transition-colors duration-300 ${
+                      isDark ? 'text-white' : 'text-gray-900'
+                    }`}>1.1 Scope</h3>
+                    <p className={`mb-4 transition-colors duration-300 ${
+                      isDark ? 'text-gray-300' : 'text-gray-700'
+                    }`}>
                       This policy applies to:
                     </p>
-                    <ul className="list-disc pl-5 text-gray-700 space-y-2 mb-6">
+                    <ul className={`list-disc pl-5 space-y-2 mb-6 ${
+                      isDark ? 'text-gray-300' : 'text-gray-700'
+                    }`}>
                       <li>Clients using our services</li>
                       <li>Website visitors and users</li>
                       <li>Job applicants and employees</li>
@@ -219,14 +281,20 @@ const PrivacyPolicy = () => {
               {/* Data Collection Section */}
               {activeSection === 'data-collection' && (
                 <section id="data-collection">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Data We Collect</h2>
+                  <h2 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
+                    isDark ? 'text-white' : 'text-gray-900'
+                  }`}>2. Data We Collect</h2>
                   
-                  <div className="prose prose-green max-w-none">
+                  <div className="prose max-w-none">
                     <div className="flex items-start mb-6">
-                      <FaDatabase className="text-blue-500 mt-1 mr-3 flex-shrink-0 text-xl" />
+                      <FaDatabase className={`mt-1 mr-3 flex-shrink-0 text-xl ${
+                        isDark ? 'text-blue-400' : 'text-blue-500'
+                      }`} />
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">2.1 Categories of Data</h3>
-                        <p className="text-gray-700">
+                        <h3 className={`text-xl font-semibold mb-2 transition-colors duration-300 ${
+                          isDark ? 'text-white' : 'text-gray-900'
+                        }`}>2.1 Categories of Data</h3>
+                        <p className={isDark ? 'text-gray-300' : 'text-gray-700'}>
                           We collect different types of information depending on your interaction with us.
                         </p>
                       </div>
@@ -234,12 +302,20 @@ const PrivacyPolicy = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                       {dataCategories.map((category, index) => (
-                        <div key={index} className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
-                          <h4 className="font-semibold text-gray-900 mb-3">{category.name}</h4>
+                        <div key={index} className={`border rounded-lg p-5 hover:shadow-md transition-shadow ${
+                          isDark ? 'border-slate-700' : 'border-gray-200'
+                        }`}>
+                          <h4 className={`font-semibold mb-3 transition-colors duration-300 ${
+                            isDark ? 'text-white' : 'text-gray-900'
+                          }`}>{category.name}</h4>
                           <ul className="space-y-2">
                             {category.items.map((item, idx) => (
-                              <li key={idx} className="flex items-center text-gray-600">
-                                <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3"></div>
+                              <li key={idx} className={`flex items-center ${
+                                isDark ? 'text-gray-300' : 'text-gray-600'
+                              }`}>
+                                <div className={`w-1.5 h-1.5 rounded-full mr-3 ${
+                                  isDark ? 'bg-blue-400' : 'bg-blue-400'
+                                }`}></div>
                                 {item}
                               </li>
                             ))}
@@ -254,15 +330,25 @@ const PrivacyPolicy = () => {
               {/* Data Use Section */}
               {activeSection === 'data-use' && (
                 <section id="data-use">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">3. How We Use Your Data</h2>
+                  <h2 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
+                    isDark ? 'text-white' : 'text-gray-900'
+                  }`}>3. How We Use Your Data</h2>
                   
-                  <div className="prose prose-green max-w-none">
-                    <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">3.1 Purposes of Processing</h3>
+                  <div className="prose max-w-none">
+                    <h3 className={`text-xl font-semibold mt-6 mb-3 transition-colors duration-300 ${
+                      isDark ? 'text-white' : 'text-gray-900'
+                    }`}>3.1 Purposes of Processing</h3>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                      <div className="bg-blue-50 p-5 rounded-lg">
-                        <h4 className="font-semibold text-blue-900 mb-3">Service Delivery</h4>
-                        <ul className="space-y-2 text-blue-800">
+                      <div className={`p-5 rounded-lg ${
+                        isDark ? 'bg-blue-900/20 border border-blue-800/30' : 'bg-blue-50'
+                      }`}>
+                        <h4 className={`font-semibold mb-3 transition-colors duration-300 ${
+                          isDark ? 'text-blue-300' : 'text-blue-900'
+                        }`}>Service Delivery</h4>
+                        <ul className={`space-y-2 ${
+                          isDark ? 'text-blue-200' : 'text-blue-800'
+                        }`}>
                           <li className="flex items-center">
                             <FaCog className="mr-2 text-sm" />
                             Providing requested services
@@ -281,9 +367,15 @@ const PrivacyPolicy = () => {
                           </li>
                         </ul>
                       </div>
-                      <div className="bg-green-50 p-5 rounded-lg">
-                        <h4 className="font-semibold text-green-900 mb-3">Business Operations</h4>
-                        <ul className="space-y-2 text-green-800">
+                      <div className={`p-5 rounded-lg ${
+                        isDark ? 'bg-green-900/20 border border-green-800/30' : 'bg-green-50'
+                      }`}>
+                        <h4 className={`font-semibold mb-3 transition-colors duration-300 ${
+                          isDark ? 'text-green-300' : 'text-green-900'
+                        }`}>Business Operations</h4>
+                        <ul className={`space-y-2 ${
+                          isDark ? 'text-green-200' : 'text-green-800'
+                        }`}>
                           <li className="flex items-center">
                             <FaCog className="mr-2 text-sm" />
                             Improving our services
@@ -310,33 +402,61 @@ const PrivacyPolicy = () => {
               {/* Data Sharing Section */}
               {activeSection === 'data-sharing' && (
                 <section id="data-sharing">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Data Sharing and Disclosure</h2>
+                  <h2 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
+                    isDark ? 'text-white' : 'text-gray-900'
+                  }`}>4. Data Sharing and Disclosure</h2>
                   
-                  <div className="prose prose-green max-w-none">
+                  <div className="prose max-w-none">
                     <div className="flex items-start mb-6">
-                      <FaEye className="text-blue-500 mt-1 mr-3 flex-shrink-0 text-xl" />
+                      <FaEye className={`mt-1 mr-3 flex-shrink-0 text-xl ${
+                        isDark ? 'text-blue-400' : 'text-blue-500'
+                      }`} />
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">4.1 When We Share Data</h3>
-                        <p className="text-gray-700">
+                        <h3 className={`text-xl font-semibold mb-2 transition-colors duration-300 ${
+                          isDark ? 'text-white' : 'text-gray-900'
+                        }`}>4.1 When We Share Data</h3>
+                        <p className={isDark ? 'text-gray-300' : 'text-gray-700'}>
                           We only share your data when necessary and with appropriate safeguards.
                         </p>
                       </div>
                     </div>
 
-                    <div className="bg-gray-50 rounded-lg p-6 mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">Third Parties We Work With</h4>
+                    <div className={`rounded-lg p-6 mb-6 ${
+                      isDark ? 'bg-slate-700/30' : 'bg-gray-50'
+                    }`}>
+                      <h4 className={`font-semibold mb-3 transition-colors duration-300 ${
+                        isDark ? 'text-white' : 'text-gray-900'
+                      }`}>Third Parties We Work With</h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <div className="p-3 bg-white rounded border">
-                          <h5 className="font-medium text-gray-900">Service Providers</h5>
-                          <p className="text-sm text-gray-600 mt-1">Hosting, payment processing, analytics</p>
+                        <div className={`p-3 rounded border ${
+                          isDark ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
+                        }`}>
+                          <h5 className={`font-medium transition-colors duration-300 ${
+                            isDark ? 'text-white' : 'text-gray-900'
+                          }`}>Service Providers</h5>
+                          <p className={`text-sm mt-1 ${
+                            isDark ? 'text-gray-400' : 'text-gray-600'
+                          }`}>Hosting, payment processing, analytics</p>
                         </div>
-                        <div className="p-3 bg-white rounded border">
-                          <h5 className="font-medium text-gray-900">Business Partners</h5>
-                          <p className="text-sm text-gray-600 mt-1">Joint service delivery partners</p>
+                        <div className={`p-3 rounded border ${
+                          isDark ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
+                        }`}>
+                          <h5 className={`font-medium transition-colors duration-300 ${
+                            isDark ? 'text-white' : 'text-gray-900'
+                          }`}>Business Partners</h5>
+                          <p className={`text-sm mt-1 ${
+                            isDark ? 'text-gray-400' : 'text-gray-600'
+                          }`}>Joint service delivery partners</p>
                         </div>
-                        <div className="p-3 bg-white rounded border">
-                          <h5 className="font-medium text-gray-900">Professional Advisors</h5>
-                          <p className="text-sm text-gray-600 mt-1">Lawyers, accountants, consultants</p>
+                        <div className={`p-3 rounded border ${
+                          isDark ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-200'
+                        }`}>
+                          <h5 className={`font-medium transition-colors duration-300 ${
+                            isDark ? 'text-white' : 'text-gray-900'
+                          }`}>Professional Advisors</h5>
+                          <p className={`text-sm mt-1 ${
+                            isDark ? 'text-gray-400' : 'text-gray-600'
+                          }`}>Lawyers, accountants, consultants</p>
                         </div>
                       </div>
                     </div>
@@ -347,66 +467,100 @@ const PrivacyPolicy = () => {
               {/* Cookies Section */}
               {activeSection === 'cookies' && (
                 <section id="cookies">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Cookies and Tracking Technologies</h2>
+                  <h2 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
+                    isDark ? 'text-white' : 'text-gray-900'
+                  }`}>5. Cookies and Tracking Technologies</h2>
                   
-                  <div className="prose prose-green max-w-none">
+                  <div className="prose max-w-none">
                     <div className="flex items-start mb-6">
-                      <FaCookie className="text-amber-500 mt-1 mr-3 flex-shrink-0 text-xl" />
+                      <FaCookie className={`mt-1 mr-3 flex-shrink-0 text-xl ${
+                        isDark ? 'text-yellow-500' : 'text-amber-500'
+                      }`} />
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">5.1 Types of Cookies We Use</h3>
-                        <p className="text-gray-700">
+                        <h3 className={`text-xl font-semibold mb-2 transition-colors duration-300 ${
+                          isDark ? 'text-white' : 'text-gray-900'
+                        }`}>5.1 Types of Cookies We Use</h3>
+                        <p className={isDark ? 'text-gray-300' : 'text-gray-700'}>
                           We use cookies and similar technologies to enhance your experience.
                         </p>
                       </div>
                     </div>
 
-                    <div className="overflow-x-auto mt-6">
+                    <div className={`overflow-x-auto mt-6 ${
+                      isDark ? 'bg-slate-800/50 rounded-lg' : ''
+                    }`}>
                       <table className="min-w-full divide-y divide-gray-200">
-                        <thead className="bg-gray-50">
+                        <thead className={isDark ? 'bg-slate-700' : 'bg-gray-50'}>
                           <tr>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th className={`px-6 py-3 text-left text-xs font-medium uppercase tracking-wider ${
+                              isDark ? 'text-gray-300' : 'text-gray-500'
+                            }`}>
                               Cookie Type
                             </th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th className={`px-6 py-3 text-left text-xs font-medium uppercase tracking-wider ${
+                              isDark ? 'text-gray-300' : 'text-gray-500'
+                            }`}>
                               Purpose
                             </th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            <th className={`px-6 py-3 text-left text-xs font-medium uppercase tracking-wider ${
+                              isDark ? 'text-gray-300' : 'text-gray-500'
+                            }`}>
                               Duration
                             </th>
                           </tr>
                         </thead>
-                        <tbody className="bg-white divide-y divide-gray-200">
-                          <tr>
+                        <tbody className={`divide-y ${
+                          isDark ? 'divide-slate-700 bg-slate-800/30' : 'divide-gray-200 bg-white'
+                        }`}>
+                          <tr className={isDark ? 'hover:bg-slate-700/50' : 'hover:bg-gray-50'}>
                             <td className="px-6 py-4 whitespace-nowrap">
-                              <div className="text-sm font-medium text-gray-900">Essential</div>
+                              <div className={`text-sm font-medium ${
+                                isDark ? 'text-white' : 'text-gray-900'
+                              }`}>Essential</div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="text-sm text-gray-900">Site functionality and security</div>
+                              <div className={`text-sm ${
+                                isDark ? 'text-gray-300' : 'text-gray-900'
+                              }`}>Site functionality and security</div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="text-sm text-gray-900">Session</div>
+                              <div className={`text-sm ${
+                                isDark ? 'text-gray-300' : 'text-gray-900'
+                              }`}>Session</div>
                             </td>
                           </tr>
-                          <tr>
+                          <tr className={isDark ? 'hover:bg-slate-700/50' : 'hover:bg-gray-50'}>
                             <td className="px-6 py-4 whitespace-nowrap">
-                              <div className="text-sm font-medium text-gray-900">Analytics</div>
+                              <div className={`text-sm font-medium ${
+                                isDark ? 'text-white' : 'text-gray-900'
+                              }`}>Analytics</div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="text-sm text-gray-900">Understanding user behavior</div>
+                              <div className={`text-sm ${
+                                isDark ? 'text-gray-300' : 'text-gray-900'
+                              }`}>Understanding user behavior</div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="text-sm text-gray-900">Up to 2 years</div>
+                              <div className={`text-sm ${
+                                isDark ? 'text-gray-300' : 'text-gray-900'
+                              }`}>Up to 2 years</div>
                             </td>
                           </tr>
-                          <tr>
+                          <tr className={isDark ? 'hover:bg-slate-700/50' : 'hover:bg-gray-50'}>
                             <td className="px-6 py-4 whitespace-nowrap">
-                              <div className="text-sm font-medium text-gray-900">Marketing</div>
+                              <div className={`text-sm font-medium ${
+                                isDark ? 'text-white' : 'text-gray-900'
+                              }`}>Marketing</div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="text-sm text-gray-900">Personalized advertising</div>
+                              <div className={`text-sm ${
+                                isDark ? 'text-gray-300' : 'text-gray-900'
+                              }`}>Personalized advertising</div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="text-sm text-gray-900">Up to 1 year</div>
+                              <div className={`text-sm ${
+                                isDark ? 'text-gray-300' : 'text-gray-900'
+                              }`}>Up to 1 year</div>
                             </td>
                           </tr>
                         </tbody>
@@ -419,58 +573,92 @@ const PrivacyPolicy = () => {
               {/* Security Section */}
               {activeSection === 'security' && (
                 <section id="security">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Data Security</h2>
+                  <h2 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
+                    isDark ? 'text-white' : 'text-gray-900'
+                  }`}>6. Data Security</h2>
                   
-                  <div className="prose prose-green max-w-none">
+                  <div className="prose max-w-none">
                     <div className="flex items-start mb-6">
-                      <FaUserLock className="text-green-500 mt-1 mr-3 flex-shrink-0 text-xl" />
+                      <FaUserLock className={`mt-1 mr-3 flex-shrink-0 text-xl ${
+                        isDark ? 'text-green-400' : 'text-green-500'
+                      }`} />
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">6.1 Security Measures</h3>
-                        <p className="text-gray-700">
+                        <h3 className={`text-xl font-semibold mb-2 transition-colors duration-300 ${
+                          isDark ? 'text-white' : 'text-gray-900'
+                        }`}>6.1 Security Measures</h3>
+                        <p className={isDark ? 'text-gray-300' : 'text-gray-700'}>
                           We implement robust security measures to protect your data.
                         </p>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                      <div className="border border-green-200 rounded-lg p-5 bg-green-50">
-                        <h4 className="font-semibold text-green-900 mb-3">Technical Measures</h4>
-                        <ul className="space-y-2 text-green-800">
+                      <div className={`border rounded-lg p-5 ${
+                        isDark ? 'border-green-800/30 bg-green-900/20' : 'border-green-200 bg-green-50'
+                      }`}>
+                        <h4 className={`font-semibold mb-3 transition-colors duration-300 ${
+                          isDark ? 'text-green-300' : 'text-green-900'
+                        }`}>Technical Measures</h4>
+                        <ul className={`space-y-2 ${
+                          isDark ? 'text-green-200' : 'text-green-800'
+                        }`}>
                           <li className="flex items-center">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <div className={`w-2 h-2 rounded-full mr-3 ${
+                              isDark ? 'bg-green-400' : 'bg-green-500'
+                            }`}></div>
                             Encryption in transit and at rest
                           </li>
                           <li className="flex items-center">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <div className={`w-2 h-2 rounded-full mr-3 ${
+                              isDark ? 'bg-green-400' : 'bg-green-500'
+                            }`}></div>
                             Regular security audits
                           </li>
                           <li className="flex items-center">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <div className={`w-2 h-2 rounded-full mr-3 ${
+                              isDark ? 'bg-green-400' : 'bg-green-500'
+                            }`}></div>
                             Access controls and authentication
                           </li>
                           <li className="flex items-center">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <div className={`w-2 h-2 rounded-full mr-3 ${
+                              isDark ? 'bg-green-400' : 'bg-green-500'
+                            }`}></div>
                             Intrusion detection systems
                           </li>
                         </ul>
                       </div>
-                      <div className="border border-blue-200 rounded-lg p-5 bg-blue-50">
-                        <h4 className="font-semibold text-blue-900 mb-3">Organizational Measures</h4>
-                        <ul className="space-y-2 text-blue-800">
+                      <div className={`border rounded-lg p-5 ${
+                        isDark ? 'border-blue-800/30 bg-blue-900/20' : 'border-blue-200 bg-blue-50'
+                      }`}>
+                        <h4 className={`font-semibold mb-3 transition-colors duration-300 ${
+                          isDark ? 'text-blue-300' : 'text-blue-900'
+                        }`}>Organizational Measures</h4>
+                        <ul className={`space-y-2 ${
+                          isDark ? 'text-blue-200' : 'text-blue-800'
+                        }`}>
                           <li className="flex items-center">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <div className={`w-2 h-2 rounded-full mr-3 ${
+                              isDark ? 'bg-blue-400' : 'bg-blue-500'
+                            }`}></div>
                             Employee training and awareness
                           </li>
                           <li className="flex items-center">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <div className={`w-2 h-2 rounded-full mr-3 ${
+                              isDark ? 'bg-blue-400' : 'bg-blue-500'
+                            }`}></div>
                             Data protection policies
                           </li>
                           <li className="flex items-center">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <div className={`w-2 h-2 rounded-full mr-3 ${
+                              isDark ? 'bg-blue-400' : 'bg-blue-500'
+                            }`}></div>
                             Incident response plans
                           </li>
                           <li className="flex items-center">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <div className={`w-2 h-2 rounded-full mr-3 ${
+                              isDark ? 'bg-blue-400' : 'bg-blue-500'
+                            }`}></div>
                             Vendor security assessments
                           </li>
                         </ul>
@@ -483,28 +671,58 @@ const PrivacyPolicy = () => {
               {/* Your Rights Section */}
               {activeSection === 'rights' && (
                 <section id="rights">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Your Privacy Rights</h2>
+                  <h2 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
+                    isDark ? 'text-white' : 'text-gray-900'
+                  }`}>7. Your Privacy Rights</h2>
                   
-                  <div className="prose prose-green max-w-none">
-                    <div className="bg-blue-50 rounded-lg p-6 mb-8">
-                      <h3 className="text-xl font-semibold text-blue-900 mb-4">Your Data Protection Rights</h3>
+                  <div className="prose max-w-none">
+                    <div className={`rounded-lg p-6 mb-8 ${
+                      isDark ? 'bg-blue-900/20 border border-blue-800/30' : 'bg-blue-50'
+                    }`}>
+                      <h3 className={`text-xl font-semibold mb-4 transition-colors duration-300 ${
+                        isDark ? 'text-blue-300' : 'text-blue-900'
+                      }`}>Your Data Protection Rights</h3>
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="bg-white p-4 rounded border border-blue-200">
-                          <h4 className="font-semibold text-gray-900 mb-2">Right to Access</h4>
-                          <p className="text-sm text-gray-600">Request a copy of your personal data</p>
+                        <div className={`p-4 rounded border ${
+                          isDark ? 'bg-slate-800 border-slate-700' : 'bg-white border-blue-200'
+                        }`}>
+                          <h4 className={`font-semibold mb-2 transition-colors duration-300 ${
+                            isDark ? 'text-white' : 'text-gray-900'
+                          }`}>Right to Access</h4>
+                          <p className={`text-sm ${
+                            isDark ? 'text-gray-400' : 'text-gray-600'
+                          }`}>Request a copy of your personal data</p>
                         </div>
-                        <div className="bg-white p-4 rounded border border-blue-200">
-                          <h4 className="font-semibold text-gray-900 mb-2">Right to Rectification</h4>
-                          <p className="text-sm text-gray-600">Correct inaccurate personal data</p>
+                        <div className={`p-4 rounded border ${
+                          isDark ? 'bg-slate-800 border-slate-700' : 'bg-white border-blue-200'
+                        }`}>
+                          <h4 className={`font-semibold mb-2 transition-colors duration-300 ${
+                            isDark ? 'text-white' : 'text-gray-900'
+                          }`}>Right to Rectification</h4>
+                          <p className={`text-sm ${
+                            isDark ? 'text-gray-400' : 'text-gray-600'
+                          }`}>Correct inaccurate personal data</p>
                         </div>
-                        <div className="bg-white p-4 rounded border border-blue-200">
-                          <h4 className="font-semibold text-gray-900 mb-2">Right to Erasure</h4>
-                          <p className="text-sm text-gray-600">Request deletion of your data</p>
+                        <div className={`p-4 rounded border ${
+                          isDark ? 'bg-slate-800 border-slate-700' : 'bg-white border-blue-200'
+                        }`}>
+                          <h4 className={`font-semibold mb-2 transition-colors duration-300 ${
+                            isDark ? 'text-white' : 'text-gray-900'
+                          }`}>Right to Erasure</h4>
+                          <p className={`text-sm ${
+                            isDark ? 'text-gray-400' : 'text-gray-600'
+                          }`}>Request deletion of your data</p>
                         </div>
-                        <div className="bg-white p-4 rounded border border-blue-200">
-                          <h4 className="font-semibold text-gray-900 mb-2">Right to Restrict</h4>
-                          <p className="text-sm text-gray-600">Limit how we use your data</p>
+                        <div className={`p-4 rounded border ${
+                          isDark ? 'bg-slate-800 border-slate-700' : 'bg-white border-blue-200'
+                        }`}>
+                          <h4 className={`font-semibold mb-2 transition-colors duration-300 ${
+                            isDark ? 'text-white' : 'text-gray-900'
+                          }`}>Right to Restrict</h4>
+                          <p className={`text-sm ${
+                            isDark ? 'text-gray-400' : 'text-gray-600'
+                          }`}>Limit how we use your data</p>
                         </div>
                       </div>
                     </div>
@@ -515,22 +733,34 @@ const PrivacyPolicy = () => {
               {/* Contact Section */}
               {activeSection === 'contact' && (
                 <section id="contact">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Contact Information</h2>
+                  <h2 className={`text-2xl font-bold mb-4 transition-colors duration-300 ${
+                    isDark ? 'text-white' : 'text-gray-900'
+                  }`}>8. Contact Information</h2>
                   
-                  <div className="prose prose-green max-w-none">
-                    <div className="bg-gray-50 rounded-lg p-6 mb-6">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                        <FaEnvelope className="mr-2 text-green-500" />
+                  <div className="prose max-w-none">
+                    <div className={`rounded-lg p-6 mb-6 ${
+                      isDark ? 'bg-slate-700/30' : 'bg-gray-50'
+                    }`}>
+                      <h3 className={`text-xl font-semibold mb-4 flex items-center transition-colors duration-300 ${
+                        isDark ? 'text-green-300' : 'text-gray-900'
+                      }`}>
+                        <FaEnvelope className={`mr-2 ${
+                          isDark ? 'text-green-400' : 'text-green-500'
+                        }`} />
                         Data Protection Officer
                       </h3>
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <FaMapMarkerAlt className="mr-2 text-gray-400" />
+                          <h4 className={`font-semibold mb-2 flex items-center transition-colors duration-300 ${
+                            isDark ? 'text-gray-300' : 'text-gray-600'
+                          }`}>
+                            <FaMapMarkerAlt className="mr-2" />
                             Postal Address
                           </h4>
-                          <address className="text-gray-600 not-italic">
+                          <address className={`not-italic ${
+                            isDark ? 'text-gray-300' : 'text-gray-600'
+                          }`}>
                             <span className='font-bold text-black'>Levitica Technologies Private Limited</span><br />
                             Office #407 & 409, 4th Floor, Jain Sadguru<br />
                             Image's Capital Park, Ayyappa Society,<br />
@@ -538,18 +768,22 @@ const PrivacyPolicy = () => {
                           </address>
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                            <FaEnvelope className="mr-2 text-gray-400" />
+                          <h4 className={`font-semibold mb-2 flex items-center transition-colors duration-300 ${
+                            isDark ? 'text-gray-300' : 'text-gray-600'
+                          }`}>
+                            <FaEnvelope className="mr-2" />
                             Email
                           </h4>
-                          <p className="text-gray-600 ">
+                          <p className={isDark ? 'text-gray-300' : 'text-gray-600'}>
                             info@leviticatechnologies.com
                           </p>
-                          <h4 className="font-semibold text-gray-900 mt-4 mb-2 flex items-center">
-                            <FaPhone className="mr-2 text-gray-400" />
+                          <h4 className={`font-semibold mt-4 mb-2 flex items-center transition-colors duration-300 ${
+                            isDark ? 'text-gray-300' : 'text-gray-600'
+                          }`}>
+                            <FaPhone className="mr-2" />
                             Phone
                           </h4>
-                          <p className="text-gray-600">
+                          <p className={isDark ? 'text-gray-300' : 'text-gray-600'}>
                             +91 9032503559
                           </p>
                         </div>
@@ -561,12 +795,18 @@ const PrivacyPolicy = () => {
             </div>
 
             {/* Consent Section */}
-            <div className="mt-8 p-6 bg-green-50 rounded-lg border border-green-200">
+            <div className={`mt-8 p-6 rounded-lg border transition-all duration-300 ${
+              isDark ? 'bg-green-900/20 border-green-800/30' : 'bg-green-50 border-green-200'
+            }`}>
               <div className="flex items-start">
-                <FaShieldAlt className="text-green-500 mt-1 mr-3 flex-shrink-0" />
+                <FaShieldAlt className={`mt-1 mr-3 flex-shrink-0 ${
+                  isDark ? 'text-green-400' : 'text-green-500'
+                }`} />
                 <div>
-                  <h3 className="font-semibold text-green-900 mb-2">Your Consent</h3>
-                  <p className="text-green-700">
+                  <h3 className={`font-semibold mb-2 transition-colors duration-300 ${
+                    isDark ? 'text-green-300' : 'text-green-900'
+                  }`}>Your Consent</h3>
+                  <p className={isDark ? 'text-green-200' : 'text-green-700'}>
                     By using our services, you consent to our Privacy Policy. If you do not agree with 
                     any part of this policy, please do not use our services.
                   </p>
@@ -575,16 +815,6 @@ const PrivacyPolicy = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Mobile floating action button */}
-      <div className="lg:hidden fixed bottom-6 right-6">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors"
-        >
-          ↑
-        </button>
       </div>
 
       <style jsx>{`

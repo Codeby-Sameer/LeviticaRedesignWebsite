@@ -210,7 +210,7 @@ const Navbar = () => {
           scrolled ? 'shadow-xl' : 'shadow-lg'
         } ${
           isDark 
-            ? 'bg-slate-900/95 border-slate-700/50' 
+            ? 'bg-slate-900 border-slate-900/95' 
             : 'bg-white/95 border-slate-200/50'
         }`}
       >
