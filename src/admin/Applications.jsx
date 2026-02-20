@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
+import { getApplications } from "../api/applications"; 
 import { 
   FaEnvelope, FaPhone, FaFileAlt, FaCalendar, FaDownload,
   FaCheck, FaTimes, FaEye, FaTrash, FaUser, FaBriefcase,
@@ -21,24 +22,28 @@ const Applications = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   // Load applications from localStorage
-  useEffect(() => {
-    const loadApplications = () => {
-      const storedApps = localStorage.getItem('leviticaApplications');
-      if (storedApps) {
-        try {
-          const apps = JSON.parse(storedApps);
-          apps.sort((a, b) => new Date(b.appliedAt) - new Date(a.appliedAt));
-          setApplications(apps);
-        } catch (error) {
-          console.error('Error parsing applications:', error);
-        }
-      }
-    };
+  
 
-    loadApplications();
-    const interval = setInterval(loadApplications, 30000);
-    return () => clearInterval(interval);
-  }, []);
+useEffect(() => {
+  const loadApplications = async () => {
+    try {
+      const response = await getApplications({
+        skip: 0,
+        limit: 20,
+      });
+
+      // IMPORTANT: because backend is paginated
+      setApplications(response.data.items);
+
+    } catch (error) {
+      console.error("Error fetching applications:", error);
+    }
+  };
+
+  loadApplications();
+
+}, []);
+
 
   // Sort applications
   const sortedApplications = [...applications].sort((a, b) => {
